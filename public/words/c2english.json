@@ -1,0 +1,5381 @@
+{
+  "name": "C1 En-Vi",
+  "words": [
+    {
+      "word": "abate",
+      "meaning": "giảm"
+    },
+    {
+      "word": "abdicate",
+      "meaning": "thoái vị"
+    },
+    {
+      "word": "aberration",
+      "meaning": "lệch lạc"
+    },
+    {
+      "word": "abet",
+      "meaning": "xúi giục"
+    },
+    {
+      "word": "abeyance",
+      "meaning": "tạm hoãn"
+    },
+    {
+      "word": "abhor",
+      "meaning": "ghê tởm"
+    },
+    {
+      "word": "abiding",
+      "meaning": "bền lâu"
+    },
+    {
+      "word": "abject",
+      "meaning": "hèn hạ"
+    },
+    {
+      "word": "abjure",
+      "meaning": "từ bỏ"
+    },
+    {
+      "word": "abrogate",
+      "meaning": "bãi bỏ"
+    },
+    {
+      "word": "abrogation",
+      "meaning": "bãi bỏ"
+    },
+    {
+      "word": "abscond",
+      "meaning": "trốn chạy"
+    },
+    {
+      "word": "absolve",
+      "meaning": "miễn tội"
+    },
+    {
+      "word": "abstain",
+      "meaning": "kiêng"
+    },
+    {
+      "word": "abstention",
+      "meaning": "kiêng"
+    },
+    {
+      "word": "abstinence",
+      "meaning": "kiêng"
+    },
+    {
+      "word": "abstruse",
+      "meaning": "khó hiểu"
+    },
+    {
+      "word": "abyss",
+      "meaning": "vực sâu"
+    },
+    {
+      "word": "accede",
+      "meaning": "đồng ý"
+    },
+    {
+      "word": "accentuate",
+      "meaning": "nhấn mạnh"
+    },
+    {
+      "word": "accession",
+      "meaning": "gia nhập"
+    },
+    {
+      "word": "acclaimed",
+      "meaning": "ca ngợi"
+    },
+    {
+      "word": "acclamation",
+      "meaning": "hoan hô"
+    },
+    {
+      "word": "accolade",
+      "meaning": "vinh danh"
+    },
+    {
+      "word": "accomplice",
+      "meaning": "đồng phạm"
+    },
+    {
+      "word": "accost",
+      "meaning": "tiếp cận"
+    },
+    {
+      "word": "accredit",
+      "meaning": "công nhận"
+    },
+    {
+      "word": "accreditation",
+      "meaning": "công nhận"
+    },
+    {
+      "word": "accrue",
+      "meaning": "tích lũy"
+    },
+    {
+      "word": "acerbic",
+      "meaning": "cay độc"
+    },
+    {
+      "word": "acquiesce",
+      "meaning": "chấp thuận"
+    },
+    {
+      "word": "acquiescence",
+      "meaning": "chấp thuận"
+    },
+    {
+      "word": "acquit",
+      "meaning": "tha bổng"
+    },
+    {
+      "word": "acrimonious",
+      "meaning": "cay nghiệt"
+    },
+    {
+      "word": "acrimony",
+      "meaning": "cay nghiệt"
+    },
+    {
+      "word": "acuity",
+      "meaning": "sắc bén"
+    },
+    {
+      "word": "acumen",
+      "meaning": "nhạy bén"
+    },
+    {
+      "word": "adage",
+      "meaning": "châm ngôn"
+    },
+    {
+      "word": "adamant",
+      "meaning": "kiên quyết"
+    },
+    {
+      "word": "adherence",
+      "meaning": "tuân thủ"
+    },
+    {
+      "word": "adherent",
+      "meaning": "tín đồ"
+    },
+    {
+      "word": "adjuration",
+      "meaning": "khẩn cầu"
+    },
+    {
+      "word": "admittance",
+      "meaning": "cho phép"
+    },
+    {
+      "word": "admonish",
+      "meaning": "cảnh cáo"
+    },
+    {
+      "word": "adroit",
+      "meaning": "khéo léo"
+    },
+    {
+      "word": "adulation",
+      "meaning": "nịnh hót"
+    },
+    {
+      "word": "advent",
+      "meaning": "sự xuất hiện"
+    },
+    {
+      "word": "adversary",
+      "meaning": "đối thủ"
+    },
+    {
+      "word": "adversity",
+      "meaning": "nghịch cảnh"
+    },
+    {
+      "word": "aegis",
+      "meaning": "bảo trợ"
+    },
+    {
+      "word": "affable",
+      "meaning": "hòa nhã"
+    },
+    {
+      "word": "affectation",
+      "meaning": "làm bộ"
+    },
+    {
+      "word": "affidavit",
+      "meaning": "bản tuyên thệ"
+    },
+    {
+      "word": "affinity",
+      "meaning": "đồng điệu"
+    },
+    {
+      "word": "affliction",
+      "meaning": "khổ đau"
+    },
+    {
+      "word": "alacrity",
+      "meaning": "nhanh nhẹn"
+    },
+    {
+      "word": "albeit",
+      "meaning": "mặc dù"
+    },
+    {
+      "word": "alchemy",
+      "meaning": "giả kim"
+    },
+    {
+      "word": "allegiance",
+      "meaning": "trung thành"
+    },
+    {
+      "word": "allegory",
+      "meaning": "ngụ ngôn"
+    },
+    {
+      "word": "alleviate",
+      "meaning": "giảm nhẹ"
+    },
+    {
+      "word": "allude",
+      "meaning": "ám chỉ"
+    },
+    {
+      "word": "allusion",
+      "meaning": "ám chỉ"
+    },
+    {
+      "word": "aloof",
+      "meaning": "xa cách"
+    },
+    {
+      "word": "altercation",
+      "meaning": "cãi vã"
+    },
+    {
+      "word": "altruistic",
+      "meaning": "vị tha"
+    },
+    {
+      "word": "amalgamation",
+      "meaning": "sáp nhập"
+    },
+    {
+      "word": "ambiguity",
+      "meaning": "mơ hồ"
+    },
+    {
+      "word": "ambivalent",
+      "meaning": "mâu thuẫn"
+    },
+    {
+      "word": "ambrosial",
+      "meaning": "thơm ngon"
+    },
+    {
+      "word": "ameliorate",
+      "meaning": "cải thiện"
+    },
+    {
+      "word": "amenable",
+      "meaning": "dễ bảo"
+    },
+    {
+      "word": "anachronism",
+      "meaning": "lỗi thời"
+    },
+    {
+      "word": "anachronistic",
+      "meaning": "lỗi thời"
+    },
+    {
+      "word": "analogous",
+      "meaning": "tương tự"
+    },
+    {
+      "word": "anarchy",
+      "meaning": "vô chính phủ"
+    },
+    {
+      "word": "anathema",
+      "meaning": "ghê tởm"
+    },
+    {
+      "word": "anecdote",
+      "meaning": "giai thoại"
+    },
+    {
+      "word": "anguish",
+      "meaning": "đau khổ"
+    },
+    {
+      "word": "animosity",
+      "meaning": "thù ghét"
+    },
+    {
+      "word": "annihilation",
+      "meaning": "hủy diệt"
+    },
+    {
+      "word": "annum",
+      "meaning": "hàng năm"
+    },
+    {
+      "word": "anomaly",
+      "meaning": "bất thường"
+    },
+    {
+      "word": "antagonise",
+      "meaning": "đối kháng"
+    },
+    {
+      "word": "antecedent",
+      "meaning": "tiền thân"
+    },
+    {
+      "word": "antidote",
+      "meaning": "thuốc giải"
+    },
+    {
+      "word": "antipathy",
+      "meaning": "ác cảm"
+    },
+    {
+      "word": "antiquated",
+      "meaning": "lỗi thời"
+    },
+    {
+      "word": "antiquity",
+      "meaning": "cổ đại"
+    },
+    {
+      "word": "antithesis",
+      "meaning": "đối lập"
+    },
+    {
+      "word": "apathetic",
+      "meaning": "thờ ơ"
+    },
+    {
+      "word": "aperture",
+      "meaning": "khe mở"
+    },
+    {
+      "word": "apex",
+      "meaning": "đỉnh"
+    },
+    {
+      "word": "aplomb",
+      "meaning": "điềm tĩnh"
+    },
+    {
+      "word": "apostle",
+      "meaning": "tông đồ"
+    },
+    {
+      "word": "apparatus",
+      "meaning": "thiết bị"
+    },
+    {
+      "word": "apparition",
+      "meaning": "bóng ma"
+    },
+    {
+      "word": "appease",
+      "meaning": "xoa dịu"
+    },
+    {
+      "word": "appellation",
+      "meaning": "tên gọi"
+    },
+    {
+      "word": "apprehension",
+      "meaning": "lo sợ"
+    },
+    {
+      "word": "apprehensive",
+      "meaning": "lo lắng"
+    },
+    {
+      "word": "aptitude",
+      "meaning": "năng khiếu"
+    },
+    {
+      "word": "arbiter",
+      "meaning": "trọng tài"
+    },
+    {
+      "word": "arcane",
+      "meaning": "bí truyền"
+    },
+    {
+      "word": "archetype",
+      "meaning": "nguyên mẫu"
+    },
+    {
+      "word": "archipelago",
+      "meaning": "quần đảo"
+    },
+    {
+      "word": "ardour",
+      "meaning": "nhiệt huyết"
+    },
+    {
+      "word": "arduous",
+      "meaning": "gian khổ"
+    },
+    {
+      "word": "arguably",
+      "meaning": "có thể nói"
+    },
+    {
+      "word": "armistice",
+      "meaning": "đình chiến"
+    },
+    {
+      "word": "arrogance",
+      "meaning": "kiêu ngạo"
+    },
+    {
+      "word": "artifice",
+      "meaning": "mưu mẹo"
+    },
+    {
+      "word": "artisan",
+      "meaning": "thợ thủ công"
+    },
+    {
+      "word": "ascendancy",
+      "meaning": "thống trị"
+    },
+    {
+      "word": "ascertain",
+      "meaning": "xác định"
+    },
+    {
+      "word": "aspersion",
+      "meaning": "vu khống"
+    },
+    {
+      "word": "assiduous",
+      "meaning": "chăm chỉ"
+    },
+    {
+      "word": "assuage",
+      "meaning": "xoa dịu"
+    },
+    {
+      "word": "astute",
+      "meaning": "sắc sảo"
+    },
+    {
+      "word": "atone",
+      "meaning": "chuộc lỗi"
+    },
+    {
+      "word": "attrition",
+      "meaning": "hao mòn"
+    },
+    {
+      "word": "audacity",
+      "meaning": "táo bạo"
+    },
+    {
+      "word": "augment",
+      "meaning": "tăng thêm"
+    },
+    {
+      "word": "auspicious",
+      "meaning": "cát tường"
+    },
+    {
+      "word": "austere",
+      "meaning": "khắc khổ"
+    },
+    {
+      "word": "autocracy",
+      "meaning": "chuyên chế"
+    },
+    {
+      "word": "autocrat",
+      "meaning": "độc tài"
+    },
+    {
+      "word": "avarice",
+      "meaning": "tham lam"
+    },
+    {
+      "word": "aversion",
+      "meaning": "ác cảm"
+    },
+    {
+      "word": "axiom",
+      "meaning": "tiên đề"
+    },
+    {
+      "word": "axiomatic",
+      "meaning": "hiển nhiên"
+    },
+    {
+      "word": "backlash",
+      "meaning": "phản ứng"
+    },
+    {
+      "word": "baleful",
+      "meaning": "tai hại"
+    },
+    {
+      "word": "balk",
+      "meaning": "ngần ngại"
+    },
+    {
+      "word": "ballast",
+      "meaning": "dằn"
+    },
+    {
+      "word": "balm",
+      "meaning": "dầu thơm"
+    },
+    {
+      "word": "banal",
+      "meaning": "tầm thường"
+    },
+    {
+      "word": "bane",
+      "meaning": "tai họa"
+    },
+    {
+      "word": "barrage",
+      "meaning": "đạn pháo"
+    },
+    {
+      "word": "bastion",
+      "meaning": "thành trì"
+    },
+    {
+      "word": "bear up",
+      "meaning": "chịu đựng"
+    },
+    {
+      "word": "bedlam",
+      "meaning": "hỗn loạn"
+    },
+    {
+      "word": "beguile",
+      "meaning": "mê hoặc"
+    },
+    {
+      "word": "behemoth",
+      "meaning": "khổng lồ"
+    },
+    {
+      "word": "beleaguer",
+      "meaning": "bao vây"
+    },
+    {
+      "word": "belie",
+      "meaning": "che giấu"
+    },
+    {
+      "word": "bellicose",
+      "meaning": "hiếu chiến"
+    },
+    {
+      "word": "belligerent",
+      "meaning": "hiếu chiến"
+    },
+    {
+      "word": "bellwether",
+      "meaning": "dẫn đầu"
+    },
+    {
+      "word": "bemoan",
+      "meaning": "than tiếc"
+    },
+    {
+      "word": "benefactor",
+      "meaning": "ân nhân"
+    },
+    {
+      "word": "benevolence",
+      "meaning": "nhân từ"
+    },
+    {
+      "word": "benevolent",
+      "meaning": "nhân từ"
+    },
+    {
+      "word": "bequeath",
+      "meaning": "di tặng"
+    },
+    {
+      "word": "bequest",
+      "meaning": "di sản"
+    },
+    {
+      "word": "berate",
+      "meaning": "mắng mỏ"
+    },
+    {
+      "word": "bereavement",
+      "meaning": "tang chế"
+    },
+    {
+      "word": "bereft",
+      "meaning": "mất mát"
+    },
+    {
+      "word": "beseech",
+      "meaning": "van xin"
+    },
+    {
+      "word": "beset",
+      "meaning": "vây hãm"
+    },
+    {
+      "word": "besotted",
+      "meaning": "mê mẩn"
+    },
+    {
+      "word": "bestow",
+      "meaning": "ban tặng"
+    },
+    {
+      "word": "bewitching",
+      "meaning": "quyến rũ"
+    },
+    {
+      "word": "bigotry",
+      "meaning": "cố chấp"
+    },
+    {
+      "word": "bilateral",
+      "meaning": "song phương"
+    },
+    {
+      "word": "billow",
+      "meaning": "cuộn sóng"
+    },
+    {
+      "word": "bite the bullet",
+      "meaning": "chịu đựng"
+    },
+    {
+      "word": "blasphemy",
+      "meaning": "báng bổ"
+    },
+    {
+      "word": "blithe",
+      "meaning": "vô tư"
+    },
+    {
+      "word": "boisterous",
+      "meaning": "ồn ào"
+    },
+    {
+      "word": "bombastic",
+      "meaning": "khoa trương"
+    },
+    {
+      "word": "boon",
+      "meaning": "lợi ích"
+    },
+    {
+      "word": "boorish",
+      "meaning": "thô lỗ"
+    },
+    {
+      "word": "bounty",
+      "meaning": "phần thưởng"
+    },
+    {
+      "word": "bourgeoisie",
+      "meaning": "tư sản"
+    },
+    {
+      "word": "brandish",
+      "meaning": "vung"
+    },
+    {
+      "word": "bravado",
+      "meaning": "khoe khoang"
+    },
+    {
+      "word": "bravura",
+      "meaning": "tài nghệ"
+    },
+    {
+      "word": "brevity",
+      "meaning": "ngắn gọn"
+    },
+    {
+      "word": "brinkmanship",
+      "meaning": "liều lĩnh"
+    },
+    {
+      "word": "brusque",
+      "meaning": "cộc lốc"
+    },
+    {
+      "word": "bulwark",
+      "meaning": "thành lũy"
+    },
+    {
+      "word": "burgeon",
+      "meaning": "phát triển"
+    },
+    {
+      "word": "buttress",
+      "meaning": "củng cố"
+    },
+    {
+      "word": "byword",
+      "meaning": "biệt danh"
+    },
+    {
+      "word": "cabal",
+      "meaning": "âm mưu"
+    },
+    {
+      "word": "cache",
+      "meaning": "kho"
+    },
+    {
+      "word": "cacophony",
+      "meaning": "tiếng ồn"
+    },
+    {
+      "word": "cadence",
+      "meaning": "nhịp điệu"
+    },
+    {
+      "word": "cajole",
+      "meaning": "dỗ dành"
+    },
+    {
+      "word": "calibre",
+      "meaning": "tầm vóc"
+    },
+    {
+      "word": "callous",
+      "meaning": "chai lì"
+    },
+    {
+      "word": "camaraderie",
+      "meaning": "tình bạn"
+    },
+    {
+      "word": "candour",
+      "meaning": "thẳng thắn"
+    },
+    {
+      "word": "cantankerous",
+      "meaning": "cáu kỉnh"
+    },
+    {
+      "word": "capitulate",
+      "meaning": "đầu hàng"
+    },
+    {
+      "word": "capricious",
+      "meaning": "thất thường"
+    },
+    {
+      "word": "cardinal",
+      "meaning": "chính yếu"
+    },
+    {
+      "word": "cartography",
+      "meaning": "bản đồ học"
+    },
+    {
+      "word": "caste",
+      "meaning": "đẳng cấp"
+    },
+    {
+      "word": "castigate",
+      "meaning": "trừng phạt"
+    },
+    {
+      "word": "cataclysm",
+      "meaning": "đại họa"
+    },
+    {
+      "word": "catharsis",
+      "meaning": "thanh lọc"
+    },
+    {
+      "word": "caustic",
+      "meaning": "cay độc"
+    },
+    {
+      "word": "cavalcade",
+      "meaning": "đoàn xe"
+    },
+    {
+      "word": "caveat",
+      "meaning": "cảnh báo"
+    },
+    {
+      "word": "censure",
+      "meaning": "chỉ trích"
+    },
+    {
+      "word": "cessation",
+      "meaning": "chấm dứt"
+    },
+    {
+      "word": "chagrin",
+      "meaning": "bẽ mặt"
+    },
+    {
+      "word": "charlatan",
+      "meaning": "lang băm"
+    },
+    {
+      "word": "chasm",
+      "meaning": "khe vực"
+    },
+    {
+      "word": "chastise",
+      "meaning": "trừng phạt"
+    },
+    {
+      "word": "chattel",
+      "meaning": "tài sản"
+    },
+    {
+      "word": "chicanery",
+      "meaning": "gian xảo"
+    },
+    {
+      "word": "chide",
+      "meaning": "quở trách"
+    },
+    {
+      "word": "chronology",
+      "meaning": "niên đại"
+    },
+    {
+      "word": "churlish",
+      "meaning": "thô lỗ"
+    },
+    {
+      "word": "circumspect",
+      "meaning": "thận trọng"
+    },
+    {
+      "word": "circumvent",
+      "meaning": "né tránh"
+    },
+    {
+      "word": "citadel",
+      "meaning": "thành trì"
+    },
+    {
+      "word": "clandestine",
+      "meaning": "bí mật"
+    },
+    {
+      "word": "cleave",
+      "meaning": "chẻ"
+    },
+    {
+      "word": "clemency",
+      "meaning": "khoan dung"
+    },
+    {
+      "word": "clique",
+      "meaning": "phe nhóm"
+    },
+    {
+      "word": "cloister",
+      "meaning": "tu viện"
+    },
+    {
+      "word": "cloistered",
+      "meaning": "ẩn dật"
+    },
+    {
+      "word": "clout",
+      "meaning": "ảnh hưởng"
+    },
+    {
+      "word": "coalesce",
+      "meaning": "hợp nhất"
+    },
+    {
+      "word": "coerce",
+      "meaning": "cưỡng ép"
+    },
+    {
+      "word": "coercion",
+      "meaning": "cưỡng ép"
+    },
+    {
+      "word": "cogent",
+      "meaning": "thuyết phục"
+    },
+    {
+      "word": "cohesion",
+      "meaning": "gắn kết"
+    },
+    {
+      "word": "collude",
+      "meaning": "thông đồng"
+    },
+    {
+      "word": "collusion",
+      "meaning": "thông đồng"
+    },
+    {
+      "word": "colossal",
+      "meaning": "khổng lồ"
+    },
+    {
+      "word": "colossus",
+      "meaning": "người khổng lồ"
+    },
+    {
+      "word": "commensurate",
+      "meaning": "tương xứng"
+    },
+    {
+      "word": "commiserate",
+      "meaning": "cảm thông"
+    },
+    {
+      "word": "compatriot",
+      "meaning": "đồng hương"
+    },
+    {
+      "word": "complacency",
+      "meaning": "tự mãn"
+    },
+    {
+      "word": "complacent",
+      "meaning": "tự mãn"
+    },
+    {
+      "word": "complementary",
+      "meaning": "bổ sung"
+    },
+    {
+      "word": "complicity",
+      "meaning": "đồng lõa"
+    },
+    {
+      "word": "compulsion",
+      "meaning": "cưỡng chế"
+    },
+    {
+      "word": "concatenation",
+      "meaning": "chuỗi"
+    },
+    {
+      "word": "conciliatory",
+      "meaning": "hòa giải"
+    },
+    {
+      "word": "conclave",
+      "meaning": "mật nghị"
+    },
+    {
+      "word": "concordance",
+      "meaning": "phù hợp"
+    },
+    {
+      "word": "condescension",
+      "meaning": "kẻ cả"
+    },
+    {
+      "word": "condone",
+      "meaning": "tha thứ"
+    },
+    {
+      "word": "confiscate",
+      "meaning": "tịch thu"
+    },
+    {
+      "word": "conflagration",
+      "meaning": "hỏa hoạn"
+    },
+    {
+      "word": "confluence",
+      "meaning": "hội tụ"
+    },
+    {
+      "word": "confound",
+      "meaning": "làm rối"
+    },
+    {
+      "word": "conjecture",
+      "meaning": "phỏng đoán"
+    },
+    {
+      "word": "conjure",
+      "meaning": "gợi lên"
+    },
+    {
+      "word": "connive",
+      "meaning": "thông đồng"
+    },
+    {
+      "word": "connoisseur",
+      "meaning": "sành sỏi"
+    },
+    {
+      "word": "connotation",
+      "meaning": "hàm ý"
+    },
+    {
+      "word": "conquest",
+      "meaning": "chinh phục"
+    },
+    {
+      "word": "consecration",
+      "meaning": "hiến thánh"
+    },
+    {
+      "word": "consortium",
+      "meaning": "liên minh"
+    },
+    {
+      "word": "consternation",
+      "meaning": "hoảng hốt"
+    },
+    {
+      "word": "construe",
+      "meaning": "diễn giải"
+    },
+    {
+      "word": "consummation",
+      "meaning": "hoàn tất"
+    },
+    {
+      "word": "contagion",
+      "meaning": "lây nhiễm"
+    },
+    {
+      "word": "contemptible",
+      "meaning": "đáng khinh"
+    },
+    {
+      "word": "contingency",
+      "meaning": "tình huống"
+    },
+    {
+      "word": "continuum",
+      "meaning": "liên tục"
+    },
+    {
+      "word": "contravene",
+      "meaning": "vi phạm"
+    },
+    {
+      "word": "contrition",
+      "meaning": "ăn năn"
+    },
+    {
+      "word": "conundrum",
+      "meaning": "câu đố"
+    },
+    {
+      "word": "convene",
+      "meaning": "triệu tập"
+    },
+    {
+      "word": "convergence",
+      "meaning": "hội tụ"
+    },
+    {
+      "word": "convivial",
+      "meaning": "vui vẻ"
+    },
+    {
+      "word": "convoluted",
+      "meaning": "rắc rối"
+    },
+    {
+      "word": "copious",
+      "meaning": "dồi dào"
+    },
+    {
+      "word": "coquettish",
+      "meaning": "lẳng lơ"
+    },
+    {
+      "word": "cordial",
+      "meaning": "thân thiện"
+    },
+    {
+      "word": "cornucopia",
+      "meaning": "dồi dào"
+    },
+    {
+      "word": "corollary",
+      "meaning": "hệ quả"
+    },
+    {
+      "word": "corroborate",
+      "meaning": "xác nhận"
+    },
+    {
+      "word": "cortege",
+      "meaning": "đoàn tang"
+    },
+    {
+      "word": "cosmology",
+      "meaning": "vũ trụ học"
+    },
+    {
+      "word": "cosmos",
+      "meaning": "vũ trụ"
+    },
+    {
+      "word": "countenance",
+      "meaning": "chấp nhận"
+    },
+    {
+      "word": "covet",
+      "meaning": "thèm muốn"
+    },
+    {
+      "word": "craven",
+      "meaning": "hèn nhát"
+    },
+    {
+      "word": "credulous",
+      "meaning": "cả tin"
+    },
+    {
+      "word": "creed",
+      "meaning": "tín điều"
+    },
+    {
+      "word": "crevasse",
+      "meaning": "khe nứt"
+    },
+    {
+      "word": "crucible",
+      "meaning": "thử thách"
+    },
+    {
+      "word": "crux",
+      "meaning": "mấu chốt"
+    },
+    {
+      "word": "crypt",
+      "meaning": "hầm mộ"
+    },
+    {
+      "word": "culminate",
+      "meaning": "kết thúc"
+    },
+    {
+      "word": "culpable",
+      "meaning": "có lỗi"
+    },
+    {
+      "word": "culprit",
+      "meaning": "thủ phạm"
+    },
+    {
+      "word": "cunning",
+      "meaning": "xảo quyệt"
+    },
+    {
+      "word": "cupidity",
+      "meaning": "tham lam"
+    },
+    {
+      "word": "curmudgeon",
+      "meaning": "người cáu kỉnh"
+    },
+    {
+      "word": "cursory",
+      "meaning": "qua loa"
+    },
+    {
+      "word": "curtail",
+      "meaning": "cắt giảm"
+    },
+    {
+      "word": "daft",
+      "meaning": "ngớ ngẩn"
+    },
+    {
+      "word": "dalliance",
+      "meaning": "ve vãn"
+    },
+    {
+      "word": "daunting",
+      "meaning": "đáng sợ"
+    },
+    {
+      "word": "dawdle",
+      "meaning": "chần chừ"
+    },
+    {
+      "word": "dearth",
+      "meaning": "khan hiếm"
+    },
+    {
+      "word": "debacle",
+      "meaning": "thảm họa"
+    },
+    {
+      "word": "debilitate",
+      "meaning": "làm suy yếu"
+    },
+    {
+      "word": "debonair",
+      "meaning": "lịch lãm"
+    },
+    {
+      "word": "debunk",
+      "meaning": "bác bỏ"
+    },
+    {
+      "word": "decadence",
+      "meaning": "suy đồi"
+    },
+    {
+      "word": "deceitful",
+      "meaning": "dối trá"
+    },
+    {
+      "word": "decimate",
+      "meaning": "tàn phá"
+    },
+    {
+      "word": "decorous",
+      "meaning": "đoan trang"
+    },
+    {
+      "word": "decorum",
+      "meaning": "phép tắc"
+    },
+    {
+      "word": "decree",
+      "meaning": "sắc lệnh"
+    },
+    {
+      "word": "decrepit",
+      "meaning": "tàn tạ"
+    },
+    {
+      "word": "decry",
+      "meaning": "lên án"
+    },
+    {
+      "word": "defamation",
+      "meaning": "phỉ báng"
+    },
+    {
+      "word": "deference",
+      "meaning": "kính trọng"
+    },
+    {
+      "word": "deflate",
+      "meaning": "xì hơi"
+    },
+    {
+      "word": "defunct",
+      "meaning": "không còn"
+    },
+    {
+      "word": "dehort",
+      "meaning": "khuyên ngăn"
+    },
+    {
+      "word": "deign",
+      "meaning": "hạ mình"
+    },
+    {
+      "word": "deity",
+      "meaning": "thần"
+    },
+    {
+      "word": "deleterious",
+      "meaning": "có hại"
+    },
+    {
+      "word": "deliberation",
+      "meaning": "cân nhắc"
+    },
+    {
+      "word": "delineate",
+      "meaning": "phác họa"
+    },
+    {
+      "word": "delineation",
+      "meaning": "phác họa"
+    },
+    {
+      "word": "delirium",
+      "meaning": "mê sảng"
+    },
+    {
+      "word": "deliverance",
+      "meaning": "giải thoát"
+    },
+    {
+      "word": "deluge",
+      "meaning": "lũ lụt"
+    },
+    {
+      "word": "demagogue",
+      "meaning": "mị dân"
+    },
+    {
+      "word": "demarcation",
+      "meaning": "ranh giới"
+    },
+    {
+      "word": "demean",
+      "meaning": "hạ thấp"
+    },
+    {
+      "word": "demeanour",
+      "meaning": "thái độ"
+    },
+    {
+      "word": "demise",
+      "meaning": "qua đời"
+    },
+    {
+      "word": "demur",
+      "meaning": "phản đối"
+    },
+    {
+      "word": "demure",
+      "meaning": "e lệ"
+    },
+    {
+      "word": "denigrate",
+      "meaning": "bôi nhọ"
+    },
+    {
+      "word": "denouement",
+      "meaning": "kết cục"
+    },
+    {
+      "word": "deplete",
+      "meaning": "làm cạn"
+    },
+    {
+      "word": "deplorable",
+      "meaning": "đáng tiếc"
+    },
+    {
+      "word": "deplore",
+      "meaning": "than phiền"
+    },
+    {
+      "word": "depravity",
+      "meaning": "trụy lạc"
+    },
+    {
+      "word": "derelict",
+      "meaning": "hoang phế"
+    },
+    {
+      "word": "deride",
+      "meaning": "chế giễu"
+    },
+    {
+      "word": "derisive",
+      "meaning": "chế giễu"
+    },
+    {
+      "word": "derogatory",
+      "meaning": "miệt thị"
+    },
+    {
+      "word": "desecrate",
+      "meaning": "xúc phạm"
+    },
+    {
+      "word": "desolation",
+      "meaning": "hoang vắng"
+    },
+    {
+      "word": "despondency",
+      "meaning": "tuyệt vọng"
+    },
+    {
+      "word": "despondent",
+      "meaning": "tuyệt vọng"
+    },
+    {
+      "word": "destitute",
+      "meaning": "bần cùng"
+    },
+    {
+      "word": "desultory",
+      "meaning": "hời hợt"
+    },
+    {
+      "word": "detachment",
+      "meaning": "tách biệt"
+    },
+    {
+      "word": "deter",
+      "meaning": "ngăn cản"
+    },
+    {
+      "word": "detestable",
+      "meaning": "đáng ghét"
+    },
+    {
+      "word": "detriment",
+      "meaning": "tác hại"
+    },
+    {
+      "word": "detrimental",
+      "meaning": "có hại"
+    },
+    {
+      "word": "deviation",
+      "meaning": "lệch hướng"
+    },
+    {
+      "word": "devious",
+      "meaning": "gian xảo"
+    },
+    {
+      "word": "devoid",
+      "meaning": "thiếu vắng"
+    },
+    {
+      "word": "dexterity",
+      "meaning": "khéo léo"
+    },
+    {
+      "word": "dexterous",
+      "meaning": "khéo léo"
+    },
+    {
+      "word": "dialectic",
+      "meaning": "biện chứng"
+    },
+    {
+      "word": "diaphanous",
+      "meaning": "mỏng nhẹ"
+    },
+    {
+      "word": "diaspora",
+      "meaning": "ly tán"
+    },
+    {
+      "word": "diatribe",
+      "meaning": "chửi mắng"
+    },
+    {
+      "word": "dichotomy",
+      "meaning": "nhị nguyên"
+    },
+    {
+      "word": "didactic",
+      "meaning": "giáo huấn"
+    },
+    {
+      "word": "diffident",
+      "meaning": "rụt rè"
+    },
+    {
+      "word": "dilatory",
+      "meaning": "trì hoãn"
+    },
+    {
+      "word": "diligence",
+      "meaning": "siêng năng"
+    },
+    {
+      "word": "diligently",
+      "meaning": "chăm chỉ"
+    },
+    {
+      "word": "diminution",
+      "meaning": "suy giảm"
+    },
+    {
+      "word": "dingy",
+      "meaning": "bẩn thỉu"
+    },
+    {
+      "word": "dirge",
+      "meaning": "ai ca"
+    },
+    {
+      "word": "disaffection",
+      "meaning": "bất mãn"
+    },
+    {
+      "word": "discern",
+      "meaning": "nhận ra"
+    },
+    {
+      "word": "discernment",
+      "meaning": "sáng suốt"
+    },
+    {
+      "word": "disciple",
+      "meaning": "đệ tử"
+    },
+    {
+      "word": "discord",
+      "meaning": "bất hòa"
+    },
+    {
+      "word": "discordant",
+      "meaning": "bất hòa"
+    },
+    {
+      "word": "discrepancy",
+      "meaning": "khác biệt"
+    },
+    {
+      "word": "disdain",
+      "meaning": "khinh thường"
+    },
+    {
+      "word": "dishevelled",
+      "meaning": "xộc xệch"
+    },
+    {
+      "word": "disillusionment",
+      "meaning": "vỡ mộng"
+    },
+    {
+      "word": "disingenuous",
+      "meaning": "giả dối"
+    },
+    {
+      "word": "disinterested",
+      "meaning": "vô tư"
+    },
+    {
+      "word": "disjointed",
+      "meaning": "rời rạc"
+    },
+    {
+      "word": "dismay",
+      "meaning": "kinh hoàng"
+    },
+    {
+      "word": "disparage",
+      "meaning": "coi thường"
+    },
+    {
+      "word": "disparate",
+      "meaning": "khác biệt"
+    },
+    {
+      "word": "disparity",
+      "meaning": "chênh lệch"
+    },
+    {
+      "word": "dispassionate",
+      "meaning": "khách quan"
+    },
+    {
+      "word": "dispel",
+      "meaning": "xua tan"
+    },
+    {
+      "word": "dispensation",
+      "meaning": "miễn trừ"
+    },
+    {
+      "word": "dispense",
+      "meaning": "phân phát"
+    },
+    {
+      "word": "disposition",
+      "meaning": "tính cách"
+    },
+    {
+      "word": "disrepute",
+      "meaning": "tai tiếng"
+    },
+    {
+      "word": "disseminate",
+      "meaning": "phổ biến"
+    },
+    {
+      "word": "dissension",
+      "meaning": "bất đồng"
+    },
+    {
+      "word": "dissent",
+      "meaning": "bất đồng"
+    },
+    {
+      "word": "dissertation",
+      "meaning": "luận văn"
+    },
+    {
+      "word": "dissident",
+      "meaning": "người bất đồng"
+    },
+    {
+      "word": "dissipate",
+      "meaning": "tiêu tan"
+    },
+    {
+      "word": "dissolution",
+      "meaning": "giải thể"
+    },
+    {
+      "word": "dissonance",
+      "meaning": "bất hòa"
+    },
+    {
+      "word": "divination",
+      "meaning": "bói toán"
+    },
+    {
+      "word": "divulge",
+      "meaning": "tiết lộ"
+    },
+    {
+      "word": "dogged",
+      "meaning": "kiên trì"
+    },
+    {
+      "word": "dogma",
+      "meaning": "giáo điều"
+    },
+    {
+      "word": "dogmatic",
+      "meaning": "giáo điều"
+    },
+    {
+      "word": "doldrums",
+      "meaning": "uể oải"
+    },
+    {
+      "word": "domicile",
+      "meaning": "nơi ở"
+    },
+    {
+      "word": "dominion",
+      "meaning": "thống trị"
+    },
+    {
+      "word": "dormant",
+      "meaning": "ngủ yên"
+    },
+    {
+      "word": "dossier",
+      "meaning": "hồ sơ"
+    },
+    {
+      "word": "dotage",
+      "meaning": "lú lẫn"
+    },
+    {
+      "word": "drudgery",
+      "meaning": "lao dịch"
+    },
+    {
+      "word": "dubious",
+      "meaning": "đáng ngờ"
+    },
+    {
+      "word": "duplicity",
+      "meaning": "gian trá"
+    },
+    {
+      "word": "duress",
+      "meaning": "cưỡng ép"
+    },
+    {
+      "word": "dwindle",
+      "meaning": "suy giảm"
+    },
+    {
+      "word": "dynasty",
+      "meaning": "triều đại"
+    },
+    {
+      "word": "ebullience",
+      "meaning": "hân hoan"
+    },
+    {
+      "word": "ebullient",
+      "meaning": "hân hoan"
+    },
+    {
+      "word": "eccentric",
+      "meaning": "lập dị"
+    },
+    {
+      "word": "echelon",
+      "meaning": "cấp bậc"
+    },
+    {
+      "word": "eclectic",
+      "meaning": "chiết trung"
+    },
+    {
+      "word": "edict",
+      "meaning": "sắc lệnh"
+    },
+    {
+      "word": "edification",
+      "meaning": "khai sáng"
+    },
+    {
+      "word": "edifice",
+      "meaning": "tòa nhà"
+    },
+    {
+      "word": "efficacious",
+      "meaning": "hiệu quả"
+    },
+    {
+      "word": "effigy",
+      "meaning": "hình nộm"
+    },
+    {
+      "word": "effrontery",
+      "meaning": "trơ tráo"
+    },
+    {
+      "word": "effusion",
+      "meaning": "tuôn trào"
+    },
+    {
+      "word": "effusive",
+      "meaning": "nồng nhiệt"
+    },
+    {
+      "word": "egregious",
+      "meaning": "trầm trọng"
+    },
+    {
+      "word": "elated",
+      "meaning": "phấn khởi"
+    },
+    {
+      "word": "elation",
+      "meaning": "phấn khởi"
+    },
+    {
+      "word": "elicit",
+      "meaning": "khơi gợi"
+    },
+    {
+      "word": "eloquent",
+      "meaning": "hùng biện"
+    },
+    {
+      "word": "elucidate",
+      "meaning": "làm sáng tỏ"
+    },
+    {
+      "word": "elusive",
+      "meaning": "khó nắm bắt"
+    },
+    {
+      "word": "emaciated",
+      "meaning": "gầy gò"
+    },
+    {
+      "word": "emanate",
+      "meaning": "phát ra"
+    },
+    {
+      "word": "emancipate",
+      "meaning": "giải phóng"
+    },
+    {
+      "word": "emancipation",
+      "meaning": "giải phóng"
+    },
+    {
+      "word": "embargo",
+      "meaning": "cấm vận"
+    },
+    {
+      "word": "embellish",
+      "meaning": "trang điểm"
+    },
+    {
+      "word": "embezzle",
+      "meaning": "tham ô"
+    },
+    {
+      "word": "emblem",
+      "meaning": "biểu tượng"
+    },
+    {
+      "word": "embroil",
+      "meaning": "lôi kéo"
+    },
+    {
+      "word": "emissary",
+      "meaning": "sứ giả"
+    },
+    {
+      "word": "emulate",
+      "meaning": "noi theo"
+    },
+    {
+      "word": "enclave",
+      "meaning": "vùng biệt lập"
+    },
+    {
+      "word": "encroach",
+      "meaning": "xâm lấn"
+    },
+    {
+      "word": "endemic",
+      "meaning": "đặc hữu"
+    },
+    {
+      "word": "endow",
+      "meaning": "ban tặng"
+    },
+    {
+      "word": "enervate",
+      "meaning": "làm suy nhược"
+    },
+    {
+      "word": "engender",
+      "meaning": "gây ra"
+    },
+    {
+      "word": "enigma",
+      "meaning": "bí ẩn"
+    },
+    {
+      "word": "enigmatic",
+      "meaning": "bí ẩn"
+    },
+    {
+      "word": "enmity",
+      "meaning": "thù địch"
+    },
+    {
+      "word": "ennui",
+      "meaning": "buồn chán"
+    },
+    {
+      "word": "enormity",
+      "meaning": "tính nghiêm trọng"
+    },
+    {
+      "word": "ensue",
+      "meaning": "xảy ra"
+    },
+    {
+      "word": "entail",
+      "meaning": "đòi hỏi"
+    },
+    {
+      "word": "enthrall",
+      "meaning": "mê hoặc"
+    },
+    {
+      "word": "enticing",
+      "meaning": "hấp dẫn"
+    },
+    {
+      "word": "entourage",
+      "meaning": "tùy tùng"
+    },
+    {
+      "word": "entreat",
+      "meaning": "van xin"
+    },
+    {
+      "word": "entrenchment",
+      "meaning": "củng cố"
+    },
+    {
+      "word": "entropy",
+      "meaning": "hỗn loạn"
+    },
+    {
+      "word": "enumerate",
+      "meaning": "liệt kê"
+    },
+    {
+      "word": "envoy",
+      "meaning": "đặc phái viên"
+    },
+    {
+      "word": "ephemeral",
+      "meaning": "phù du"
+    },
+    {
+      "word": "epicentre",
+      "meaning": "tâm chấn"
+    },
+    {
+      "word": "epicure",
+      "meaning": "người sành ăn"
+    },
+    {
+      "word": "epigram",
+      "meaning": "câu châm ngôn"
+    },
+    {
+      "word": "epilogue",
+      "meaning": "hậu truyện"
+    },
+    {
+      "word": "epiphany",
+      "meaning": "khải ngộ"
+    },
+    {
+      "word": "epitaph",
+      "meaning": "văn bia"
+    },
+    {
+      "word": "epitome",
+      "meaning": "tinh hoa"
+    },
+    {
+      "word": "epitomise",
+      "meaning": "tiêu biểu"
+    },
+    {
+      "word": "epoch",
+      "meaning": "thời đại"
+    },
+    {
+      "word": "equanimity",
+      "meaning": "bình thản"
+    },
+    {
+      "word": "equilibrium",
+      "meaning": "cân bằng"
+    },
+    {
+      "word": "equivocal",
+      "meaning": "mập mờ"
+    },
+    {
+      "word": "eradicate",
+      "meaning": "diệt trừ"
+    },
+    {
+      "word": "erotic",
+      "meaning": "khiêu dâm"
+    },
+    {
+      "word": "err",
+      "meaning": "sai lầm"
+    },
+    {
+      "word": "erstwhile",
+      "meaning": "trước đây"
+    },
+    {
+      "word": "erudite",
+      "meaning": "uyên bác"
+    },
+    {
+      "word": "erudition",
+      "meaning": "uyên bác"
+    },
+    {
+      "word": "escapade",
+      "meaning": "phiêu lưu"
+    },
+    {
+      "word": "escarpment",
+      "meaning": "vách dốc"
+    },
+    {
+      "word": "eschew",
+      "meaning": "tránh"
+    },
+    {
+      "word": "esoteric",
+      "meaning": "bí truyền"
+    },
+    {
+      "word": "espouse",
+      "meaning": "ủng hộ"
+    },
+    {
+      "word": "esteem",
+      "meaning": "tôn trọng"
+    },
+    {
+      "word": "ethereal",
+      "meaning": "thanh thoát"
+    },
+    {
+      "word": "ethos",
+      "meaning": "tinh thần"
+    },
+    {
+      "word": "etymology",
+      "meaning": "từ nguyên"
+    },
+    {
+      "word": "eulogy",
+      "meaning": "điếu văn"
+    },
+    {
+      "word": "euphemism",
+      "meaning": "nói giảm"
+    },
+    {
+      "word": "euphoria",
+      "meaning": "hưng phấn"
+    },
+    {
+      "word": "evanescent",
+      "meaning": "phai nhạt"
+    },
+    {
+      "word": "exacerbate",
+      "meaning": "làm trầm trọng"
+    },
+    {
+      "word": "exacting",
+      "meaning": "khắt khe"
+    },
+    {
+      "word": "exalt",
+      "meaning": "tôn vinh"
+    },
+    {
+      "word": "exaltation",
+      "meaning": "tôn vinh"
+    },
+    {
+      "word": "exchequer",
+      "meaning": "ngân khố"
+    },
+    {
+      "word": "excoriate",
+      "meaning": "lên án"
+    },
+    {
+      "word": "excruciating",
+      "meaning": "đau đớn"
+    },
+    {
+      "word": "execrable",
+      "meaning": "tồi tệ"
+    },
+    {
+      "word": "exemplify",
+      "meaning": "minh họa"
+    },
+    {
+      "word": "exhort",
+      "meaning": "khuyên giục"
+    },
+    {
+      "word": "exhortation",
+      "meaning": "lời khuyên"
+    },
+    {
+      "word": "exigency",
+      "meaning": "khẩn cấp"
+    },
+    {
+      "word": "exigent",
+      "meaning": "khẩn cấp"
+    },
+    {
+      "word": "exodus",
+      "meaning": "di cư"
+    },
+    {
+      "word": "exonerate",
+      "meaning": "minh oan"
+    },
+    {
+      "word": "exorbitant",
+      "meaning": "quá mức"
+    },
+    {
+      "word": "expatriate",
+      "meaning": "kiều dân"
+    },
+    {
+      "word": "expediency",
+      "meaning": "tiện lợi"
+    },
+    {
+      "word": "expedient",
+      "meaning": "thích hợp"
+    },
+    {
+      "word": "expedite",
+      "meaning": "đẩy nhanh"
+    },
+    {
+      "word": "exponent",
+      "meaning": "người ủng hộ"
+    },
+    {
+      "word": "exposition",
+      "meaning": "thuyết minh"
+    },
+    {
+      "word": "expound",
+      "meaning": "giải thích"
+    },
+    {
+      "word": "expunge",
+      "meaning": "xóa bỏ"
+    },
+    {
+      "word": "exquisite",
+      "meaning": "tuyệt đẹp"
+    },
+    {
+      "word": "extol",
+      "meaning": "ca ngợi"
+    },
+    {
+      "word": "extraneous",
+      "meaning": "thừa thãi"
+    },
+    {
+      "word": "extricate",
+      "meaning": "giải thoát"
+    },
+    {
+      "word": "exuberant",
+      "meaning": "sung mãn"
+    },
+    {
+      "word": "exude",
+      "meaning": "tỏa ra"
+    },
+    {
+      "word": "exultation",
+      "meaning": "hoan hỉ"
+    },
+    {
+      "word": "fabricate",
+      "meaning": "bịa đặt"
+    },
+    {
+      "word": "fabrication",
+      "meaning": "bịa đặt"
+    },
+    {
+      "word": "facet",
+      "meaning": "khía cạnh"
+    },
+    {
+      "word": "facetious",
+      "meaning": "bông đùa"
+    },
+    {
+      "word": "facile",
+      "meaning": "dễ dàng"
+    },
+    {
+      "word": "facsimile",
+      "meaning": "bản sao"
+    },
+    {
+      "word": "fallacious",
+      "meaning": "sai lầm"
+    },
+    {
+      "word": "fallacy",
+      "meaning": "ngụy biện"
+    },
+    {
+      "word": "fallibility",
+      "meaning": "khả năng sai"
+    },
+    {
+      "word": "famine",
+      "meaning": "nạn đói"
+    },
+    {
+      "word": "fanaticism",
+      "meaning": "cuồng tín"
+    },
+    {
+      "word": "farce",
+      "meaning": "trò hề"
+    },
+    {
+      "word": "farcical",
+      "meaning": "lố bịch"
+    },
+    {
+      "word": "fastidious",
+      "meaning": "khó tính"
+    },
+    {
+      "word": "fatalism",
+      "meaning": "định mệnh"
+    },
+    {
+      "word": "fathom",
+      "meaning": "thấu hiểu"
+    },
+    {
+      "word": "fatuous",
+      "meaning": "ngu ngốc"
+    },
+    {
+      "word": "fauna",
+      "meaning": "động vật"
+    },
+    {
+      "word": "fawn over",
+      "meaning": "nịnh nọt"
+    },
+    {
+      "word": "façade",
+      "meaning": "mặt tiền"
+    },
+    {
+      "word": "feckless",
+      "meaning": "vô dụng"
+    },
+    {
+      "word": "feign",
+      "meaning": "giả vờ"
+    },
+    {
+      "word": "feisty",
+      "meaning": "gan lì"
+    },
+    {
+      "word": "fermentation",
+      "meaning": "lên men"
+    },
+    {
+      "word": "ferocious",
+      "meaning": "hung dữ"
+    },
+    {
+      "word": "ferret out",
+      "meaning": "tìm ra"
+    },
+    {
+      "word": "fervent",
+      "meaning": "nồng nhiệt"
+    },
+    {
+      "word": "fervid",
+      "meaning": "nhiệt tình"
+    },
+    {
+      "word": "fervour",
+      "meaning": "nhiệt huyết"
+    },
+    {
+      "word": "fetish",
+      "meaning": "vật sùng bái"
+    },
+    {
+      "word": "feud",
+      "meaning": "mối thù"
+    },
+    {
+      "word": "fiasco",
+      "meaning": "thất bại"
+    },
+    {
+      "word": "fickle",
+      "meaning": "thất thường"
+    },
+    {
+      "word": "fidelity",
+      "meaning": "trung thành"
+    },
+    {
+      "word": "figment",
+      "meaning": "tưởng tượng"
+    },
+    {
+      "word": "figurehead",
+      "meaning": "bù nhìn"
+    },
+    {
+      "word": "filibuster",
+      "meaning": "cản trở"
+    },
+    {
+      "word": "finesse",
+      "meaning": "khéo léo"
+    },
+    {
+      "word": "fissure",
+      "meaning": "vết nứt"
+    },
+    {
+      "word": "flagrant",
+      "meaning": "trắng trợn"
+    },
+    {
+      "word": "flaunt",
+      "meaning": "khoe khoang"
+    },
+    {
+      "word": "fleeting",
+      "meaning": "thoáng qua"
+    },
+    {
+      "word": "flimsy",
+      "meaning": "mong manh"
+    },
+    {
+      "word": "flora",
+      "meaning": "thực vật"
+    },
+    {
+      "word": "flotsam",
+      "meaning": "đồ trôi dạt"
+    },
+    {
+      "word": "flout",
+      "meaning": "coi thường"
+    },
+    {
+      "word": "flux",
+      "meaning": "biến động"
+    },
+    {
+      "word": "fodder",
+      "meaning": "thức ăn"
+    },
+    {
+      "word": "foible",
+      "meaning": "nhược điểm"
+    },
+    {
+      "word": "folly",
+      "meaning": "ngu xuẩn"
+    },
+    {
+      "word": "foment",
+      "meaning": "kích động"
+    },
+    {
+      "word": "foolhardiness",
+      "meaning": "liều lĩnh"
+    },
+    {
+      "word": "foray",
+      "meaning": "đột kích"
+    },
+    {
+      "word": "forbearance",
+      "meaning": "khoan dung"
+    },
+    {
+      "word": "forerunner",
+      "meaning": "tiền thân"
+    },
+    {
+      "word": "forestall",
+      "meaning": "ngăn trước"
+    },
+    {
+      "word": "forfeiture",
+      "meaning": "tịch thu"
+    },
+    {
+      "word": "forgo",
+      "meaning": "từ bỏ"
+    },
+    {
+      "word": "forlorn",
+      "meaning": "cô quạnh"
+    },
+    {
+      "word": "formidable",
+      "meaning": "đáng gờm"
+    },
+    {
+      "word": "forsake",
+      "meaning": "từ bỏ"
+    },
+    {
+      "word": "forte",
+      "meaning": "sở trường"
+    },
+    {
+      "word": "fortitude",
+      "meaning": "kiên cường"
+    },
+    {
+      "word": "fortuitous",
+      "meaning": "tình cờ"
+    },
+    {
+      "word": "founder",
+      "meaning": "thất bại"
+    },
+    {
+      "word": "fractious",
+      "meaning": "khó bảo"
+    },
+    {
+      "word": "fraught",
+      "meaning": "đầy rẫy"
+    },
+    {
+      "word": "fray",
+      "meaning": "xung đột"
+    },
+    {
+      "word": "frenetic",
+      "meaning": "điên cuồng"
+    },
+    {
+      "word": "frenzy",
+      "meaning": "cuồng loạn"
+    },
+    {
+      "word": "freshman",
+      "meaning": "sinh viên mới"
+    },
+    {
+      "word": "fretful",
+      "meaning": "bồn chồn"
+    },
+    {
+      "word": "frivolous",
+      "meaning": "phù phiếm"
+    },
+    {
+      "word": "frugal",
+      "meaning": "tiết kiệm"
+    },
+    {
+      "word": "fruition",
+      "meaning": "thành quả"
+    },
+    {
+      "word": "fulcrum",
+      "meaning": "điểm tựa"
+    },
+    {
+      "word": "fulsome",
+      "meaning": "quá mức"
+    },
+    {
+      "word": "furor",
+      "meaning": "phẫn nộ"
+    },
+    {
+      "word": "furtive",
+      "meaning": "lén lút"
+    },
+    {
+      "word": "futile",
+      "meaning": "vô ích"
+    },
+    {
+      "word": "futility",
+      "meaning": "vô ích"
+    },
+    {
+      "word": "gaffe",
+      "meaning": "lỗi lầm"
+    },
+    {
+      "word": "galvanise",
+      "meaning": "thúc đẩy"
+    },
+    {
+      "word": "gambit",
+      "meaning": "nước cờ"
+    },
+    {
+      "word": "garish",
+      "meaning": "lòe loẹt"
+    },
+    {
+      "word": "garner",
+      "meaning": "thu thập"
+    },
+    {
+      "word": "garrison",
+      "meaning": "đồn trú"
+    },
+    {
+      "word": "garrulous",
+      "meaning": "lắm lời"
+    },
+    {
+      "word": "gauche",
+      "meaning": "vụng về"
+    },
+    {
+      "word": "gauntlet",
+      "meaning": "thử thách"
+    },
+    {
+      "word": "genealogy",
+      "meaning": "gia phả"
+    },
+    {
+      "word": "genesis",
+      "meaning": "khởi nguồn"
+    },
+    {
+      "word": "genial",
+      "meaning": "thân thiện"
+    },
+    {
+      "word": "genuflect",
+      "meaning": "quỳ lạy"
+    },
+    {
+      "word": "germane",
+      "meaning": "liên quan"
+    },
+    {
+      "word": "gestation",
+      "meaning": "thai kỳ"
+    },
+    {
+      "word": "gingerly",
+      "meaning": "thận trọng"
+    },
+    {
+      "word": "gist",
+      "meaning": "ý chính"
+    },
+    {
+      "word": "glean",
+      "meaning": "thu thập"
+    },
+    {
+      "word": "glib",
+      "meaning": "trơn tru"
+    },
+    {
+      "word": "glossary",
+      "meaning": "bảng chú giải"
+    },
+    {
+      "word": "gluttony",
+      "meaning": "háu ăn"
+    },
+    {
+      "word": "grandeur",
+      "meaning": "tráng lệ"
+    },
+    {
+      "word": "gratification",
+      "meaning": "thỏa mãn"
+    },
+    {
+      "word": "gratuitous",
+      "meaning": "vô cớ"
+    },
+    {
+      "word": "gravitas",
+      "meaning": "uy nghiêm"
+    },
+    {
+      "word": "gregarious",
+      "meaning": "hòa đồng"
+    },
+    {
+      "word": "grievance",
+      "meaning": "bất bình"
+    },
+    {
+      "word": "grovel",
+      "meaning": "quỵ lụy"
+    },
+    {
+      "word": "gruelling",
+      "meaning": "khắc nghiệt"
+    },
+    {
+      "word": "guile",
+      "meaning": "mưu mẹo"
+    },
+    {
+      "word": "gullible",
+      "meaning": "cả tin"
+    },
+    {
+      "word": "hackneyed",
+      "meaning": "sáo mòn"
+    },
+    {
+      "word": "halcyon",
+      "meaning": "thanh bình"
+    },
+    {
+      "word": "hallmark",
+      "meaning": "đặc trưng"
+    },
+    {
+      "word": "halo",
+      "meaning": "hào quang"
+    },
+    {
+      "word": "hamper",
+      "meaning": "cản trở"
+    },
+    {
+      "word": "haphazard",
+      "meaning": "bừa bãi"
+    },
+    {
+      "word": "hapless",
+      "meaning": "bất hạnh"
+    },
+    {
+      "word": "harangue",
+      "meaning": "bài diễn thuyết"
+    },
+    {
+      "word": "harbinger",
+      "meaning": "điềm báo"
+    },
+    {
+      "word": "harness",
+      "meaning": "khai thác"
+    },
+    {
+      "word": "hasten",
+      "meaning": "đẩy nhanh"
+    },
+    {
+      "word": "haughty",
+      "meaning": "kiêu ngạo"
+    },
+    {
+      "word": "havoc",
+      "meaning": "tàn phá"
+    },
+    {
+      "word": "hearsay",
+      "meaning": "tin đồn"
+    },
+    {
+      "word": "hedonistic",
+      "meaning": "hưởng lạc"
+    },
+    {
+      "word": "heed",
+      "meaning": "chú ý"
+    },
+    {
+      "word": "hegemony",
+      "meaning": "bá quyền"
+    },
+    {
+      "word": "heinous",
+      "meaning": "tàn ác"
+    },
+    {
+      "word": "heirloom",
+      "meaning": "gia truyền"
+    },
+    {
+      "word": "henceforth",
+      "meaning": "từ nay"
+    },
+    {
+      "word": "henchman",
+      "meaning": "tay sai"
+    },
+    {
+      "word": "herald",
+      "meaning": "báo hiệu"
+    },
+    {
+      "word": "herbivore",
+      "meaning": "động vật ăn cỏ"
+    },
+    {
+      "word": "heresy",
+      "meaning": "dị giáo"
+    },
+    {
+      "word": "heretical",
+      "meaning": "dị giáo"
+    },
+    {
+      "word": "hiatus",
+      "meaning": "gián đoạn"
+    },
+    {
+      "word": "hindrance",
+      "meaning": "trở ngại"
+    },
+    {
+      "word": "hinterland",
+      "meaning": "vùng nội địa"
+    },
+    {
+      "word": "histrionic",
+      "meaning": "kịch tính"
+    },
+    {
+      "word": "hitherto",
+      "meaning": "cho đến nay"
+    },
+    {
+      "word": "hoard",
+      "meaning": "tích trữ"
+    },
+    {
+      "word": "holocaust",
+      "meaning": "thảm sát"
+    },
+    {
+      "word": "homage",
+      "meaning": "tôn kính"
+    },
+    {
+      "word": "homogeneous",
+      "meaning": "đồng nhất"
+    },
+    {
+      "word": "hone",
+      "meaning": "trau dồi"
+    },
+    {
+      "word": "horoscope",
+      "meaning": "tử vi"
+    },
+    {
+      "word": "hospice",
+      "meaning": "nhà tế bần"
+    },
+    {
+      "word": "hubris",
+      "meaning": "ngạo mạn"
+    },
+    {
+      "word": "hybrid",
+      "meaning": "lai"
+    },
+    {
+      "word": "hyperbole",
+      "meaning": "phóng đại"
+    },
+    {
+      "word": "hypocrisy",
+      "meaning": "đạo đức giả"
+    },
+    {
+      "word": "hypothetical",
+      "meaning": "giả định"
+    },
+    {
+      "word": "hysteria",
+      "meaning": "cuồng loạn"
+    },
+    {
+      "word": "iconoclasm",
+      "meaning": "phá bỏ"
+    },
+    {
+      "word": "iconoclast",
+      "meaning": "người phá bỏ"
+    },
+    {
+      "word": "ideologue",
+      "meaning": "nhà tư tưởng"
+    },
+    {
+      "word": "idiosyncrasy",
+      "meaning": "đặc tính riêng"
+    },
+    {
+      "word": "idiosyncratic",
+      "meaning": "độc đáo"
+    },
+    {
+      "word": "idyllic",
+      "meaning": "thanh bình"
+    },
+    {
+      "word": "ignominious",
+      "meaning": "nhục nhã"
+    },
+    {
+      "word": "ignominy",
+      "meaning": "nhục nhã"
+    },
+    {
+      "word": "ill-advised",
+      "meaning": "dại dột"
+    },
+    {
+      "word": "illicit",
+      "meaning": "bất hợp pháp"
+    },
+    {
+      "word": "imbue",
+      "meaning": "thấm nhuần"
+    },
+    {
+      "word": "immaculate",
+      "meaning": "hoàn hảo"
+    },
+    {
+      "word": "immeasurably",
+      "meaning": "vô cùng"
+    },
+    {
+      "word": "immensity",
+      "meaning": "vô hạn"
+    },
+    {
+      "word": "immortal",
+      "meaning": "bất tử"
+    },
+    {
+      "word": "immutable",
+      "meaning": "bất biến"
+    },
+    {
+      "word": "impair",
+      "meaning": "làm suy giảm"
+    },
+    {
+      "word": "impartial",
+      "meaning": "công bằng"
+    },
+    {
+      "word": "impasse",
+      "meaning": "bế tắc"
+    },
+    {
+      "word": "impassive",
+      "meaning": "vô cảm"
+    },
+    {
+      "word": "impeachment",
+      "meaning": "luận tội"
+    },
+    {
+      "word": "impeccable",
+      "meaning": "hoàn hảo"
+    },
+    {
+      "word": "impede",
+      "meaning": "cản trở"
+    },
+    {
+      "word": "impediment",
+      "meaning": "trở ngại"
+    },
+    {
+      "word": "imperative",
+      "meaning": "cấp thiết"
+    },
+    {
+      "word": "imperceptibly",
+      "meaning": "khó nhận thấy"
+    },
+    {
+      "word": "imperialism",
+      "meaning": "đế quốc"
+    },
+    {
+      "word": "imperil",
+      "meaning": "gây nguy hiểm"
+    },
+    {
+      "word": "imperious",
+      "meaning": "độc đoán"
+    },
+    {
+      "word": "impertinent",
+      "meaning": "xấc xược"
+    },
+    {
+      "word": "imperturbable",
+      "meaning": "điềm tĩnh"
+    },
+    {
+      "word": "impervious",
+      "meaning": "không bị ảnh hưởng"
+    },
+    {
+      "word": "impetuous",
+      "meaning": "bốc đồng"
+    },
+    {
+      "word": "impetus",
+      "meaning": "động lực"
+    },
+    {
+      "word": "implacable",
+      "meaning": "không khoan nhượng"
+    },
+    {
+      "word": "implausible",
+      "meaning": "khó tin"
+    },
+    {
+      "word": "impracticable",
+      "meaning": "không khả thi"
+    },
+    {
+      "word": "impregnable",
+      "meaning": "bất khả xâm phạm"
+    },
+    {
+      "word": "impromptu",
+      "meaning": "ngẫu hứng"
+    },
+    {
+      "word": "impropriety",
+      "meaning": "không đúng mực"
+    },
+    {
+      "word": "impudence",
+      "meaning": "trơ trẽn"
+    },
+    {
+      "word": "impugn",
+      "meaning": "chỉ trích"
+    },
+    {
+      "word": "impunity",
+      "meaning": "miễn phạt"
+    },
+    {
+      "word": "inadequacy",
+      "meaning": "thiếu sót"
+    },
+    {
+      "word": "inadvertent",
+      "meaning": "vô ý"
+    },
+    {
+      "word": "inane",
+      "meaning": "vô nghĩa"
+    },
+    {
+      "word": "inaugurate",
+      "meaning": "khánh thành"
+    },
+    {
+      "word": "incarnation",
+      "meaning": "hóa thân"
+    },
+    {
+      "word": "incendiary",
+      "meaning": "gây cháy"
+    },
+    {
+      "word": "incense",
+      "meaning": "chọc giận"
+    },
+    {
+      "word": "inception",
+      "meaning": "khởi đầu"
+    },
+    {
+      "word": "incessant",
+      "meaning": "liên tục"
+    },
+    {
+      "word": "incisive",
+      "meaning": "sắc bén"
+    },
+    {
+      "word": "incite",
+      "meaning": "kích động"
+    },
+    {
+      "word": "inclement",
+      "meaning": "khắc nghiệt"
+    },
+    {
+      "word": "inclination",
+      "meaning": "khuynh hướng"
+    },
+    {
+      "word": "inclusive",
+      "meaning": "bao gồm"
+    },
+    {
+      "word": "incomprehensible",
+      "meaning": "không thể hiểu"
+    },
+    {
+      "word": "inconceivable",
+      "meaning": "không thể tưởng"
+    },
+    {
+      "word": "incongruity",
+      "meaning": "không phù hợp"
+    },
+    {
+      "word": "incongruous",
+      "meaning": "không phù hợp"
+    },
+    {
+      "word": "incontrovertible",
+      "meaning": "không thể chối cãi"
+    },
+    {
+      "word": "incorrigible",
+      "meaning": "không thể sửa"
+    },
+    {
+      "word": "incredulity",
+      "meaning": "hoài nghi"
+    },
+    {
+      "word": "incredulous",
+      "meaning": "không tin"
+    },
+    {
+      "word": "incumbency",
+      "meaning": "nhiệm kỳ"
+    },
+    {
+      "word": "incumbent",
+      "meaning": "đương nhiệm"
+    },
+    {
+      "word": "incursion",
+      "meaning": "xâm nhập"
+    },
+    {
+      "word": "indefatigable",
+      "meaning": "không mệt mỏi"
+    },
+    {
+      "word": "indelible",
+      "meaning": "không phai"
+    },
+    {
+      "word": "indemnify",
+      "meaning": "bồi thường"
+    },
+    {
+      "word": "indifference",
+      "meaning": "thờ ơ"
+    },
+    {
+      "word": "indifferent",
+      "meaning": "thờ ơ"
+    },
+    {
+      "word": "indignant",
+      "meaning": "phẫn nộ"
+    },
+    {
+      "word": "indignation",
+      "meaning": "phẫn nộ"
+    },
+    {
+      "word": "indiscretion",
+      "meaning": "khinh suất"
+    },
+    {
+      "word": "indoctrination",
+      "meaning": "nhồi sọ"
+    },
+    {
+      "word": "indolent",
+      "meaning": "lười biếng"
+    },
+    {
+      "word": "indomitable",
+      "meaning": "bất khuất"
+    },
+    {
+      "word": "inducement",
+      "meaning": "khuyến khích"
+    },
+    {
+      "word": "induction",
+      "meaning": "suy luận"
+    },
+    {
+      "word": "indulgent",
+      "meaning": "nuông chiều"
+    },
+    {
+      "word": "industrious",
+      "meaning": "chăm chỉ"
+    },
+    {
+      "word": "ineffable",
+      "meaning": "không thể tả"
+    },
+    {
+      "word": "inept",
+      "meaning": "vụng về"
+    },
+    {
+      "word": "ineptitude",
+      "meaning": "bất tài"
+    },
+    {
+      "word": "inequity",
+      "meaning": "bất công"
+    },
+    {
+      "word": "inertia",
+      "meaning": "quán tính"
+    },
+    {
+      "word": "inexhaustible",
+      "meaning": "vô tận"
+    },
+    {
+      "word": "inexorable",
+      "meaning": "không lay chuyển"
+    },
+    {
+      "word": "infallible",
+      "meaning": "không sai"
+    },
+    {
+      "word": "infamy",
+      "meaning": "ô danh"
+    },
+    {
+      "word": "infatuation",
+      "meaning": "mê đắm"
+    },
+    {
+      "word": "inferno",
+      "meaning": "địa ngục"
+    },
+    {
+      "word": "infirmary",
+      "meaning": "bệnh xá"
+    },
+    {
+      "word": "inflammatory",
+      "meaning": "kích động"
+    },
+    {
+      "word": "influx",
+      "meaning": "dòng người"
+    },
+    {
+      "word": "infraction",
+      "meaning": "vi phạm"
+    },
+    {
+      "word": "ingenious",
+      "meaning": "khéo léo"
+    },
+    {
+      "word": "ingenuity",
+      "meaning": "sáng tạo"
+    },
+    {
+      "word": "ingenuous",
+      "meaning": "chân thật"
+    },
+    {
+      "word": "ingrained",
+      "meaning": "ăn sâu"
+    },
+    {
+      "word": "inhospitable",
+      "meaning": "không hiếu khách"
+    },
+    {
+      "word": "inhumanity",
+      "meaning": "vô nhân đạo"
+    },
+    {
+      "word": "inimical",
+      "meaning": "thù địch"
+    },
+    {
+      "word": "iniquitous",
+      "meaning": "bất chính"
+    },
+    {
+      "word": "injunction",
+      "meaning": "lệnh cấm"
+    },
+    {
+      "word": "inkling",
+      "meaning": "linh cảm"
+    },
+    {
+      "word": "innocuous",
+      "meaning": "vô hại"
+    },
+    {
+      "word": "innuendo",
+      "meaning": "ám chỉ"
+    },
+    {
+      "word": "innumerable",
+      "meaning": "vô số"
+    },
+    {
+      "word": "inquisition",
+      "meaning": "thẩm vấn"
+    },
+    {
+      "word": "insatiable",
+      "meaning": "vô độ"
+    },
+    {
+      "word": "inscrutable",
+      "meaning": "khó hiểu"
+    },
+    {
+      "word": "insidious",
+      "meaning": "xảo quyệt"
+    },
+    {
+      "word": "insipid",
+      "meaning": "nhạt nhẽo"
+    },
+    {
+      "word": "insolent",
+      "meaning": "xấc xược"
+    },
+    {
+      "word": "insoluble",
+      "meaning": "không giải được"
+    },
+    {
+      "word": "insouciant",
+      "meaning": "vô tư"
+    },
+    {
+      "word": "instigate",
+      "meaning": "xúi giục"
+    },
+    {
+      "word": "insurgency",
+      "meaning": "nổi dậy"
+    },
+    {
+      "word": "insurmountable",
+      "meaning": "không thể vượt qua"
+    },
+    {
+      "word": "insurrection",
+      "meaning": "khởi nghĩa"
+    },
+    {
+      "word": "intelligentsia",
+      "meaning": "giới trí thức"
+    },
+    {
+      "word": "inter alia",
+      "meaning": "ngoài ra"
+    },
+    {
+      "word": "interlude",
+      "meaning": "đoạn xen"
+    },
+    {
+      "word": "intermittently",
+      "meaning": "gián đoạn"
+    },
+    {
+      "word": "internecine",
+      "meaning": "huynh đệ tương tàn"
+    },
+    {
+      "word": "intimation",
+      "meaning": "gợi ý"
+    },
+    {
+      "word": "intimidation",
+      "meaning": "đe dọa"
+    },
+    {
+      "word": "intransigence",
+      "meaning": "ngoan cố"
+    },
+    {
+      "word": "intransigent",
+      "meaning": "ngoan cố"
+    },
+    {
+      "word": "intrepid",
+      "meaning": "gan dạ"
+    },
+    {
+      "word": "intrinsic",
+      "meaning": "nội tại"
+    },
+    {
+      "word": "introspection",
+      "meaning": "tự xét"
+    },
+    {
+      "word": "intrusive",
+      "meaning": "xâm phạm"
+    },
+    {
+      "word": "intuition",
+      "meaning": "trực giác"
+    },
+    {
+      "word": "inundate",
+      "meaning": "nhấn chìm"
+    },
+    {
+      "word": "invasive",
+      "meaning": "xâm lấn"
+    },
+    {
+      "word": "invective",
+      "meaning": "lời chửi"
+    },
+    {
+      "word": "inveterate",
+      "meaning": "thâm căn"
+    },
+    {
+      "word": "invidious",
+      "meaning": "đáng ghét"
+    },
+    {
+      "word": "invocation",
+      "meaning": "cầu khấn"
+    },
+    {
+      "word": "iota",
+      "meaning": "chút ít"
+    },
+    {
+      "word": "irascible",
+      "meaning": "dễ cáu"
+    },
+    {
+      "word": "ire",
+      "meaning": "phẫn nộ"
+    },
+    {
+      "word": "irk",
+      "meaning": "làm khó chịu"
+    },
+    {
+      "word": "irreproachable",
+      "meaning": "không chê trách"
+    },
+    {
+      "word": "irreverent",
+      "meaning": "bất kính"
+    },
+    {
+      "word": "itinerant",
+      "meaning": "lưu động"
+    },
+    {
+      "word": "itinerary",
+      "meaning": "lịch trình"
+    },
+    {
+      "word": "jaded",
+      "meaning": "chán ngán"
+    },
+    {
+      "word": "jamboree",
+      "meaning": "lễ hội"
+    },
+    {
+      "word": "jargon",
+      "meaning": "thuật ngữ"
+    },
+    {
+      "word": "jaundiced",
+      "meaning": "thiên kiến"
+    },
+    {
+      "word": "jaunt",
+      "meaning": "chuyến đi"
+    },
+    {
+      "word": "jeopardise",
+      "meaning": "gây nguy hiểm"
+    },
+    {
+      "word": "jingoism",
+      "meaning": "sôvanh"
+    },
+    {
+      "word": "jocular",
+      "meaning": "hài hước"
+    },
+    {
+      "word": "jocularity",
+      "meaning": "hài hước"
+    },
+    {
+      "word": "journeyman",
+      "meaning": "thợ lành nghề"
+    },
+    {
+      "word": "joust",
+      "meaning": "đấu thương"
+    },
+    {
+      "word": "jubilation",
+      "meaning": "hân hoan"
+    },
+    {
+      "word": "jubilee",
+      "meaning": "đại lễ"
+    },
+    {
+      "word": "judicious",
+      "meaning": "sáng suốt"
+    },
+    {
+      "word": "juggernaut",
+      "meaning": "thế lực khổng lồ"
+    },
+    {
+      "word": "juncture",
+      "meaning": "thời điểm"
+    },
+    {
+      "word": "jurisprudence",
+      "meaning": "luật học"
+    },
+    {
+      "word": "jurist",
+      "meaning": "luật gia"
+    },
+    {
+      "word": "juxtapose",
+      "meaning": "đặt cạnh"
+    },
+    {
+      "word": "juxtaposition",
+      "meaning": "đối chiếu"
+    },
+    {
+      "word": "kaleidoscope",
+      "meaning": "kính vạn hoa"
+    },
+    {
+      "word": "ken",
+      "meaning": "hiểu biết"
+    },
+    {
+      "word": "kernel",
+      "meaning": "hạt nhân"
+    },
+    {
+      "word": "keynote",
+      "meaning": "chủ đề chính"
+    },
+    {
+      "word": "kindle",
+      "meaning": "khơi dậy"
+    },
+    {
+      "word": "kindred",
+      "meaning": "đồng loại"
+    },
+    {
+      "word": "kinship",
+      "meaning": "thân thuộc"
+    },
+    {
+      "word": "knoll",
+      "meaning": "gò đồi"
+    },
+    {
+      "word": "kudos",
+      "meaning": "lời khen"
+    },
+    {
+      "word": "labyrinth",
+      "meaning": "mê cung"
+    },
+    {
+      "word": "lackadaisical",
+      "meaning": "uể oải"
+    },
+    {
+      "word": "lacklustre",
+      "meaning": "nhạt nhẽo"
+    },
+    {
+      "word": "laconic",
+      "meaning": "cộc lốc"
+    },
+    {
+      "word": "laggard",
+      "meaning": "kẻ tụt hậu"
+    },
+    {
+      "word": "lambaste",
+      "meaning": "chỉ trích"
+    },
+    {
+      "word": "lament",
+      "meaning": "than khóc"
+    },
+    {
+      "word": "lamentable",
+      "meaning": "đáng tiếc"
+    },
+    {
+      "word": "lampoon",
+      "meaning": "châm biếm"
+    },
+    {
+      "word": "languid",
+      "meaning": "uể oải"
+    },
+    {
+      "word": "languish",
+      "meaning": "héo mòn"
+    },
+    {
+      "word": "lapse",
+      "meaning": "sai sót"
+    },
+    {
+      "word": "larceny",
+      "meaning": "trộm cắp"
+    },
+    {
+      "word": "largesse",
+      "meaning": "hào phóng"
+    },
+    {
+      "word": "latent",
+      "meaning": "tiềm ẩn"
+    },
+    {
+      "word": "latitude",
+      "meaning": "vĩ độ"
+    },
+    {
+      "word": "laud",
+      "meaning": "ca ngợi"
+    },
+    {
+      "word": "laudable",
+      "meaning": "đáng khen"
+    },
+    {
+      "word": "laureate",
+      "meaning": "người đoạt giải"
+    },
+    {
+      "word": "lectern",
+      "meaning": "bục đọc"
+    },
+    {
+      "word": "leery of",
+      "meaning": "cảnh giác"
+    },
+    {
+      "word": "leeway",
+      "meaning": "khoảng tự do"
+    },
+    {
+      "word": "lenient",
+      "meaning": "khoan dung"
+    },
+    {
+      "word": "lethargic",
+      "meaning": "uể oải"
+    },
+    {
+      "word": "lethargy",
+      "meaning": "uể oải"
+    },
+    {
+      "word": "level-headed",
+      "meaning": "điềm tĩnh"
+    },
+    {
+      "word": "levity",
+      "meaning": "phù phiếm"
+    },
+    {
+      "word": "levy",
+      "meaning": "đánh thuế"
+    },
+    {
+      "word": "lexicon",
+      "meaning": "từ vựng"
+    },
+    {
+      "word": "liaison",
+      "meaning": "liên lạc"
+    },
+    {
+      "word": "licentious",
+      "meaning": "phóng túng"
+    },
+    {
+      "word": "limbo",
+      "meaning": "lửng lơ"
+    },
+    {
+      "word": "lineage",
+      "meaning": "dòng dõi"
+    },
+    {
+      "word": "linguist",
+      "meaning": "nhà ngôn ngữ"
+    },
+    {
+      "word": "liquidate",
+      "meaning": "thanh lý"
+    },
+    {
+      "word": "liquidation",
+      "meaning": "thanh lý"
+    },
+    {
+      "word": "litany",
+      "meaning": "kinh cầu"
+    },
+    {
+      "word": "litigant",
+      "meaning": "nguyên đơn"
+    },
+    {
+      "word": "litigious",
+      "meaning": "hay kiện"
+    },
+    {
+      "word": "liturgy",
+      "meaning": "nghi lễ"
+    },
+    {
+      "word": "loathe",
+      "meaning": "ghê tởm"
+    },
+    {
+      "word": "longevity",
+      "meaning": "trường thọ"
+    },
+    {
+      "word": "loophole",
+      "meaning": "kẽ hở"
+    },
+    {
+      "word": "loquacious",
+      "meaning": "lắm lời"
+    },
+    {
+      "word": "lore",
+      "meaning": "tri thức"
+    },
+    {
+      "word": "lout",
+      "meaning": "kẻ thô lỗ"
+    },
+    {
+      "word": "lucid",
+      "meaning": "sáng rõ"
+    },
+    {
+      "word": "ludicrous",
+      "meaning": "lố bịch"
+    },
+    {
+      "word": "lugubrious",
+      "meaning": "u sầu"
+    },
+    {
+      "word": "lukewarm",
+      "meaning": "hờ hững"
+    },
+    {
+      "word": "luminary",
+      "meaning": "nhân vật lỗi lạc"
+    },
+    {
+      "word": "luminous",
+      "meaning": "sáng"
+    },
+    {
+      "word": "lustre",
+      "meaning": "ánh sáng"
+    },
+    {
+      "word": "luxuriant",
+      "meaning": "tươi tốt"
+    },
+    {
+      "word": "machination",
+      "meaning": "mưu mô"
+    },
+    {
+      "word": "machismo",
+      "meaning": "nam tính"
+    },
+    {
+      "word": "macrocosm",
+      "meaning": "vũ trụ lớn"
+    },
+    {
+      "word": "madcap",
+      "meaning": "điên rồ"
+    },
+    {
+      "word": "maelstrom",
+      "meaning": "vòng xoáy"
+    },
+    {
+      "word": "maestro",
+      "meaning": "bậc thầy"
+    },
+    {
+      "word": "magnanimous",
+      "meaning": "hào hiệp"
+    },
+    {
+      "word": "magnate",
+      "meaning": "ông trùm"
+    },
+    {
+      "word": "mainstay",
+      "meaning": "trụ cột"
+    },
+    {
+      "word": "malady",
+      "meaning": "bệnh tật"
+    },
+    {
+      "word": "malaise",
+      "meaning": "khó chịu"
+    },
+    {
+      "word": "malcontent",
+      "meaning": "bất mãn"
+    },
+    {
+      "word": "malevolent",
+      "meaning": "độc ác"
+    },
+    {
+      "word": "malfeasance",
+      "meaning": "sai phạm"
+    },
+    {
+      "word": "malice",
+      "meaning": "ác ý"
+    },
+    {
+      "word": "malign",
+      "meaning": "phỉ báng"
+    },
+    {
+      "word": "malleable",
+      "meaning": "dễ uốn"
+    },
+    {
+      "word": "malodorous",
+      "meaning": "hôi thối"
+    },
+    {
+      "word": "manifestation",
+      "meaning": "biểu hiện"
+    },
+    {
+      "word": "mannerism",
+      "meaning": "thói quen"
+    },
+    {
+      "word": "manor",
+      "meaning": "trang viên"
+    },
+    {
+      "word": "mantle",
+      "meaning": "vai trò"
+    },
+    {
+      "word": "marauder",
+      "meaning": "kẻ cướp"
+    },
+    {
+      "word": "marquee",
+      "meaning": "lều lớn"
+    },
+    {
+      "word": "martyrdom",
+      "meaning": "tử đạo"
+    },
+    {
+      "word": "masochism",
+      "meaning": "khổ dâm"
+    },
+    {
+      "word": "masquerade",
+      "meaning": "giả trang"
+    },
+    {
+      "word": "materialism",
+      "meaning": "duy vật"
+    },
+    {
+      "word": "matriarch",
+      "meaning": "nữ gia trưởng"
+    },
+    {
+      "word": "maudlin",
+      "meaning": "ủy mị"
+    },
+    {
+      "word": "maverick",
+      "meaning": "kẻ lập dị"
+    },
+    {
+      "word": "maxim",
+      "meaning": "châm ngôn"
+    },
+    {
+      "word": "mayhem",
+      "meaning": "hỗn loạn"
+    },
+    {
+      "word": "meagre",
+      "meaning": "ít ỏi"
+    },
+    {
+      "word": "mediator",
+      "meaning": "hòa giải viên"
+    },
+    {
+      "word": "mediocrity",
+      "meaning": "tầm thường"
+    },
+    {
+      "word": "megalomania",
+      "meaning": "vĩ cuồng"
+    },
+    {
+      "word": "melancholy",
+      "meaning": "u sầu"
+    },
+    {
+      "word": "melee",
+      "meaning": "hỗn chiến"
+    },
+    {
+      "word": "memento",
+      "meaning": "vật kỷ niệm"
+    },
+    {
+      "word": "memorabilia",
+      "meaning": "đồ lưu niệm"
+    },
+    {
+      "word": "menacing",
+      "meaning": "đe dọa"
+    },
+    {
+      "word": "mendacious",
+      "meaning": "dối trá"
+    },
+    {
+      "word": "mercenary",
+      "meaning": "lính đánh thuê"
+    },
+    {
+      "word": "meritocracy",
+      "meaning": "trọng dụng tài năng"
+    },
+    {
+      "word": "messiah",
+      "meaning": "đấng cứu thế"
+    },
+    {
+      "word": "metamorphosis",
+      "meaning": "biến đổi"
+    },
+    {
+      "word": "methodology",
+      "meaning": "phương pháp luận"
+    },
+    {
+      "word": "meticulous",
+      "meaning": "tỉ mỉ"
+    },
+    {
+      "word": "mettle",
+      "meaning": "bản lĩnh"
+    },
+    {
+      "word": "microcosm",
+      "meaning": "tiểu vũ trụ"
+    },
+    {
+      "word": "minion",
+      "meaning": "tay sai"
+    },
+    {
+      "word": "minutiae",
+      "meaning": "tiểu tiết"
+    },
+    {
+      "word": "mirage",
+      "meaning": "ảo ảnh"
+    },
+    {
+      "word": "mire",
+      "meaning": "vũng lầy"
+    },
+    {
+      "word": "misanthrope",
+      "meaning": "người ghét người"
+    },
+    {
+      "word": "mischievous",
+      "meaning": "nghịch ngợm"
+    },
+    {
+      "word": "misgiving",
+      "meaning": "lo ngại"
+    },
+    {
+      "word": "mishap",
+      "meaning": "rủi ro"
+    },
+    {
+      "word": "misnomer",
+      "meaning": "gọi sai tên"
+    },
+    {
+      "word": "misogyny",
+      "meaning": "ghét phụ nữ"
+    },
+    {
+      "word": "mitigate",
+      "meaning": "giảm nhẹ"
+    },
+    {
+      "word": "modicum",
+      "meaning": "chút ít"
+    },
+    {
+      "word": "mogul",
+      "meaning": "ông trùm"
+    },
+    {
+      "word": "mollify",
+      "meaning": "xoa dịu"
+    },
+    {
+      "word": "moniker",
+      "meaning": "biệt danh"
+    },
+    {
+      "word": "monolith",
+      "meaning": "khối đá"
+    },
+    {
+      "word": "monologue",
+      "meaning": "độc thoại"
+    },
+    {
+      "word": "montage",
+      "meaning": "mộng ghép"
+    },
+    {
+      "word": "moratorium",
+      "meaning": "tạm hoãn"
+    },
+    {
+      "word": "mordant",
+      "meaning": "cay độc"
+    },
+    {
+      "word": "morgue",
+      "meaning": "nhà xác"
+    },
+    {
+      "word": "moribund",
+      "meaning": "sắp chết"
+    },
+    {
+      "word": "morose",
+      "meaning": "ủ rũ"
+    },
+    {
+      "word": "mortal",
+      "meaning": "phàm nhân"
+    },
+    {
+      "word": "mortifying",
+      "meaning": "nhục nhã"
+    },
+    {
+      "word": "mosaic",
+      "meaning": "khảm"
+    },
+    {
+      "word": "muffle",
+      "meaning": "làm giảm"
+    },
+    {
+      "word": "multitude",
+      "meaning": "vô số"
+    },
+    {
+      "word": "mundane",
+      "meaning": "trần tục"
+    },
+    {
+      "word": "munificent",
+      "meaning": "hào phóng"
+    },
+    {
+      "word": "munition",
+      "meaning": "đạn dược"
+    },
+    {
+      "word": "mural",
+      "meaning": "tranh tường"
+    },
+    {
+      "word": "mutable",
+      "meaning": "hay thay đổi"
+    },
+    {
+      "word": "myopic",
+      "meaning": "thiển cận"
+    },
+    {
+      "word": "myriad",
+      "meaning": "vô số"
+    },
+    {
+      "word": "mystique",
+      "meaning": "sức hút"
+    },
+    {
+      "word": "nadir",
+      "meaning": "đáy"
+    },
+    {
+      "word": "nag",
+      "meaning": "cằn nhằn"
+    },
+    {
+      "word": "naivety",
+      "meaning": "ngây thơ"
+    },
+    {
+      "word": "namesake",
+      "meaning": "đồng danh"
+    },
+    {
+      "word": "narcissism",
+      "meaning": "tự yêu"
+    },
+    {
+      "word": "nascent",
+      "meaning": "mới hình thành"
+    },
+    {
+      "word": "nebulous",
+      "meaning": "mơ hồ"
+    },
+    {
+      "word": "nefarious",
+      "meaning": "xấu xa"
+    },
+    {
+      "word": "negligence",
+      "meaning": "cẩu thả"
+    },
+    {
+      "word": "nemesis",
+      "meaning": "kẻ báo ứng"
+    },
+    {
+      "word": "neophyte",
+      "meaning": "người mới"
+    },
+    {
+      "word": "nepotism",
+      "meaning": "gia đình trị"
+    },
+    {
+      "word": "nexus",
+      "meaning": "mối liên hệ"
+    },
+    {
+      "word": "nihilism",
+      "meaning": "hư vô"
+    },
+    {
+      "word": "nirvana",
+      "meaning": "niết-bàn"
+    },
+    {
+      "word": "nomenclature",
+      "meaning": "danh pháp"
+    },
+    {
+      "word": "nonchalance",
+      "meaning": "thản nhiên"
+    },
+    {
+      "word": "nonchalant",
+      "meaning": "thản nhiên"
+    },
+    {
+      "word": "nonentity",
+      "meaning": "vô danh"
+    },
+    {
+      "word": "notoriety",
+      "meaning": "tai tiếng"
+    },
+    {
+      "word": "novice",
+      "meaning": "người mới"
+    },
+    {
+      "word": "noxious",
+      "meaning": "độc hại"
+    },
+    {
+      "word": "nuance",
+      "meaning": "sắc thái"
+    },
+    {
+      "word": "oaf",
+      "meaning": "kẻ ngốc"
+    },
+    {
+      "word": "oasis",
+      "meaning": "ốc đảo"
+    },
+    {
+      "word": "obdurate",
+      "meaning": "cứng đầu"
+    },
+    {
+      "word": "obfuscate",
+      "meaning": "làm mơ hồ"
+    },
+    {
+      "word": "obfuscation",
+      "meaning": "làm mơ hồ"
+    },
+    {
+      "word": "obituary",
+      "meaning": "cáo phó"
+    },
+    {
+      "word": "obliterate",
+      "meaning": "xóa sổ"
+    },
+    {
+      "word": "oblivion",
+      "meaning": "lãng quên"
+    },
+    {
+      "word": "obscenity",
+      "meaning": "tục tĩu"
+    },
+    {
+      "word": "obscure",
+      "meaning": "mơ hồ"
+    },
+    {
+      "word": "obscurity",
+      "meaning": "tối nghĩa"
+    },
+    {
+      "word": "obsequious",
+      "meaning": "nịnh bợ"
+    },
+    {
+      "word": "observance",
+      "meaning": "tuân thủ"
+    },
+    {
+      "word": "obsolescence",
+      "meaning": "lỗi thời"
+    },
+    {
+      "word": "obsolete",
+      "meaning": "lỗi thời"
+    },
+    {
+      "word": "obstinate",
+      "meaning": "cứng đầu"
+    },
+    {
+      "word": "obstreperous",
+      "meaning": "ồn ào"
+    },
+    {
+      "word": "obtuse",
+      "meaning": "đần độn"
+    },
+    {
+      "word": "obviate",
+      "meaning": "loại bỏ"
+    },
+    {
+      "word": "ode",
+      "meaning": "thơ ca"
+    },
+    {
+      "word": "odyssey",
+      "meaning": "phiêu lưu"
+    },
+    {
+      "word": "officious",
+      "meaning": "xen vào"
+    },
+    {
+      "word": "oligarchy",
+      "meaning": "thiểu trị"
+    },
+    {
+      "word": "omen",
+      "meaning": "điềm báo"
+    },
+    {
+      "word": "ominous",
+      "meaning": "đáng ngại"
+    },
+    {
+      "word": "omission",
+      "meaning": "bỏ sót"
+    },
+    {
+      "word": "omnipotence",
+      "meaning": "toàn năng"
+    },
+    {
+      "word": "omniscience",
+      "meaning": "toàn tri"
+    },
+    {
+      "word": "onerous",
+      "meaning": "nặng nề"
+    },
+    {
+      "word": "onset",
+      "meaning": "khởi phát"
+    },
+    {
+      "word": "onslaught",
+      "meaning": "tấn công"
+    },
+    {
+      "word": "onus",
+      "meaning": "gánh nặng"
+    },
+    {
+      "word": "opacity",
+      "meaning": "độ đục"
+    },
+    {
+      "word": "opaque",
+      "meaning": "mờ đục"
+    },
+    {
+      "word": "opportunistic",
+      "meaning": "cơ hội"
+    },
+    {
+      "word": "opulence",
+      "meaning": "xa hoa"
+    },
+    {
+      "word": "opulent",
+      "meaning": "xa hoa"
+    },
+    {
+      "word": "oracle",
+      "meaning": "nhà tiên tri"
+    },
+    {
+      "word": "orator",
+      "meaning": "nhà hùng biện"
+    },
+    {
+      "word": "oratory",
+      "meaning": "hùng biện"
+    },
+    {
+      "word": "ordeal",
+      "meaning": "thử thách"
+    },
+    {
+      "word": "ordinance",
+      "meaning": "pháp lệnh"
+    },
+    {
+      "word": "ornate",
+      "meaning": "cầu kỳ"
+    },
+    {
+      "word": "orthodoxy",
+      "meaning": "chính thống"
+    },
+    {
+      "word": "oscillation",
+      "meaning": "dao động"
+    },
+    {
+      "word": "ostensible",
+      "meaning": "bề ngoài"
+    },
+    {
+      "word": "ostentation",
+      "meaning": "phô trương"
+    },
+    {
+      "word": "ostentatious",
+      "meaning": "phô trương"
+    },
+    {
+      "word": "ostracise",
+      "meaning": "tẩy chay"
+    },
+    {
+      "word": "ostracism",
+      "meaning": "tẩy chay"
+    },
+    {
+      "word": "oust",
+      "meaning": "trục xuất"
+    },
+    {
+      "word": "outweigh",
+      "meaning": "vượt trội"
+    },
+    {
+      "word": "ovation",
+      "meaning": "hoan hô"
+    },
+    {
+      "word": "oversight",
+      "meaning": "giám sát"
+    },
+    {
+      "word": "overweening",
+      "meaning": "kiêu ngạo"
+    },
+    {
+      "word": "oxymoron",
+      "meaning": "nghịch hợp"
+    },
+    {
+      "word": "pacifism",
+      "meaning": "hòa bình"
+    },
+    {
+      "word": "pacify",
+      "meaning": "xoa dịu"
+    },
+    {
+      "word": "pageant",
+      "meaning": "lễ hội"
+    },
+    {
+      "word": "pageantry",
+      "meaning": "lễ nghi"
+    },
+    {
+      "word": "painstaking",
+      "meaning": "tỉ mỉ"
+    },
+    {
+      "word": "palatable",
+      "meaning": "dễ chịu"
+    },
+    {
+      "word": "palatial",
+      "meaning": "tráng lệ"
+    },
+    {
+      "word": "pallbearer",
+      "meaning": "người khiêng"
+    },
+    {
+      "word": "palliate",
+      "meaning": "giảm nhẹ"
+    },
+    {
+      "word": "pallid",
+      "meaning": "nhợt nhạt"
+    },
+    {
+      "word": "pallor",
+      "meaning": "nhợt nhạt"
+    },
+    {
+      "word": "palpable",
+      "meaning": "rõ ràng"
+    },
+    {
+      "word": "palpitation",
+      "meaning": "hồi hộp"
+    },
+    {
+      "word": "paltry",
+      "meaning": "ít ỏi"
+    },
+    {
+      "word": "pamper",
+      "meaning": "nuông chiều"
+    },
+    {
+      "word": "panacea",
+      "meaning": "thuốc chữa bách bệnh"
+    },
+    {
+      "word": "panache",
+      "meaning": "phong cách"
+    },
+    {
+      "word": "pandemonium",
+      "meaning": "hỗn loạn"
+    },
+    {
+      "word": "pang",
+      "meaning": "cơn đau"
+    },
+    {
+      "word": "panorama",
+      "meaning": "toàn cảnh"
+    },
+    {
+      "word": "parable",
+      "meaning": "ngụ ngôn"
+    },
+    {
+      "word": "paradigm",
+      "meaning": "mô hình"
+    },
+    {
+      "word": "paradox",
+      "meaning": "nghịch lý"
+    },
+    {
+      "word": "paragon",
+      "meaning": "mẫu mực"
+    },
+    {
+      "word": "paramount",
+      "meaning": "tối quan trọng"
+    },
+    {
+      "word": "paraphernalia",
+      "meaning": "đồ dùng"
+    },
+    {
+      "word": "pariah",
+      "meaning": "người bị ruồng bỏ"
+    },
+    {
+      "word": "parity",
+      "meaning": "ngang bằng"
+    },
+    {
+      "word": "parlance",
+      "meaning": "cách nói"
+    },
+    {
+      "word": "parochial",
+      "meaning": "thiển cận"
+    },
+    {
+      "word": "parody",
+      "meaning": "nhại"
+    },
+    {
+      "word": "parsimonious",
+      "meaning": "keo kiệt"
+    },
+    {
+      "word": "parsimony",
+      "meaning": "keo kiệt"
+    },
+    {
+      "word": "partisan",
+      "meaning": "đảng phái"
+    },
+    {
+      "word": "partisanship",
+      "meaning": "đảng phái"
+    },
+    {
+      "word": "patently",
+      "meaning": "rõ ràng"
+    },
+    {
+      "word": "pathos",
+      "meaning": "bi thương"
+    },
+    {
+      "word": "patriarch",
+      "meaning": "tộc trưởng"
+    },
+    {
+      "word": "patronage",
+      "meaning": "bảo trợ"
+    },
+    {
+      "word": "paucity",
+      "meaning": "khan hiếm"
+    },
+    {
+      "word": "pavilion",
+      "meaning": "gian nhà"
+    },
+    {
+      "word": "pedagogy",
+      "meaning": "sư phạm"
+    },
+    {
+      "word": "pedant",
+      "meaning": "mọt sách"
+    },
+    {
+      "word": "pedantic",
+      "meaning": "học thuật"
+    },
+    {
+      "word": "pedantry",
+      "meaning": "mọt sách"
+    },
+    {
+      "word": "pedestal",
+      "meaning": "bệ đỡ"
+    },
+    {
+      "word": "pedigree",
+      "meaning": "phả hệ"
+    },
+    {
+      "word": "peevish",
+      "meaning": "cáu kỉnh"
+    },
+    {
+      "word": "pejorative",
+      "meaning": "miệt thị"
+    },
+    {
+      "word": "penchant",
+      "meaning": "thiên hướng"
+    },
+    {
+      "word": "pending",
+      "meaning": "đang chờ"
+    },
+    {
+      "word": "penitence",
+      "meaning": "sám hối"
+    },
+    {
+      "word": "penitent",
+      "meaning": "sám hối"
+    },
+    {
+      "word": "pennant",
+      "meaning": "cờ hiệu"
+    },
+    {
+      "word": "pensive",
+      "meaning": "trầm tư"
+    },
+    {
+      "word": "penury",
+      "meaning": "nghèo khổ"
+    },
+    {
+      "word": "peremptory",
+      "meaning": "độc đoán"
+    },
+    {
+      "word": "perennial",
+      "meaning": "lâu năm"
+    },
+    {
+      "word": "perfidious",
+      "meaning": "phản bội"
+    },
+    {
+      "word": "perfunctory",
+      "meaning": "qua loa"
+    },
+    {
+      "word": "peril",
+      "meaning": "nguy hiểm"
+    },
+    {
+      "word": "perilous",
+      "meaning": "nguy hiểm"
+    },
+    {
+      "word": "perimeter",
+      "meaning": "chu vi"
+    },
+    {
+      "word": "periphery",
+      "meaning": "ngoại vi"
+    },
+    {
+      "word": "perjurer",
+      "meaning": "người khai gian"
+    },
+    {
+      "word": "perjury",
+      "meaning": "khai man"
+    },
+    {
+      "word": "permanence",
+      "meaning": "vĩnh viễn"
+    },
+    {
+      "word": "permeate",
+      "meaning": "thấm vào"
+    },
+    {
+      "word": "permutation",
+      "meaning": "hoán vị"
+    },
+    {
+      "word": "pernicious",
+      "meaning": "độc hại"
+    },
+    {
+      "word": "perpetrator",
+      "meaning": "thủ phạm"
+    },
+    {
+      "word": "perpetual",
+      "meaning": "vĩnh viễn"
+    },
+    {
+      "word": "perpetuate",
+      "meaning": "duy trì"
+    },
+    {
+      "word": "perplexity",
+      "meaning": "bối rối"
+    },
+    {
+      "word": "persecute",
+      "meaning": "bức hại"
+    },
+    {
+      "word": "perseverance",
+      "meaning": "kiên trì"
+    },
+    {
+      "word": "perspicacious",
+      "meaning": "sáng suốt"
+    },
+    {
+      "word": "perturbed",
+      "meaning": "bối rối"
+    },
+    {
+      "word": "peruse",
+      "meaning": "đọc kỹ"
+    },
+    {
+      "word": "pervade",
+      "meaning": "lan khắp"
+    },
+    {
+      "word": "pervasive",
+      "meaning": "lan rộng"
+    },
+    {
+      "word": "pervert",
+      "meaning": "làm sai lệch"
+    },
+    {
+      "word": "pessimism",
+      "meaning": "bi quan"
+    },
+    {
+      "word": "petulant",
+      "meaning": "cáu kỉnh"
+    },
+    {
+      "word": "philanthropic",
+      "meaning": "từ thiện"
+    },
+    {
+      "word": "philanthropist",
+      "meaning": "nhà từ thiện"
+    },
+    {
+      "word": "philistine",
+      "meaning": "người phàm tục"
+    },
+    {
+      "word": "phlegmatic",
+      "meaning": "điềm đạm"
+    },
+    {
+      "word": "phoenix",
+      "meaning": "phượng hoàng"
+    },
+    {
+      "word": "piety",
+      "meaning": "sùng đạo"
+    },
+    {
+      "word": "pillage",
+      "meaning": "cướp bóc"
+    },
+    {
+      "word": "pinnacle",
+      "meaning": "đỉnh cao"
+    },
+    {
+      "word": "pioneering",
+      "meaning": "tiên phong"
+    },
+    {
+      "word": "pious",
+      "meaning": "ngoan đạo"
+    },
+    {
+      "word": "pique",
+      "meaning": "phật ý"
+    },
+    {
+      "word": "piracy",
+      "meaning": "vi phạm bản quyền"
+    },
+    {
+      "word": "pitfall",
+      "meaning": "cạm bẫy"
+    },
+    {
+      "word": "pithy",
+      "meaning": "súc tích"
+    },
+    {
+      "word": "pittance",
+      "meaning": "ít ỏi"
+    },
+    {
+      "word": "placate",
+      "meaning": "xoa dịu"
+    },
+    {
+      "word": "placebo",
+      "meaning": "giả dược"
+    },
+    {
+      "word": "placid",
+      "meaning": "yên bình"
+    },
+    {
+      "word": "plagiarism",
+      "meaning": "đạo văn"
+    },
+    {
+      "word": "plaintiff",
+      "meaning": "nguyên đơn"
+    },
+    {
+      "word": "plasticity",
+      "meaning": "tính dẻo"
+    },
+    {
+      "word": "platitude",
+      "meaning": "lời sáo rỗng"
+    },
+    {
+      "word": "playwright",
+      "meaning": "nhà viết kịch"
+    },
+    {
+      "word": "plebiscite",
+      "meaning": "trưng cầu dân ý"
+    },
+    {
+      "word": "plethora",
+      "meaning": "quá nhiều"
+    },
+    {
+      "word": "plight",
+      "meaning": "hoàn cảnh"
+    },
+    {
+      "word": "ploy",
+      "meaning": "mưu mẹo"
+    },
+    {
+      "word": "plunder",
+      "meaning": "cướp bóc"
+    },
+    {
+      "word": "podium",
+      "meaning": "bục"
+    },
+    {
+      "word": "poignancy",
+      "meaning": "xúc động"
+    },
+    {
+      "word": "poignant",
+      "meaning": "xúc động"
+    },
+    {
+      "word": "poise",
+      "meaning": "điềm tĩnh"
+    },
+    {
+      "word": "polemic",
+      "meaning": "tranh luận"
+    },
+    {
+      "word": "polyglot",
+      "meaning": "đa ngôn ngữ"
+    },
+    {
+      "word": "pomp",
+      "meaning": "phô trương"
+    },
+    {
+      "word": "pompous",
+      "meaning": "khoa trương"
+    },
+    {
+      "word": "ponder",
+      "meaning": "suy ngẫm"
+    },
+    {
+      "word": "ponderous",
+      "meaning": "nặng nề"
+    },
+    {
+      "word": "pontificate",
+      "meaning": "lên mặt"
+    },
+    {
+      "word": "populace",
+      "meaning": "dân chúng"
+    },
+    {
+      "word": "populism",
+      "meaning": "dân túy"
+    },
+    {
+      "word": "portend",
+      "meaning": "báo trước"
+    },
+    {
+      "word": "portent",
+      "meaning": "điềm báo"
+    },
+    {
+      "word": "portentous",
+      "meaning": "điềm báo"
+    },
+    {
+      "word": "posterity",
+      "meaning": "hậu thế"
+    },
+    {
+      "word": "posthumous",
+      "meaning": "hậu thế"
+    },
+    {
+      "word": "postmortem",
+      "meaning": "khám nghiệm"
+    },
+    {
+      "word": "postulate",
+      "meaning": "đặt ra"
+    },
+    {
+      "word": "pragmatism",
+      "meaning": "thực dụng"
+    },
+    {
+      "word": "pragmatist",
+      "meaning": "người thực dụng"
+    },
+    {
+      "word": "preamble",
+      "meaning": "lời mở đầu"
+    },
+    {
+      "word": "precarious",
+      "meaning": "bấp bênh"
+    },
+    {
+      "word": "precedence",
+      "meaning": "ưu tiên"
+    },
+    {
+      "word": "precipice",
+      "meaning": "vách đá"
+    },
+    {
+      "word": "precipitate",
+      "meaning": "gây ra"
+    },
+    {
+      "word": "precipitous",
+      "meaning": "dốc đứng"
+    },
+    {
+      "word": "preclude",
+      "meaning": "ngăn chặn"
+    },
+    {
+      "word": "precocious",
+      "meaning": "thần đồng"
+    },
+    {
+      "word": "precursor",
+      "meaning": "tiền thân"
+    },
+    {
+      "word": "predilection",
+      "meaning": "thiên hướng"
+    },
+    {
+      "word": "predominance",
+      "meaning": "ưu thế"
+    },
+    {
+      "word": "preeminent",
+      "meaning": "nổi bật"
+    },
+    {
+      "word": "preempt",
+      "meaning": "ngăn trước"
+    },
+    {
+      "word": "prelude",
+      "meaning": "khúc dạo đầu"
+    },
+    {
+      "word": "premonition",
+      "meaning": "điềm báo"
+    },
+    {
+      "word": "preponderance",
+      "meaning": "ưu thế"
+    },
+    {
+      "word": "preposterous",
+      "meaning": "lố bịch"
+    },
+    {
+      "word": "prerequisite",
+      "meaning": "điều kiện tiên quyết"
+    },
+    {
+      "word": "prerogative",
+      "meaning": "đặc quyền"
+    },
+    {
+      "word": "presumption",
+      "meaning": "giả định"
+    },
+    {
+      "word": "presumptuous",
+      "meaning": "tự phụ"
+    },
+    {
+      "word": "pretence",
+      "meaning": "giả vờ"
+    },
+    {
+      "word": "pretender",
+      "meaning": "kẻ giả danh"
+    },
+    {
+      "word": "pretentious",
+      "meaning": "khoa trương"
+    },
+    {
+      "word": "pretext",
+      "meaning": "cớ"
+    },
+    {
+      "word": "prevalent",
+      "meaning": "phổ biến"
+    },
+    {
+      "word": "prevaricate",
+      "meaning": "lảng tránh"
+    },
+    {
+      "word": "primacy",
+      "meaning": "ưu thế"
+    },
+    {
+      "word": "primeval",
+      "meaning": "nguyên thủy"
+    },
+    {
+      "word": "pristine",
+      "meaning": "nguyên sơ"
+    },
+    {
+      "word": "privation",
+      "meaning": "thiếu thốn"
+    },
+    {
+      "word": "probity",
+      "meaning": "chính trực"
+    },
+    {
+      "word": "proclamation",
+      "meaning": "tuyên bố"
+    },
+    {
+      "word": "proclivity",
+      "meaning": "khuynh hướng"
+    },
+    {
+      "word": "procrastinate",
+      "meaning": "trì hoãn"
+    },
+    {
+      "word": "procure",
+      "meaning": "thu mua"
+    },
+    {
+      "word": "procurement",
+      "meaning": "mua sắm"
+    },
+    {
+      "word": "prodigal",
+      "meaning": "hoang phí"
+    },
+    {
+      "word": "prodigious",
+      "meaning": "khổng lồ"
+    },
+    {
+      "word": "prodigy",
+      "meaning": "thần đồng"
+    },
+    {
+      "word": "profane",
+      "meaning": "trần tục"
+    },
+    {
+      "word": "profanity",
+      "meaning": "tục tĩu"
+    },
+    {
+      "word": "profess",
+      "meaning": "tuyên bố"
+    },
+    {
+      "word": "proffer",
+      "meaning": "đề nghị"
+    },
+    {
+      "word": "proficiency",
+      "meaning": "thành thạo"
+    },
+    {
+      "word": "profligate",
+      "meaning": "phóng túng"
+    },
+    {
+      "word": "profusion",
+      "meaning": "dồi dào"
+    },
+    {
+      "word": "progeny",
+      "meaning": "hậu duệ"
+    },
+    {
+      "word": "prognosis",
+      "meaning": "tiên lượng"
+    },
+    {
+      "word": "prohibitive",
+      "meaning": "quá đắt"
+    },
+    {
+      "word": "proliferation",
+      "meaning": "gia tăng"
+    },
+    {
+      "word": "prolific",
+      "meaning": "sung mãn"
+    },
+    {
+      "word": "prologue",
+      "meaning": "lời mở đầu"
+    },
+    {
+      "word": "promiscuity",
+      "meaning": "bừa bãi"
+    },
+    {
+      "word": "propagandist",
+      "meaning": "nhà tuyên truyền"
+    },
+    {
+      "word": "propensity",
+      "meaning": "khuynh hướng"
+    },
+    {
+      "word": "prophecy",
+      "meaning": "lời tiên tri"
+    },
+    {
+      "word": "propitious",
+      "meaning": "thuận lợi"
+    },
+    {
+      "word": "proponent",
+      "meaning": "người ủng hộ"
+    },
+    {
+      "word": "proprietor",
+      "meaning": "chủ sở hữu"
+    },
+    {
+      "word": "propriety",
+      "meaning": "đúng mực"
+    },
+    {
+      "word": "prosaic",
+      "meaning": "tẻ nhạt"
+    },
+    {
+      "word": "proscribe",
+      "meaning": "cấm"
+    },
+    {
+      "word": "protagonist",
+      "meaning": "nhân vật chính"
+    },
+    {
+      "word": "prototype",
+      "meaning": "nguyên mẫu"
+    },
+    {
+      "word": "protract",
+      "meaning": "kéo dài"
+    },
+    {
+      "word": "protégé",
+      "meaning": "người được bảo trợ"
+    },
+    {
+      "word": "provenance",
+      "meaning": "nguồn gốc"
+    },
+    {
+      "word": "proverb",
+      "meaning": "tục ngữ"
+    },
+    {
+      "word": "providence",
+      "meaning": "quan phòng"
+    },
+    {
+      "word": "proviso",
+      "meaning": "điều kiện"
+    },
+    {
+      "word": "prowess",
+      "meaning": "tài năng"
+    },
+    {
+      "word": "proximity",
+      "meaning": "gần gũi"
+    },
+    {
+      "word": "proxy",
+      "meaning": "đại diện"
+    },
+    {
+      "word": "prudence",
+      "meaning": "thận trọng"
+    },
+    {
+      "word": "prudent",
+      "meaning": "thận trọng"
+    },
+    {
+      "word": "pseudonym",
+      "meaning": "bút danh"
+    },
+    {
+      "word": "psyche",
+      "meaning": "tâm hồn"
+    },
+    {
+      "word": "puerile",
+      "meaning": "ấu trĩ"
+    },
+    {
+      "word": "pugnacious",
+      "meaning": "hiếu chiến"
+    },
+    {
+      "word": "pulpit",
+      "meaning": "tòa giảng"
+    },
+    {
+      "word": "punctilious",
+      "meaning": "cẩn thận"
+    },
+    {
+      "word": "pundit",
+      "meaning": "chuyên gia"
+    },
+    {
+      "word": "pungency",
+      "meaning": "cay nồng"
+    },
+    {
+      "word": "pungent",
+      "meaning": "cay nồng"
+    },
+    {
+      "word": "purge",
+      "meaning": "thanh lọc"
+    },
+    {
+      "word": "purist",
+      "meaning": "người thuần túy"
+    },
+    {
+      "word": "purport",
+      "meaning": "có ý định"
+    },
+    {
+      "word": "purveyor",
+      "meaning": "nhà cung cấp"
+    },
+    {
+      "word": "pusillanimous",
+      "meaning": "hèn nhát"
+    },
+    {
+      "word": "quack",
+      "meaning": "lang băm"
+    },
+    {
+      "word": "quadrant",
+      "meaning": "góc phần tư"
+    },
+    {
+      "word": "quagmire",
+      "meaning": "bế tắc"
+    },
+    {
+      "word": "quaint",
+      "meaning": "cổ kính"
+    },
+    {
+      "word": "qualm",
+      "meaning": "lo ngại"
+    },
+    {
+      "word": "quandary",
+      "meaning": "tiến thoái lưỡng nan"
+    },
+    {
+      "word": "quarantine",
+      "meaning": "cách ly"
+    },
+    {
+      "word": "quarry",
+      "meaning": "mỏ đá"
+    },
+    {
+      "word": "quartet",
+      "meaning": "bộ tứ"
+    },
+    {
+      "word": "quash",
+      "meaning": "bác bỏ"
+    },
+    {
+      "word": "quaver",
+      "meaning": "run rẩy"
+    },
+    {
+      "word": "quell",
+      "meaning": "dập tắt"
+    },
+    {
+      "word": "querulous",
+      "meaning": "hay phàn nàn"
+    },
+    {
+      "word": "quibble",
+      "meaning": "vặt vãnh"
+    },
+    {
+      "word": "quicksand",
+      "meaning": "cát lún"
+    },
+    {
+      "word": "quiescent",
+      "meaning": "im lặng"
+    },
+    {
+      "word": "quintessence",
+      "meaning": "tinh túy"
+    },
+    {
+      "word": "quintessential",
+      "meaning": "tiêu biểu"
+    },
+    {
+      "word": "quintet",
+      "meaning": "bộ ngũ"
+    },
+    {
+      "word": "quip",
+      "meaning": "lời đùa"
+    },
+    {
+      "word": "quiver",
+      "meaning": "run rẩy"
+    },
+    {
+      "word": "quixotic",
+      "meaning": "viển vông"
+    },
+    {
+      "word": "quorum",
+      "meaning": "số đại biểu"
+    }
+  ]
+}

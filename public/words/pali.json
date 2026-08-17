@@ -1,0 +1,33 @@
+{
+  "name": "Pali (sample)",
+  "words": [
+    { "word": "dhamma", "meaning": "the Buddha's teachings; truth" },
+    { "word": "kamma", "meaning": "intentional action and its results" },
+    { "word": "mettā", "meaning": "loving-kindness" },
+    { "word": "karuṇā", "meaning": "compassion" },
+    { "word": "muditā", "meaning": "sympathetic joy" },
+    { "word": "upekkhā", "meaning": "equanimity; balance of mind" },
+    { "word": "sati", "meaning": "mindfulness; awareness" },
+    { "word": "samādhi", "meaning": "concentration; collectedness" },
+    { "word": "paññā", "meaning": "wisdom; insight" },
+    { "word": "sīla", "meaning": "virtue; moral conduct" },
+    { "word": "dukkha", "meaning": "suffering; unsatisfactoriness" },
+    { "word": "anicca", "meaning": "impermanence" },
+    { "word": "anattā", "meaning": "non-self; no permanent self" },
+    { "word": "nibbāna", "meaning": "the end of suffering; liberation" },
+    { "word": "saṃsāra", "meaning": "the cycle of rebirth" },
+    { "word": "saṅkhāra", "meaning": "mental formations; volition" },
+    { "word": "vedanā", "meaning": "feeling; sensation" },
+    { "word": "saññā", "meaning": "perception" },
+    { "word": "citta", "meaning": "mind; consciousness" },
+    { "word": "kāya", "meaning": "body" },
+    { "word": "viriya", "meaning": "energy; effort" },
+    { "word": "khanti", "meaning": "patience; forbearance" },
+    { "word": "puñña", "meaning": "merit; wholesome action" },
+    { "word": "bhikkhu", "meaning": "a fully ordained monk" },
+    { "word": "bhikkhunī", "meaning": "a fully ordained nun" },
+    { "word": "paritta", "meaning": "protective chants" },
+    { "word": "anumodanā", "meaning": "rejoicing in another's merit" },
+    { "word": "pūjā", "meaning": "homage; devotional offering" }
+  ]
+}
