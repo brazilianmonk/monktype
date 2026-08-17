@@ -1,5 +1,5 @@
 /* ============================================================
-   vocabtype — glassmorphism UI
+   goattype — glassmorphism UI
    An aurora gradient backdrop with frosted-glass panels and a
    violet → cyan accent. Original design system.
    ============================================================ */
@@ -166,11 +166,18 @@ body::before {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: -0.03em;
   user-select: none;
   color: var(--text-color);
+}
+
+.logo svg {
+  flex-shrink: 0;
 }
 
 .logo .accent {

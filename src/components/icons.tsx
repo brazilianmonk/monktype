@@ -74,3 +74,28 @@ export function CloseIcon({ size = 20 }: IconProps) {
     </svg>
   );
 }
+
+export function GoatLogo({ size = 30 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true">
+      <defs>
+        <linearGradient id="goat-g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#a78bfa" />
+          <stop offset="1" stopColor="#22d3ee" />
+        </linearGradient>
+      </defs>
+      <rect width="64" height="64" rx="16" fill="url(#goat-g)" />
+      <g stroke="#fff" strokeWidth="4.5" strokeLinecap="round" fill="none">
+        <path d="M24 26c-6-2-9-8-8-14" />
+        <path d="M40 26c6-2 9-8 8-14" />
+        <path d="M18 34c-3 1-5 4-4 7" />
+        <path d="M46 34c3 1 5 4 4 7" />
+      </g>
+      <ellipse cx="32" cy="40" rx="14" ry="13" fill="#fff" />
+      <path d="M32 51c-4 0-6 3-6 6h12c0-3-2-6-6-6z" fill="#fff" />
+      <circle cx="26.5" cy="39" r="2.2" fill="#6d28d9" />
+      <circle cx="37.5" cy="39" r="2.2" fill="#6d28d9" />
+      <path d="M28.5 44.5h7" stroke="#6d28d9" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}

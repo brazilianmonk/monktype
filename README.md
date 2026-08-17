@@ -1,4 +1,4 @@
-# vocabtype
+# goattype
 
 A typing + vocabulary practice website with a frosted-glass UI.
 Type each word; when you finish it (press **space**), its meaning is revealed below.
