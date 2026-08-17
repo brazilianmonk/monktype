@@ -347,16 +347,18 @@ body::before {
   z-index: -1;
 }
 
-/* 3 visible lines (fs * 1.5 * 3) + a reserved 2.75rem headroom band above
-   the words where the meaning bubble floats (it must not be clipped). */
+/* 3 visible lines (fs * 1.5 * 3) + a reserved 6.5rem headroom band above
+   the words where the meaning bubble floats (it must not be clipped). The
+   band is tall enough for the bubble to sit above the top row of words
+   instead of covering the row that is about to be typed. */
 .words-area {
   position: relative;
-  height: calc(var(--fs) * 4.5 + 2.75rem);
+  height: calc(var(--fs) * 4.5 + 6.5rem);
 }
 
 .words-viewport {
   position: absolute;
-  top: 2.75rem;
+  top: 6.5rem;
   left: 0;
   right: 0;
   bottom: 0;
@@ -516,9 +518,9 @@ body::before {
   border-top: 2px solid var(--main-color);
   color: var(--text-color);
   border-radius: var(--radius-sm);
-  padding: 0.45rem 0.9rem;
-  font-size: 0.9rem;
-  line-height: 1.45;
+  padding: 0.6rem 1.1rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
   box-shadow: var(--glass-shadow);
   pointer-events: none;
   user-select: none;
@@ -570,7 +572,7 @@ body::before {
 .meaning-bubble .mb-ipa {
   color: var(--accent-2);
   font-family: var(--font-mono);
-  font-size: 0.85em;
+  font-size: 0.9em;
   margin-right: 0.3em;
 }
 
@@ -1382,6 +1384,6 @@ code {
   }
 
   .words-area {
-    height: calc(var(--fs) * 4 + 2.75rem);
+    height: calc(var(--fs) * 4 + 6.5rem);
   }
 }

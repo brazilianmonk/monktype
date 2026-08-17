@@ -167,6 +167,17 @@ export default function App() {
 
   const test = useTypingTest(testWords, testCount, testOrder, testOffset, testMemorize, handleMemorize);
 
+  // Keep focus on the typing input whenever the typing area is shown, so the
+  // user can keep typing right after clicking any button (theme toggle, config
+  // controls, etc.) without having to click back on the words. Skipped while
+  // the settings modal is open (it has its own fields) and once the test is
+  // finished (the results screen has its own buttons). No dependency array:
+  // runs after every render, which is what re-captures focus after a click.
+  useEffect(() => {
+    if (test.status === "finished" || settingsOpen) return;
+    test.focusInput();
+  });
+
   const typedChars = test.stats.correct + test.stats.errors + test.stats.extra;
   const liveWpm = netWpm(test.stats.correct, test.elapsedMs);
   const liveAcc = accuracy(test.stats.correct, typedChars);

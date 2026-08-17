@@ -163,14 +163,6 @@ export function useTypingTest(
     if (inputRef.current) inputRef.current.value = "";
   }, []);
 
-  // Keep focus on the typing input whenever the typing area is shown. Runs
-  // after React commits, so it also works right after the input is (re)mounted
-  // — e.g. starting a new test from the results screen with Enter.
-  useEffect(() => {
-    if (status === "finished") return;
-    inputRef.current?.focus();
-  }, [status, words]);
-
   // Start a fresh test whenever the list, word count, order or sequence
   // offset changes.
   useEffect(() => {
