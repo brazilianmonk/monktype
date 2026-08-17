@@ -24,6 +24,14 @@ interface WordsProps {
 }
 
 const BUBBLE_GAP = 10;
+/**
+ * How far the bubble may extend above the words area (into the panel's top
+ * padding / the reserved headroom band) before it flips below the word
+ * instead. Meaning text can wrap to several lines, so the bubble must be
+ * allowed to grow upward rather than be pushed down on top of the word the
+ * user is about to type.
+ */
+const TOP_OVERFLOW = 28;
 
 /**
  * A small tooltip anchored above a word in the grid. It is positioned in
@@ -68,13 +76,17 @@ function MeaningBubble({
     const areaW = area.offsetWidth;
     const areaH = area.offsetHeight;
 
-    // Prefer the bubble above the word; flip it below when there is no room,
-    // then clamp so it always stays inside the words area (and on screen)
-    // without ever covering the word it describes.
+    // Prefer the bubble above the word. It may grow up into the reserved
+    // headroom band and the panel's top padding (TOP_OVERFLOW), so tall
+    // multi-line meanings still sit above the word instead of covering it;
+    // only flip below when there is truly no room above. The final clamp
+    // never pushes the bubble onto the word it describes: the above position
+    // keeps its bottom exactly BUBBLE_GAP above the word, and the below
+    // position starts below the word.
     let top = wordY - bh - BUBBLE_GAP;
-    const below = top < BUBBLE_GAP;
+    const below = top < -TOP_OVERFLOW;
     if (below) top = wordY + wordH + BUBBLE_GAP;
-    top = Math.max(BUBBLE_GAP, Math.min(top, areaH - bh - BUBBLE_GAP));
+    top = Math.max(-TOP_OVERFLOW, Math.min(top, areaH - bh - BUBBLE_GAP));
 
     let left = wordX + wordW / 2;
     const half = bw / 2;

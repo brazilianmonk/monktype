@@ -347,18 +347,18 @@ body::before {
   z-index: -1;
 }
 
-/* 3 visible lines (fs * 1.5 * 3) + a reserved 6.5rem headroom band above
+/* 3 visible lines (fs * 1.5 * 3) + a reserved 7.5rem headroom band above
    the words where the meaning bubble floats (it must not be clipped). The
-   band is tall enough for the bubble to sit above the top row of words
-   instead of covering the row that is about to be typed. */
+   band is tall enough for multi-line meanings to sit above the top row of
+   words instead of covering the row that is about to be typed. */
 .words-area {
   position: relative;
-  height: calc(var(--fs) * 4.5 + 6.5rem);
+  height: calc(var(--fs) * 4.5 + 7.5rem);
 }
 
 .words-viewport {
   position: absolute;
-  top: 6.5rem;
+  top: 7.5rem;
   left: 0;
   right: 0;
   bottom: 0;
@@ -1384,6 +1384,6 @@ code {
   }
 
   .words-area {
-    height: calc(var(--fs) * 4 + 6.5rem);
+    height: calc(var(--fs) * 4 + 7.5rem);
   }
 }
