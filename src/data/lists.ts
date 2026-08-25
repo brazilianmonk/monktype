@@ -7,7 +7,7 @@ import type { WordEntry, WordList } from "../types";
  * The files are loaded with fetch at runtime, so you can edit them without
  * rebuilding — but a rebuild + redeploy is needed to ship changes.
  */
-const BUILT_IN_FILES = ["english.json", "pali.json"];
+const BUILT_IN_FILES = ["english.json", "pali.json", "B2-group-1.json" ];
 
 const CUSTOM_KEY = "vocabtype:customLists";
 
