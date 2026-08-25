@@ -54,7 +54,10 @@ export default function App() {
     return WORD_COUNTS.includes(saved) ? saved : 50;
   });
   const [listId, setListId] = useState<string>(() => localStorage.getItem(LIST_KEY) ?? "");
-  const [peek, setPeek] = useState<boolean>(() => localStorage.getItem(PEEK_KEY) === "1");
+  const [peek, setPeek] = useState<boolean>(() => {
+    const saved = localStorage.getItem(PEEK_KEY);
+    return saved !== null ? saved === "1" : true;
+  });
   const [order, setOrder] = useState<WordOrder>(() =>
     localStorage.getItem(ORDER_KEY) === "sequence" ? "sequence" : "random"
   );
