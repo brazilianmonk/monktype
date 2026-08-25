@@ -1,5 +1,5 @@
 import type { Theme } from "../types";
-import { GearIcon, GoatLogo, MoonIcon, SunIcon } from "./icons";
+import { GearIcon, MonkLogo, MoonIcon, SunIcon } from "./icons";
 
 interface HeaderProps {
   theme: Theme;
@@ -11,9 +11,9 @@ export function Header({ theme, onToggleTheme, onOpenSettings }: HeaderProps) {
   return (
     <header className="header">
       <div className="logo">
-        <GoatLogo />
+        <MonkLogo />
         <span>
-          goat<span className="accent">type</span>
+          monk<span className="accent">type</span>
         </span>
       </div>
       <div className="header-actions">
