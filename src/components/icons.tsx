@@ -75,27 +75,30 @@ export function CloseIcon({ size = 20 }: IconProps) {
   );
 }
 
-export function GoatLogo({ size = 30 }: IconProps) {
+export function MonkLogo({ size = 30 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true">
       <defs>
-        <linearGradient id="goat-g" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id="monk-g" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stopColor="#a78bfa" />
           <stop offset="1" stopColor="#22d3ee" />
         </linearGradient>
       </defs>
-      <rect width="64" height="64" rx="16" fill="url(#goat-g)" />
-      <g stroke="#fff" strokeWidth="4.5" strokeLinecap="round" fill="none">
-        <path d="M24 26c-6-2-9-8-8-14" />
-        <path d="M40 26c6-2 9-8 8-14" />
-        <path d="M18 34c-3 1-5 4-4 7" />
-        <path d="M46 34c3 1 5 4 4 7" />
-      </g>
-      <ellipse cx="32" cy="40" rx="14" ry="13" fill="#fff" />
-      <path d="M32 51c-4 0-6 3-6 6h12c0-3-2-6-6-6z" fill="#fff" />
-      <circle cx="26.5" cy="39" r="2.2" fill="#6d28d9" />
-      <circle cx="37.5" cy="39" r="2.2" fill="#6d28d9" />
-      <path d="M28.5 44.5h7" stroke="#6d28d9" strokeWidth="2" strokeLinecap="round" />
+      <rect width="64" height="64" rx="16" fill="url(#monk-g)" />
+      {/* Halo / Aura */}
+      <circle cx="32" cy="24" r="16" stroke="#fff" strokeWidth="2" strokeDasharray="4 2" fill="none" opacity="0.25" />
+      {/* Robe/Shoulders */}
+      <path d="M14 54c2-14 8-18 18-18s16 4 18 18" fill="none" stroke="#fff" strokeWidth="4.5" strokeLinecap="round" />
+      {/* Robe V-neck collar */}
+      <path d="M25 38l7 10 7-10" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M29 44l3 4" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" />
+      {/* Head (shaved/bald) */}
+      <circle cx="32" cy="23" r="9.5" fill="#fff" />
+      {/* Eyes (serene closed) */}
+      <path d="M26 23.5c1 1.5 3 1.5 4 0" fill="none" stroke="#6d28d9" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M34 23.5c1 1.5 3 1.5 4 0" fill="none" stroke="#6d28d9" strokeWidth="1.8" strokeLinecap="round" />
+      {/* Smile */}
+      <path d="M30 28.5c1 1 3 1 4 0" fill="none" stroke="#6d28d9" strokeWidth="1.8" strokeLinecap="round" />
     </svg>
   );
 }
