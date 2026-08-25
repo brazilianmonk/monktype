@@ -514,6 +514,11 @@ body::before {
   position: absolute;
   z-index: 10;
   transform: translateX(-50%) translateY(6px) scale(0.96);
+  /* Take the bubble's natural (single-shape) width up to the max-width cap.
+     Without this an absolutely-positioned box shrink-to-fits into whatever
+     space is left between its `left` and the container edge, so a word near
+     the right edge would squeeze the meaning into 4-5 narrow lines. */
+  width: max-content;
   max-width: min(26rem, calc(100% - 2rem));
   /* Solid (opaque) so the words behind it never show through. */
   background: var(--bubble-bg);
@@ -592,7 +597,9 @@ body::before {
   content: "";
   position: absolute;
   bottom: -5px;
-  left: 50%;
+  /* Set inline (--mb-arrow-x) so the tail keeps pointing at the word even
+     when the bubble itself was shifted or clamped sideways. */
+  left: var(--mb-arrow-x, 50%);
   width: 10px;
   height: 10px;
   background: var(--bubble-bg);

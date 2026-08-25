@@ -16,12 +16,13 @@ import {
 import type { BubbleInfo } from "./components/Words";
 import type { MemorizeEntry, Theme, WordEntry, WordList } from "./types";
 import { accuracy, netWpm, rawWpm } from "./utils/stats";
-import { stopSpeaking } from "./utils/speech";
+import { speak, stopSpeaking } from "./utils/speech";
 
 const THEME_KEY = "vocabtype:theme";
 const COUNT_KEY = "vocabtype:wordCount";
 const LIST_KEY = "vocabtype:listId";
 const PEEK_KEY = "vocabtype:peek";
+const AUTO_SPEAK_KEY = "vocabtype:autoSpeak";
 const ORDER_KEY = "vocabtype:order";
 /** Per-list position for "in order" tests: list id → next word index. */
 const PROGRESS_KEY = "vocabtype:progress";
@@ -57,6 +58,11 @@ export default function App() {
   const [listId, setListId] = useState<string>(() => localStorage.getItem(LIST_KEY) ?? "");
   const [peek, setPeek] = useState<boolean>(() => {
     const saved = localStorage.getItem(PEEK_KEY);
+    return saved !== null ? saved === "1" : true;
+  });
+  // Auto-pronunciation defaults to on; the speaker toggle mutes it.
+  const [autoSpeak, setAutoSpeak] = useState<boolean>(() => {
+    const saved = localStorage.getItem(AUTO_SPEAK_KEY);
     return saved !== null ? saved === "1" : true;
   });
   const [order, setOrder] = useState<WordOrder>(() =>
@@ -116,6 +122,11 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem(PEEK_KEY, peek ? "1" : "0");
   }, [peek]);
+
+  useEffect(() => {
+    localStorage.setItem(AUTO_SPEAK_KEY, autoSpeak ? "1" : "0");
+    if (!autoSpeak) stopSpeaking();
+  }, [autoSpeak]);
 
   useEffect(() => {
     localStorage.setItem(ORDER_KEY, order);
@@ -203,6 +214,23 @@ export default function App() {
     const id = window.setTimeout(() => setBubbleExpired(true), 3000);
     return () => window.clearTimeout(id);
   }, [peek, test.lastMeaning]);
+
+  // Auto-pronunciation: say each new word followed by its meaning as soon as
+  // it becomes active. Declared after the effect above so the stopSpeaking()
+  // there (cutting off the finished word's audio) always runs first. The
+  // status guard also makes the very first word spoken once typing starts
+  // (browsers require a user gesture before audio may play).
+  const spokenRef = useRef(-1);
+  useEffect(() => {
+    spokenRef.current = -1;
+  }, [test.status, test.words]);
+  useEffect(() => {
+    if (!autoSpeak || test.status !== "running") return;
+    const entry = test.words[test.wordIndex];
+    if (!entry || spokenRef.current === test.wordIndex) return;
+    spokenRef.current = test.wordIndex;
+    speak(entry.meaning ? `${entry.word}. ${entry.meaning}` : entry.word);
+  }, [autoSpeak, test.status, test.wordIndex, test.words]);
 
   const bubble = useMemo<BubbleInfo | null>(() => {
     if (loading || test.status === "finished" || test.words.length === 0) return null;
@@ -375,6 +403,8 @@ export default function App() {
             onList={handleList}
             peek={peek}
             onTogglePeek={() => setPeek((p) => !p)}
+            autoSpeak={autoSpeak}
+            onToggleAutoSpeak={() => setAutoSpeak((s) => !s)}
             order={order}
             onOrder={setOrder}
             practice={

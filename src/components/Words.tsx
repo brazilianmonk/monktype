@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type RefObject } from "react";
 import type { WordEntry } from "../types";
 import { toChars } from "../utils/text";
 import { speak } from "../utils/speech";
@@ -58,7 +58,7 @@ function MeaningBubble({
   translateY: number;
 }) {
   const bubbleRef = useRef<HTMLDivElement>(null);
-  const [pos, setPos] = useState<{ left: number; top: number } | null>(null);
+  const [pos, setPos] = useState<{ left: number; top: number; arrowPct: number } | null>(null);
   const [cap, setCap] = useState<number | null>(null);
   const [flipped, setFlipped] = useState(false);
   const [resizeTick, setResizeTick] = useState(0);
@@ -147,15 +147,29 @@ function MeaningBubble({
     // Horizontal: centre on the word, then clamp to viewport and area.
     let left = wordX + wordW / 2;
     const half = bw / 2;
+    // When the word sits near the right edge, don't squeeze the bubble
+    // between the word and the screen border — align the bubble's RIGHT edge
+    // with the word's right edge so the box extends to the LEFT and the
+    // meaning keeps its full width (no extra wrapping).
+    const maxCenter = areaW - half - BUBBLE_GAP;
+    if (left > maxCenter) {
+      left = Math.min(left, wordX + wordW - half);
+    }
     const vpLeft = areaRect.left + left - half;
     const vpRight = areaRect.left + left + half;
     if (vpLeft < VIEWPORT_MARGIN) left += VIEWPORT_MARGIN - vpLeft;
     if (vpRight > window.innerWidth - VIEWPORT_MARGIN) left -= vpRight - (window.innerWidth - VIEWPORT_MARGIN);
     left = Math.max(half + BUBBLE_GAP, Math.min(left, areaW - half - BUBBLE_GAP));
 
+    // Slide the arrow/tail along the bubble's edge so it keeps pointing at
+    // the target word even after the bubble was shifted or clamped.
+    const wordCenterX = wordX + wordW / 2;
+    const arrowX = Math.min(Math.max(wordCenterX, left - half + 14), left + half - 14);
+    const arrowPct = ((arrowX - (left - half)) / bw) * 100;
+
     setFlipped(placement === "below");
     setCap(maxInnerH);
-    setPos({ left, top });
+    setPos({ left, top, arrowPct });
     // eslint-disable-next-line no-console
     console.log("[bubble-debug]", JSON.stringify({
       word: bubble.word, target: bubble.targetIndex, translateY,
@@ -182,7 +196,7 @@ function MeaningBubble({
       ref={bubbleRef}
       key={bubble.animate ? bubble.word : undefined}
       className={`meaning-bubble${bubble.visible ? " visible" : ""}${flipped ? " flipped" : ""}`}
-      style={{ left: pos?.left ?? 0, top: pos?.top ?? 0 }}
+      style={{ left: pos?.left ?? 0, top: pos?.top ?? 0, "--mb-arrow-x": `${pos?.arrowPct ?? 50}%` } as CSSProperties}
     >
       <div className="mb-scroll" style={cap != null ? { maxHeight: cap } : undefined}>
         <span className="mb-word">{bubble.word}</span>

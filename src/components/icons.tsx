@@ -75,6 +75,27 @@ export function CloseIcon({ size = 20 }: IconProps) {
   );
 }
 
+/** Speaker with sound waves — auto-pronunciation is on. */
+export function VolumeIcon({ size = 20 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M11 5 6 9H2v6h4l5 4V5z" />
+      <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+      <path d="M18.5 5.5a9 9 0 0 1 0 13" />
+    </svg>
+  );
+}
+
+/** Muted speaker — auto-pronunciation is off. */
+export function VolumeOffIcon({ size = 20 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M11 5 6 9H2v6h4l5 4V5z" />
+      <path d="m16 9 6 6M22 9l-6 6" />
+    </svg>
+  );
+}
+
 export function MonkLogo({ size = 30 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true">
