@@ -23,12 +23,12 @@ function ReviewWord({ completion }: { completion: Completion }) {
     <>
       {chars.map((c, j) => (
         <span key={j} className={j < tChars.length && tChars[j] === c ? "correct" : "incorrect"}>
-          {c}
+          {c === " " ? "\u00A0" : c}
         </span>
       ))}
       {tChars.slice(chars.length).map((c, j) => (
         <span key={`x${j}`} className="incorrect extra">
-          {c}
+          {c === " " ? "\u00A0" : c}
         </span>
       ))}
     </>

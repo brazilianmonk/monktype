@@ -269,9 +269,12 @@ export function useTypingTest(
 
   const onInput = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
-      // Strip any whitespace (e.g. from pasted text) — words never contain it.
+      // Entries may be multi-word phrases (e.g. "to get") whose inner space
+      // is part of the entry, so keep single spaces. Collapse any other
+      // whitespace (tabs/newlines from pasted text) to one space and drop a
+      // leading one.
       const raw = e.currentTarget.value;
-      const value = raw.replace(/\s+/g, "");
+      const value = raw.replace(/\s+/g, " ").replace(/^ /, "");
       if (value !== raw) e.currentTarget.value = value;
       setTyped((prev) => {
         const next = prev.slice();
@@ -296,9 +299,18 @@ export function useTypingTest(
         return;
       }
       if (e.key === " ") {
+        const t = typed[wordIndex] ?? "";
+        const wChars = toChars(words[wordIndex]?.word ?? "");
+        // Multi-word entries (e.g. "to get"): when the next expected character
+        // is a space, let the space through so it becomes part of the typed
+        // entry. Otherwise the space finishes the entry and never reaches the
+        // input value.
+        if (status === "running" && t.length < wChars.length && wChars[t.length] === " ") {
+          return;
+        }
         // Finish the current word. Space never reaches the input value.
         e.preventDefault();
-        if (status === "running" && (typed[wordIndex] ?? "").length > 0) {
+        if (status === "running" && t.length > 0) {
           finishWord();
         }
         return;

@@ -16,6 +16,7 @@ import {
 import type { BubbleInfo } from "./components/Words";
 import type { MemorizeEntry, Theme, WordEntry, WordList } from "./types";
 import { accuracy, netWpm, rawWpm } from "./utils/stats";
+import { stopSpeaking } from "./utils/speech";
 
 const THEME_KEY = "vocabtype:theme";
 const COUNT_KEY = "vocabtype:wordCount";
@@ -194,6 +195,8 @@ export default function App() {
     }
     if (!test.lastMeaning) return;
     setBubbleExpired(false);
+    // The word moved on — cut off any pronunciation still playing.
+    stopSpeaking();
     const id = window.setTimeout(() => setBubbleExpired(true), 3000);
     return () => window.clearTimeout(id);
   }, [peek, test.lastMeaning]);
@@ -223,6 +226,11 @@ export default function App() {
       animate: true,
     };
   }, [loading, test.status, peek, test.words, test.wordIndex, test.lastMeaning, test.typed, bubbleExpired]);
+
+  // Stop any pronunciation once the test ends (results screen / new test).
+  useEffect(() => {
+    if (test.status === "finished") stopSpeaking();
+  }, [test.status]);
 
   // Save one history entry per completed test.
   const lastSavedRef = useRef("");
@@ -439,8 +447,8 @@ export default function App() {
 
       <footer className="container footer">
         <span>
-          <kbd>space</kbd> finish a word · <kbd>tab</kbd> restart · <kbd>enter</kbd> new test ·{" "}
-          <kbd>⌫</kbd> at the start of a word goes back
+          <kbd>space</kbd> finish a word (or type the space inside a phrase) · <kbd>tab</kbd>{" "}
+          restart · <kbd>enter</kbd> new test · <kbd>⌫</kbd> at the start of a word goes back
         </span>
         <span>
           <kbd>*</kbd> drills a word {DIFFICULT_REPEATS}× now · <kbd>/</kbd> memorizes it for later

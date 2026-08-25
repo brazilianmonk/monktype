@@ -1,6 +1,7 @@
-import { useLayoutEffect, useRef, useState, type RefObject } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from "react";
 import type { WordEntry } from "../types";
 import { toChars } from "../utils/text";
+import { speak } from "../utils/speech";
 
 /** What the meaning bubble should show and where. */
 export interface BubbleInfo {
@@ -24,19 +25,24 @@ interface WordsProps {
 }
 
 const BUBBLE_GAP = 10;
-/**
- * How far the bubble may extend above the words area (into the panel's top
- * padding / the reserved headroom band) before it flips below the word
- * instead. Meaning text can wrap to several lines, so the bubble must be
- * allowed to grow upward rather than be pushed down on top of the word the
- * user is about to type.
- */
-const TOP_OVERFLOW = 28;
 
 /**
- * A small tooltip anchored above a word in the grid. It is positioned in
- * "area" coordinates (the words-area is not clipped), so it stays visible
- * even when the word grid scrolls inside its viewport.
+ * A small speaker icon SVG for the bubble's pronunciation button.
+ */
+function SpeakerIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M11 5 6 9H2v6h4l5 4V5z" />
+      <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+      <path d="M18.5 5.5a9 9 0 0 1 0 13" />
+    </svg>
+  );
+}
+
+/**
+ * A floating meaning bubble anchored above (or below) a word in the grid.
+ * Positioned in area-relative coordinates, clamped to the viewport so it
+ * never covers the target word and never extends off-screen.
  */
 function MeaningBubble({
   bubble,
@@ -53,7 +59,16 @@ function MeaningBubble({
 }) {
   const bubbleRef = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState<{ left: number; top: number } | null>(null);
+  const [cap, setCap] = useState<number | null>(null);
   const [flipped, setFlipped] = useState(false);
+  const [resizeTick, setResizeTick] = useState(0);
+
+  // Re-layout on window resize so the bubble stays on screen.
+  useEffect(() => {
+    const onResize = () => setResizeTick((n) => n + 1);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   useLayoutEffect(() => {
     const area = areaRef.current;
@@ -63,38 +78,104 @@ function MeaningBubble({
     const target = area?.querySelector<HTMLElement>(`[data-w="${bubble.targetIndex}"]`);
     if (!area || !vp || !inner || !el || !target) return;
 
-    // Anchor with layout offsets (unaffected by the scroll transform and its
-    // CSS transition), then add the final scroll offset. getBoundingClientRect
-    // would report a mid-animation value right after a line-wrap scroll, which
-    // is why the bubble used to land in the wrong spot on a new row.
+    // Word position in area-relative coordinates (layout offsets are
+    // unaffected by the scrolling CSS transform).
     const wordX = vp.offsetLeft + inner.offsetLeft + target.offsetLeft;
     const wordY = vp.offsetTop + inner.offsetTop + target.offsetTop + translateY;
     const wordW = target.offsetWidth;
     const wordH = target.offsetHeight;
     const bw = el.offsetWidth;
-    const bh = el.offsetHeight;
     const areaW = area.offsetWidth;
-    const areaH = area.offsetHeight;
+    const areaRect = area.getBoundingClientRect();
+    const wordVpTop = areaRect.top + wordY;
+    const wordVpBottom = wordVpTop + wordH;
 
-    // Prefer the bubble above the word. It may grow up into the reserved
-    // headroom band and the panel's top padding (TOP_OVERFLOW), so tall
-    // multi-line meanings still sit above the word instead of covering it;
-    // only flip below when there is truly no room above. The final clamp
-    // never pushes the bubble onto the word it describes: the above position
-    // keeps its bottom exactly BUBBLE_GAP above the word, and the below
-    // position starts below the word.
-    let top = wordY - bh - BUBBLE_GAP;
-    const below = top < -TOP_OVERFLOW;
-    if (below) top = wordY + wordH + BUBBLE_GAP;
-    top = Math.max(-TOP_OVERFLOW, Math.min(top, areaH - bh - BUBBLE_GAP));
+    // Vertical padding/borders of the outer bubble, and the bubble's natural
+    // (uncapped) height. scrollHeight of the inner wrapper reports the full
+    // content height even when a max-height clip is applied, so the height
+    // we measure here is stable regardless of the current cap — this keeps
+    // the layout decision from oscillating.
+    const cs = getComputedStyle(el);
+    const padV =
+      parseFloat(cs.paddingTop) +
+      parseFloat(cs.paddingBottom) +
+      parseFloat(cs.borderTopWidth) +
+      parseFloat(cs.borderBottomWidth);
+    const innerScroll = el.querySelector<HTMLElement>(".mb-scroll");
+    const naturalContentH = innerScroll
+      ? innerScroll.scrollHeight
+      : Math.max(0, el.offsetHeight - padV);
+    const bh = naturalContentH + padV;
 
+    const VIEWPORT_MARGIN = 8;
+    const vpTop = VIEWPORT_MARGIN;
+    const vpBottom = window.innerHeight - VIEWPORT_MARGIN;
+
+    // Decide placement: above the word (preferred), else below, else cap
+    // height on the roomier side.  The bubble *never* overlaps the target
+    // word — the gap is always maintained.
+    const aboveTop = wordVpTop - bh - BUBBLE_GAP;
+    const fitsAbove = aboveTop >= vpTop;
+    const belowTop = wordVpBottom + BUBBLE_GAP;
+    const fitsBelow = belowTop + bh <= vpBottom;
+
+    let placement: "above" | "below";
+    let maxInnerH: number | null = null;
+    if (fitsAbove) {
+      placement = "above";
+    } else if (fitsBelow) {
+      placement = "below";
+    } else {
+      // Neither fits — cap the scrollable inner area on the roomier side.
+      const roomAbove = wordVpTop - vpTop - BUBBLE_GAP;
+      const roomBelow = vpBottom - wordVpBottom - BUBBLE_GAP;
+      if (roomBelow > roomAbove) {
+        placement = "below";
+        maxInnerH = Math.max(0, roomBelow - padV);
+      } else {
+        placement = "above";
+        maxInnerH = Math.max(0, roomAbove - padV);
+      }
+    }
+
+    const renderedBh = maxInnerH == null ? bh : Math.min(bh, maxInnerH + padV);
+    const top =
+      placement === "above"
+        ? wordY - renderedBh - BUBBLE_GAP
+        : wordY + wordH + BUBBLE_GAP;
+
+    // Horizontal: centre on the word, then clamp to viewport and area.
     let left = wordX + wordW / 2;
     const half = bw / 2;
+    const vpLeft = areaRect.left + left - half;
+    const vpRight = areaRect.left + left + half;
+    if (vpLeft < VIEWPORT_MARGIN) left += VIEWPORT_MARGIN - vpLeft;
+    if (vpRight > window.innerWidth - VIEWPORT_MARGIN) left -= vpRight - (window.innerWidth - VIEWPORT_MARGIN);
     left = Math.max(half + BUBBLE_GAP, Math.min(left, areaW - half - BUBBLE_GAP));
 
-    setFlipped(below);
+    setFlipped(placement === "below");
+    setCap(maxInnerH);
     setPos({ left, top });
-  }, [bubble.targetIndex, bubble.word, bubble.visible, translateY, areaRef, viewportRef, innerRef]);
+    // eslint-disable-next-line no-console
+    console.log("[bubble-debug]", JSON.stringify({
+      word: bubble.word, target: bubble.targetIndex, translateY,
+      wordY, wordVpTop, bh, bw, fitsAbove, fitsBelow, placement,
+      maxInnerH, renderedBh, top, left,
+      wordOffsetTop: target.offsetTop, vpOffsetTop: vp.offsetTop, innerOffsetTop: inner.offsetTop,
+      areaRectTop: areaRect.top, areaRectLeft: areaRect.left, areaW, viewportH: window.innerHeight,
+    }));
+  }, [
+    bubble.targetIndex,
+    bubble.word,
+    bubble.meaning,
+    bubble.ipa,
+    bubble.visible,
+    translateY,
+    resizeTick,
+    areaRef,
+    viewportRef,
+    innerRef,
+  ]);
 
   return (
     <div
@@ -103,10 +184,25 @@ function MeaningBubble({
       className={`meaning-bubble${bubble.visible ? " visible" : ""}${flipped ? " flipped" : ""}`}
       style={{ left: pos?.left ?? 0, top: pos?.top ?? 0 }}
     >
-      <span className="mb-word">{bubble.word}</span>
-      {bubble.ipa && <span className="mb-ipa">{bubble.ipa}</span>}
-      <span className="mb-dash">—</span>
-      <span className="mb-meaning">{bubble.meaning || "no meaning"}</span>
+      <div className="mb-scroll" style={cap != null ? { maxHeight: cap } : undefined}>
+        <span className="mb-word">{bubble.word}</span>
+        <button
+          type="button"
+          className="speaker-btn"
+          title={`Pronounce ${bubble.word}`}
+          aria-label={`Pronounce ${bubble.word}`}
+          onClick={() => {
+            // The click bubbles up to the typing-area, which refocuses the
+            // typing input so the user can keep typing.
+            speak(bubble.word);
+          }}
+        >
+          <SpeakerIcon />
+        </button>
+        {bubble.ipa && <span className="mb-ipa">{bubble.ipa}</span>}
+        <span className="mb-dash">—</span>
+        <span className="mb-meaning">{bubble.meaning || "no meaning"}</span>
+      </div>
     </div>
   );
 }
@@ -123,7 +219,8 @@ export function Words({ words, typed, activeIndex, bubble }: WordsProps) {
   const viewportRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
   const [translateY, setTranslateY] = useState(0);
-  const [caretX, setCaretX] = useState(0);
+  // Position/size of the underline caret, in px relative to the active word.
+  const [caretPos, setCaretPos] = useState<{ x: number; y: number; w: number } | null>(null);
 
   const activeChars = toChars(words[activeIndex]?.word ?? "");
   const activeTyped = typed[activeIndex] ?? "";
@@ -155,13 +252,19 @@ export function Words({ words, typed, activeIndex, bubble }: WordsProps) {
     t = Math.min(0, Math.max(t, vr.height - inner.offsetHeight));
     setTranslateY(t);
 
-    // Position the caret inside the active word. offsetLeft is a layout
-    // offset (unaffected by the container transform), so it stays correct.
+    // Position the underline caret under the current letter. offsetLeft/Top
+    // are layout offsets (unaffected by the container transform), so they
+    // stay correct. When the word is fully typed, the caret moves just past
+    // the last letter (the insertion point before the spacebar).
     const letterIdx = Math.min(caretChar, Math.max(0, activeChars.length - 1));
     const letterEl = inner.querySelector<HTMLElement>(`[data-l="${activeIndex}:${letterIdx}"]`);
     if (letterEl) {
       const atEnd = caretChar >= activeChars.length;
-      setCaretX(letterEl.offsetLeft + (atEnd ? letterEl.offsetWidth : 0));
+      setCaretPos({
+        x: letterEl.offsetLeft + (atEnd ? letterEl.offsetWidth : 0),
+        y: letterEl.offsetTop + letterEl.offsetHeight,
+        w: letterEl.offsetWidth,
+      });
     }
   }, [activeIndex, caretChar, words]);
 
@@ -201,7 +304,10 @@ export function Words({ words, typed, activeIndex, bubble }: WordsProps) {
               }
               return (
                 <span key={j} data-l={`${i}:${j}`} className={`letter ${cls}`.trim()}>
-                  {c}
+                  {/* A space inside an inline-block box collapses to zero width;
+                      render it as a non-breaking space so phrases ("to get") keep
+                      their gap and the caret tracks the right box. */}
+                  {c === " " ? "\u00A0" : c}
                 </span>
               );
             });
@@ -226,7 +332,7 @@ export function Words({ words, typed, activeIndex, bubble }: WordsProps) {
               hasError = true;
               letters.push(
                 <span key={`x${j}`} data-l={`${i}:${j}`} className="letter incorrect extra">
-                  {tChars[j]}
+                  {tChars[j] === " " ? "\u00A0" : tChars[j]}
                 </span>
               );
             }
@@ -247,8 +353,16 @@ export function Words({ words, typed, activeIndex, bubble }: WordsProps) {
                     ↻
                   </span>
                 )}
-                {isActive && (
-                  <span className="caret" style={{ left: `${caretX}px` }} aria-hidden="true" />
+                {isActive && caretPos && (
+                  <span
+                    className="caret"
+                    style={{
+                      left: `${caretPos.x}px`,
+                      top: `${caretPos.y}px`,
+                      width: `${caretPos.w}px`,
+                    }}
+                    aria-hidden="true"
+                  />
                 )}
                 {letters}
               </div>
