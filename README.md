@@ -43,6 +43,11 @@ copy the prompt, and let an AI chat convert it to JSON for you.
 while typing and in the results review. Omit it for other languages (e.g. Pali) and it will not
 be displayed. `pronunciation` is also accepted as an alias for `ipa`.
 
+`word` may contain a single space to type multi-word phrases (e.g. `"word": "to get"`). The
+space is part of the phrase: type `to`, press space to insert it, then type `get`. A trailing
+space after a complete phrase is not required — pressing space again finishes the word. Phrase
+keys also work with the `*` drill and `/` memorize markers (`"to get*"`, `"to get/"`).
+
 Plain arrays are also accepted:
 `[ { "word": "apple", "meaning": "a fruit" } ]` or `["apple", "banana"]` (no meanings).
 

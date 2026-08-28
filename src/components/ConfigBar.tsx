@@ -1,6 +1,6 @@
 import type { WordOrder } from "../hooks/useTypingTest";
 import type { WordList } from "../types";
-import { EyeIcon, EyeOffIcon, RestartIcon } from "./icons";
+import { EyeIcon, EyeOffIcon, RestartIcon, VolumeIcon, VolumeOffIcon } from "./icons";
 
 export const WORD_COUNTS = [10, 25, 50, 100, 250, 500];
 
@@ -12,6 +12,9 @@ interface ConfigBarProps {
   onList: (id: string) => void;
   peek: boolean;
   onTogglePeek: () => void;
+  /** Auto-pronounce each new word (word + meaning) when it starts. */
+  autoSpeak: boolean;
+  onToggleAutoSpeak: () => void;
   /** How words are picked: random subset or in order (continuing last time). */
   order: WordOrder;
   onOrder: (o: WordOrder) => void;
@@ -28,6 +31,8 @@ export function ConfigBar({
   onList,
   peek,
   onTogglePeek,
+  autoSpeak,
+  onToggleAutoSpeak,
   order,
   onOrder,
   practice,
@@ -94,6 +99,16 @@ export function ConfigBar({
         title={peek ? "Meaning shown while typing — click to hide" : "Show meaning while typing"}
       >
         {peek ? <EyeIcon /> : <EyeOffIcon />}
+      </button>
+      <button
+        type="button"
+        className={`icon-btn speak-btn${autoSpeak ? " active" : ""}`}
+        onClick={onToggleAutoSpeak}
+        aria-label={autoSpeak ? "Stop pronouncing each word" : "Pronounce each word aloud"}
+        aria-pressed={autoSpeak}
+        title={autoSpeak ? "Pronouncing each word — click to mute" : "Pronounce each word aloud when it starts"}
+      >
+        {autoSpeak ? <VolumeIcon /> : <VolumeOffIcon />}
       </button>
       <button
         type="button"

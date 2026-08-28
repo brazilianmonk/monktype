@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Translate TTS (word pronunciation) rejects requests that
+        carry a page Referer with a 404. Browsers do not honor the
+        per-element referrerpolicy on <audio>, so strip the Referer for every
+        request from this page — it is a static app, so nothing needs it. -->
+    <meta name="referrer" content="no-referrer" />
     <meta
       name="description"
       content="MonkType — practice typing while learning vocabulary. Type each word, press space to reveal its meaning, and drill your own word lists."

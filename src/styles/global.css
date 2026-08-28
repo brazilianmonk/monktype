@@ -350,7 +350,9 @@ body::before {
 /* 3 visible lines (fs * 1.5 * 3) + a reserved 7.5rem headroom band above
    the words where the meaning bubble floats (it must not be clipped). The
    band is tall enough for multi-line meanings to sit above the top row of
-   words instead of covering the row that is about to be typed. */
+   words instead of covering the row that is about to be typed. The bubble
+   may also extend beyond the band (into the container padding and up to the
+   viewport edge) when meanings are very long. */
 .words-area {
   position: relative;
   height: calc(var(--fs) * 4.5 + 7.5rem);
@@ -448,24 +450,25 @@ body::before {
 }
 
 .caret {
+  /* A short underline bar sitting at the bottom of the current letter
+     (like monkeytype's default caret). Width and top are set in px from
+     Words.tsx so it tracks the exact letter box; height is fixed here. */
   position: absolute;
-  top: 0.12em;
-  width: 0.12em;
-  height: 1.25em;
-  background: linear-gradient(180deg, var(--main-color), var(--accent-2));
+  height: 0.16em;
+  background: linear-gradient(90deg, var(--main-color), var(--accent-2));
   border-radius: 999px;
   box-shadow: 0 0 10px var(--accent-glow);
-  animation: caret-flash 1.1s infinite;
+  animation: caret-blink 1.1s step-end infinite;
   pointer-events: none;
 }
 
-@keyframes caret-flash {
+@keyframes caret-blink {
   0%,
   100% {
-    opacity: 0;
+    opacity: 1;
   }
   50% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
@@ -511,6 +514,11 @@ body::before {
   position: absolute;
   z-index: 10;
   transform: translateX(-50%) translateY(6px) scale(0.96);
+  /* Take the bubble's natural (single-shape) width up to the max-width cap.
+     Without this an absolutely-positioned box shrink-to-fits into whatever
+     space is left between its `left` and the container edge, so a word near
+     the right edge would squeeze the meaning into 4-5 narrow lines. */
+  width: max-content;
   max-width: min(26rem, calc(100% - 2rem));
   /* Solid (opaque) so the words behind it never show through. */
   background: var(--bubble-bg);
@@ -522,6 +530,8 @@ body::before {
   font-size: 1.05rem;
   line-height: 1.5;
   box-shadow: var(--glass-shadow);
+  /* The bubble itself lets clicks pass through to the typing area; only the
+     speaker button (inside .mb-scroll) is interactive. */
   pointer-events: none;
   user-select: none;
   opacity: 0;
@@ -532,11 +542,64 @@ body::before {
     top 0.2s ease;
 }
 
+/* Scrollable content wrapper: when a very long meaning would cover the word
+   or leave the screen, its max-height is capped (set inline) and the extra
+   text scrolls here. */
+.meaning-bubble .mb-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.05em 0.35em;
+  max-height: none;
+  overflow-y: auto;
+  pointer-events: auto;
+}
+
+/* Speaker button that reads the word aloud. */
+.meaning-bubble .speaker-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.6em;
+  height: 1.6em;
+  padding: 0;
+  margin-left: 0.1em;
+  color: var(--accent-2);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  vertical-align: middle;
+  transition:
+    color 0.15s,
+    background-color 0.15s,
+    border-color 0.15s,
+    transform 0.1s;
+}
+
+.meaning-bubble .speaker-btn:hover {
+  color: var(--main-color);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border);
+  transform: scale(1.1);
+}
+
+.meaning-bubble .speaker-btn:active {
+  transform: scale(0.92);
+}
+
+.meaning-bubble .speaker-btn svg {
+  display: block;
+}
+
 .meaning-bubble::after {
   content: "";
   position: absolute;
   bottom: -5px;
-  left: 50%;
+  /* Set inline (--mb-arrow-x) so the tail keeps pointing at the word even
+     when the bubble itself was shifted or clamped sideways. */
+  left: var(--mb-arrow-x, 50%);
   width: 10px;
   height: 10px;
   background: var(--bubble-bg);
@@ -573,7 +636,6 @@ body::before {
   color: var(--accent-2);
   font-family: var(--font-mono);
   font-size: 0.9em;
-  margin-right: 0.3em;
 }
 
 .meaning-bubble .mb-dash {

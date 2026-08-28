@@ -202,10 +202,15 @@ export function useTypingTest(
     return { correct, errors, extra };
   }, [typed, wordIndex, words]);
 
-  const finishWord = useCallback(() => {
+  /**
+   * Finish the current word and advance. `override` supplies what was typed
+   * for callers that know the final text but have not flushed it into state
+   * yet (the mobile input path below).
+   */
+  const finishWord = useCallback((override?: string) => {
     const entry = words[wordIndex];
     if (!entry) return;
-    const raw = typed[wordIndex] ?? "";
+    const raw = override ?? typed[wordIndex] ?? "";
     // `word*` drills it now; `word/` memorizes it for later tests.
     const starred = raw.endsWith("*");
     const memorizeMarked = raw.endsWith("/");
@@ -269,10 +274,37 @@ export function useTypingTest(
 
   const onInput = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
-      // Strip any whitespace (e.g. from pasted text) — words never contain it.
+      // Entries may be multi-word phrases (e.g. "to get") whose inner space
+      // is part of the entry, so keep single spaces. Collapse any other
+      // whitespace (tabs/newlines from pasted text) to one space and drop a
+      // leading one.
       const raw = e.currentTarget.value;
-      const value = raw.replace(/\s+/g, "");
+      let value = raw.replace(/\s+/g, " ").replace(/^ /, "");
       if (value !== raw) e.currentTarget.value = value;
+
+      // Mobile virtual keyboards often never deliver a usable `keydown` for
+      // space (the key comes through as "Unidentified"), so the space simply
+      // appears in the value. Finish the word from here whenever the value
+      // ends with a space that is not part of a multi-word phrase (e.g.
+      // "to get"), which works identically with physical keyboards.
+      const wChars = toChars(words[wordIndex]?.word ?? "");
+      const composing =
+        typeof InputEvent !== "undefined" &&
+        e.nativeEvent instanceof InputEvent &&
+        e.nativeEvent.isComposing;
+      // A space at the end of the value finishes the word — unless it is an
+      // expected inner space of a multi-word phrase (e.g. "to get").
+      let finishNow = false;
+      if (
+        !composing &&
+        status === "running" &&
+        value.endsWith(" ") &&
+        !(value.length - 1 < wChars.length && wChars[value.length - 1] === " ")
+      ) {
+        value = value.slice(0, -1);
+        e.currentTarget.value = value;
+        finishNow = true;
+      }
       setTyped((prev) => {
         const next = prev.slice();
         next[wordIndex] = value;
@@ -283,8 +315,11 @@ export function useTypingTest(
         setNow(performance.now());
         setStatus("running");
       }
+      if (finishNow && value.length > 0) {
+        finishWord(value);
+      }
     },
-    [wordIndex, startTime]
+    [wordIndex, startTime, words, status, finishWord]
   );
 
   const onKeyDown = useCallback(
@@ -296,11 +331,27 @@ export function useTypingTest(
         return;
       }
       if (e.key === " ") {
+        const t = typed[wordIndex] ?? "";
+        const wChars = toChars(words[wordIndex]?.word ?? "");
+        // Multi-word entries (e.g. "to get"): when the next expected character
+        // is a space, let the space through so it becomes part of the typed
+        // entry. Otherwise the space finishes the entry and never reaches the
+        // input value.
+        if (status === "running" && t.length < wChars.length && wChars[t.length] === " ") {
+          return;
+        }
         // Finish the current word. Space never reaches the input value.
         e.preventDefault();
-        if (status === "running" && (typed[wordIndex] ?? "").length > 0) {
+        if (status === "running" && t.length > 0) {
           finishWord();
         }
+        return;
+      }
+      if (e.key === "Enter") {
+        // Some on-screen keyboards send Enter instead of/in addition to
+        // space; treat it as a word finisher too.
+        e.preventDefault();
+        if (status === "running") finishWord();
         return;
       }
       if (e.key === "Backspace") {
