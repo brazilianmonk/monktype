@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { LiveStats } from "./components/LiveStats";
 import { Results } from "./components/Results";
 import { SettingsModal } from "./components/SettingsModal";
+import { CommandPalette } from "./components/CommandPalette";
 import { Words } from "./components/Words";
 import { addHistory } from "./data/history";
 import { deleteCustomList, getCustomLists, loadFileLists } from "./data/lists";
@@ -45,6 +46,7 @@ export default function App() {
   const [failedFiles, setFailedFiles] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [paletteOpen, setPaletteOpen] = useState(false);
   const [practiceSet, setPracticeSet] = useState<WordEntry[] | null>(null);
 
   const [theme, setTheme] = useState<Theme>(() => {
@@ -182,16 +184,18 @@ export default function App() {
 
   const test = useTypingTest(testWords, testCount, testOrder, testOffset, testMemorize, handleMemorize);
 
-  // Keep focus on the typing input whenever the typing area is shown, so the
-  // user can keep typing right after clicking any button (theme toggle, config
-  // controls, etc.) without having to click back on the words. Skipped while
-  // the settings modal is open (it has its own fields) and once the test is
-  // finished (the results screen has its own buttons). No dependency array:
-  // runs after every render, which is what re-captures focus after a click.
+  // Focus the typing input when a new test starts or the status changes
+  // from finished to idle. Skipped while the settings modal is open.
+  const prevStatusRef = useRef(test.status);
   useEffect(() => {
+    const prev = prevStatusRef.current;
+    prevStatusRef.current = test.status;
     if (test.status === "finished" || settingsOpen) return;
-    test.focusInput();
-  });
+    // Focus on fresh start (idle after finished, or first mount)
+    if (prev === "finished" || prev === "idle") {
+      test.focusInput();
+    }
+  }, [test.status, settingsOpen, test.focusInput]);
 
   const typedChars = test.stats.correct + test.stats.errors + test.stats.extra;
   const liveWpm = netWpm(test.stats.correct, test.elapsedMs);
@@ -229,7 +233,7 @@ export default function App() {
     const entry = test.words[test.wordIndex];
     if (!entry || spokenRef.current === test.wordIndex) return;
     spokenRef.current = test.wordIndex;
-    speak(entry.meaning ? `${entry.word}. ${entry.meaning}` : entry.word);
+    speak(entry.word);
   }, [autoSpeak, test.status, test.wordIndex, test.words]);
 
   const bubble = useMemo<BubbleInfo | null>(() => {
@@ -257,6 +261,19 @@ export default function App() {
       animate: true,
     };
   }, [loading, test.status, peek, test.words, test.wordIndex, test.lastMeaning, test.typed, bubbleExpired]);
+
+  // Keyboard shortcut: Ctrl+Shift+P (or Cmd+Shift+P on Mac) speaks the current word.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === "p") {
+        e.preventDefault();
+        const entry = test.words[test.wordIndex];
+        if (entry) speak(entry.word);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [test.words, test.wordIndex]);
 
   // Stop any pronunciation once the test ends (results screen / new test).
   useEffect(() => {
@@ -355,6 +372,26 @@ export default function App() {
     return () => window.removeEventListener("keydown", onKey);
   }, [settingsOpen]);
 
+  // ESC opens the command palette (or closes it if already open).
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape" || e.repeat) return;
+      // If settings modal is open, let it handle ESC itself.
+      if (settingsOpen) return;
+      if (paletteOpen) {
+        setPaletteOpen(false);
+        test.focusInput();
+        return;
+      }
+      // Blur the typing input and open the palette.
+      e.preventDefault();
+      document.activeElement instanceof HTMLElement && document.activeElement.blur();
+      setPaletteOpen(true);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [settingsOpen, paletteOpen, test.focusInput]);
+
   const handlePracticeMistakes = () => {
     const mistakes = test.completions
       .filter((c) => c.errors > 0)
@@ -445,6 +482,8 @@ export default function App() {
             <input
               ref={test.inputRef}
               className="hidden-input"
+              type="text"
+              inputMode="text"
               onInput={test.onInput}
               onKeyDown={test.onKeyDown}
               aria-label="Typing input"
@@ -484,10 +523,30 @@ export default function App() {
           restart · <kbd>enter</kbd> new test · <kbd>⌫</kbd> at the start of a word goes back
         </span>
         <span>
-          <kbd>*</kbd> drills a word {DIFFICULT_REPEATS}× now · <kbd>/</kbd> memorizes it for later
-          tests · word lists load from <code>public/words/</code> and your browser storage
+          <kbd>esc</kbd> open command palette · <kbd>ctrl+shift+p</kbd> speak the current word · <kbd>*</kbd> drills a word {DIFFICULT_REPEATS}×
+          now · <kbd>/</kbd> memorizes it for later tests · word lists load from{" "}
+          <code>public/words/</code> and your browser storage
         </span>
       </footer>
+
+      <CommandPalette
+        open={paletteOpen}
+        onClose={() => {
+          setPaletteOpen(false);
+          test.focusInput();
+        }}
+        lists={allLists}
+        listId={activeList?.id ?? ""}
+        onSelectList={handleList}
+        wordCount={wordCount}
+        onSelectCount={handleCount}
+        peek={peek}
+        onTogglePeek={() => setPeek((p) => !p)}
+        autoSpeak={autoSpeak}
+        onToggleAutoSpeak={() => setAutoSpeak((s) => !s)}
+        order={order}
+        onOrder={setOrder}
+      />
 
       {settingsOpen && (
         <SettingsModal

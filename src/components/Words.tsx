@@ -170,14 +170,7 @@ function MeaningBubble({
     setFlipped(placement === "below");
     setCap(maxInnerH);
     setPos({ left, top, arrowPct });
-    // eslint-disable-next-line no-console
-    console.log("[bubble-debug]", JSON.stringify({
-      word: bubble.word, target: bubble.targetIndex, translateY,
-      wordY, wordVpTop, bh, bw, fitsAbove, fitsBelow, placement,
-      maxInnerH, renderedBh, top, left,
-      wordOffsetTop: target.offsetTop, vpOffsetTop: vp.offsetTop, innerOffsetTop: inner.offsetTop,
-      areaRectTop: areaRect.top, areaRectLeft: areaRect.left, areaW, viewportH: window.innerHeight,
-    }));
+
   }, [
     bubble.targetIndex,
     bubble.word,
