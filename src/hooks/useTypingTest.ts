@@ -149,6 +149,12 @@ export function useTypingTest(
   useEffect(() => {
     memorizeRef.current = memorize;
   }, [memorize]);
+  /**
+   * Guard against double-finish: keydown (enter) and the subsequent onInput
+   * may both try to finish the same word. This ref prevents the second
+   * call from firing.
+   */
+  const finishingRef = useRef(false);
 
   const resetAll = useCallback((fresh: WordEntry[]) => {
     difficultRef.current = {};
@@ -210,6 +216,8 @@ export function useTypingTest(
   const finishWord = useCallback((override?: string) => {
     const entry = words[wordIndex];
     if (!entry) return;
+    if (finishingRef.current) return;
+    finishingRef.current = true;
     const raw = override ?? typed[wordIndex] ?? "";
     // `word*` drills it now; `word/` memorizes it for later tests.
     const starred = raw.endsWith("*");
@@ -274,26 +282,38 @@ export function useTypingTest(
 
   const onInput = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
-      // Entries may be multi-word phrases (e.g. "to get") whose inner space
-      // is part of the entry, so keep single spaces. Collapse any other
-      // whitespace (tabs/newlines from pasted text) to one space and drop a
-      // leading one.
+      // Read the latest value directly from the DOM — on mobile the
+      // input value can lag behind React state.
       const raw = e.currentTarget.value;
-      let value = raw.replace(/\s+/g, " ").replace(/^ /, "");
-      if (value !== raw) e.currentTarget.value = value;
 
-      // Mobile virtual keyboards often never deliver a usable `keydown` for
-      // space (the key comes through as "Unidentified"), so the space simply
-      // appears in the value. Finish the word from here whenever the value
-      // ends with a space that is not part of a multi-word phrase (e.g.
-      // "to get"), which works identically with physical keyboards.
+      // If the input is empty, the word was likely just finished
+      // (finishWord clears it) — skip processing.
+      if (raw.length === 0) return;
+
+      // Clear the double-finish guard — the new input event means the
+      // user is actively typing a new word.
+      finishingRef.current = false;
+
+      // Entries may be multi-word phrases (e.g. "to get") whose inner space
+      // is part of the entry, so keep single spaces.  Collapse other
+      // whitespace (tabs/newlines from pasted text) to one space and drop a
+      // leading one.  Only write back to the DOM when something actually
+      // changed to avoid confusing mobile soft-keyboard composition.
+      let value = raw.replace(/\s+/g, " ").replace(/^ /, "");
+      if (value !== raw) {
+        e.currentTarget.value = value;
+      }
+
       const wChars = toChars(words[wordIndex]?.word ?? "");
       const composing =
         typeof InputEvent !== "undefined" &&
         e.nativeEvent instanceof InputEvent &&
         e.nativeEvent.isComposing;
-      // A space at the end of the value finishes the word — unless it is an
-      // expected inner space of a multi-word phrase (e.g. "to get").
+      // A space (or newline) at the end of the value finishes the word —
+      // unless it is an expected inner space of a multi-word phrase (e.g.
+      // "to get").  On mobile soft keyboards, space arrives here as an
+      // input event (insertText) rather than a keydown — this is the sole
+      // place where word-commit is handled for maximum mobile compat.
       let finishNow = false;
       if (
         !composing &&
@@ -330,28 +350,11 @@ export function useTypingTest(
         resetAll(words);
         return;
       }
-      if (e.key === " ") {
-        const t = typed[wordIndex] ?? "";
-        const wChars = toChars(words[wordIndex]?.word ?? "");
-        // Multi-word entries (e.g. "to get"): when the next expected character
-        // is a space, let the space through so it becomes part of the typed
-        // entry. Otherwise the space finishes the entry and never reaches the
-        // input value.
-        if (status === "running" && t.length < wChars.length && wChars[t.length] === " ") {
-          return;
-        }
-        // Finish the current word. Space never reaches the input value.
-        e.preventDefault();
-        if (status === "running" && t.length > 0) {
-          finishWord();
-        }
-        return;
-      }
       if (e.key === "Enter") {
         // Some on-screen keyboards send Enter instead of/in addition to
         // space; treat it as a word finisher too.
         e.preventDefault();
-        if (status === "running") finishWord();
+        if (status === "running") finishWord(e.currentTarget.value);
         return;
       }
       if (e.key === "Backspace") {
