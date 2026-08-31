@@ -7,8 +7,8 @@
 { "word": "hang on", "meaning": "wait", "ipa": "/hæŋ ɑːn/" },
 { "word": "human being", "meaning": "person", "ipa": "/ˈhjuːmən ˈbiːɪŋ/" },
 { "word": "human rights", "meaning": "basic rights of people", "ipa": "/ˈhjuːmən raɪts/" },
-{ "word": "if only…", "meaning": "expressing a wish", "ipa": "/ɪf ˈoʊnli/" },
-{ "word": "I have to say…", "meaning": "used to express an opinion", "ipa": "/aɪ hæv tə seɪ/" },
+{ "word": "if only", "meaning": "expressing a wish", "ipa": "/ɪf ˈoʊnli/" },
+{ "word": "I have to say", "meaning": "used to express an opinion", "ipa": "/aɪ hæv tə seɪ/" },
 { "word": "in action", "meaning": "working or operating", "ipa": "/ɪn ˈækʃən/" },
 { "word": "in advance", "meaning": "beforehand", "ipa": "/ɪn ədˈvæns/" },
 { "word": "in an attempt to do something", "meaning": "in an effort to do something", "ipa": "/ɪn ən əˈtempt tə duː sʌmθɪŋ/" },
@@ -25,9 +25,9 @@
 { "word": "mental health", "meaning": "emotional and psychological well-being", "ipa": "/ˈmentəl helθ/" },
 { "word": "more or less", "meaning": "approximately; mostly", "ipa": "/mɔːr ər les/" },
 { "word": "no doubt", "meaning": "certainly", "ipa": "/noʊ daʊt/" },
-{ "word": "no matter…", "meaning": "regardless", "ipa": "/noʊ ˈmætər/" },
-{ "word": "no matter how…", "meaning": "regardless of how", "ipa": "/noʊ ˈmætər haʊ/" },
-{ "word": "no matter what…", "meaning": "regardless of what", "ipa": "/noʊ ˈmætər wʌt/" },
+{ "word": "no matter", "meaning": "regardless", "ipa": "/noʊ ˈmætər/" },
+{ "word": "no matter how", "meaning": "regardless of how", "ipa": "/noʊ ˈmætər haʊ/" },
+{ "word": "no matter what", "meaning": "regardless of what", "ipa": "/noʊ ˈmætər wʌt/" },
 { "word": "nothing but", "meaning": "only", "ipa": "/ˈnʌθɪŋ bʌt/" },
 { "word": "on board", "meaning": "on or onto a vehicle", "ipa": "/ɑːn bɔːrd/" },
 { "word": "once again", "meaning": "again", "ipa": "/wʌns əˈɡen/" },
@@ -53,7 +53,7 @@
 { "word": "set out", "meaning": "begin a journey or task", "ipa": "/set aʊt/" },
 { "word": "short of something", "meaning": "lacking something", "ipa": "/ʃɔːrt əv/" },
 { "word": "so as to do something", "meaning": "in order to do something", "ipa": "/soʊ æz tə duː/" },
-{ "word": "something like…", "meaning": "approximately; similar to", "ipa": "/ˈsʌmθɪŋ laɪk/" },
+{ "word": "something like", "meaning": "approximately; similar to", "ipa": "/ˈsʌmθɪŋ laɪk/" },
 { "word": "sort somebody/something/yourself out", "meaning": "organize or resolve something", "ipa": "/sɔːrt aʊt/" },
 { "word": "stick to something", "meaning": "continue following something", "ipa": "/stɪk tə/" },
 { "word": "subject to something", "meaning": "dependent on something", "ipa": "/ˈsʌbdʒɪkt tə/" },
@@ -69,7 +69,7 @@
 { "word": "up to somebody", "meaning": "someone's choice or responsibility", "ipa": "/ʌp tə/" },
 { "word": "when it comes to something", "meaning": "regarding something", "ipa": "/wen ɪt kʌmz tə/" },
 { "word": "when it comes to doing something", "meaning": "regarding doing something", "ipa": "/wen ɪt kʌmz tə ˈduːɪŋ/" },
-{ "word": "whether or not…", "meaning": "regardless of whether", "ipa": "/ˈweðər ɔːr nɑːt/" },
-{ "word": "would rather…", "meaning": "would prefer", "ipa": "/wʊd ˈræðər/" }
+{ "word": "whether or not", "meaning": "regardless of whether", "ipa": "/ˈweðər ɔːr nɑːt/" },
+{ "word": "would rather", "meaning": "would prefer", "ipa": "/wʊd ˈræðər/" }
 ]
 }
