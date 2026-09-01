@@ -7,7 +7,7 @@ import type { WordEntry, WordList } from "../types";
  * The files are loaded with fetch at runtime, so you can edit them without
  * rebuilding — but a rebuild + redeploy is needed to ship changes.
  */
-const BUILT_IN_FILES = ["english.json", "C2-eng-viet.json", "pali-sample.json", "B2-group-1.json", "B2-group-2.json", "B2-group-3.json", "B2-group-4.json", "B2-group-5.json", "B2-group-6.json", "B2-group-7.json", "B2-group-8.json", "B2-group-9.json", "B2-group-10.json", "C1-group-1.json", "C1-group-2.json", "C1-group-3.json", "C1-group-4.json", "C1-group-5.json", "C1-group-6.json", "C1-group-7.json", "C1-group-8.json", "C1-group-9.json", "C1-group-10.json", "B1-phrases-group-1.json", "B1-phrases-group-2.json", "B2-phrases-group-1.json", "B2-phrases-group-2.json", "C1-phrases.json", ];
+const BUILT_IN_FILES = ["english.json", "C2-eng-viet.json", "pali-sample.json", "B1-group-1.json", "B1-group-2.json", "B1-group-3.json", "B1-group-4.json", "B1-group-5.json", "B1-group-6.json", "B2-group-1.json", "B2-group-2.json", "B2-group-3.json", "B2-group-4.json", "B2-group-5.json", "B2-group-6.json", "B2-group-7.json", "B2-group-8.json", "B2-group-9.json", "B2-group-10.json", "C1-group-1.json", "C1-group-2.json", "C1-group-3.json", "C1-group-4.json", "C1-group-5.json", "C1-group-6.json", "C1-group-7.json", "C1-group-8.json", "C1-group-9.json", "C1-group-10.json", "B1-phrases-group-1.json", "B1-phrases-group-2.json", "B2-phrases-group-1.json", "B2-phrases-group-2.json", "C1-phrases.json", ];
 
 const CUSTOM_KEY = "vocabtype:customLists";
 
