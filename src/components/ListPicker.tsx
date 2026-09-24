@@ -17,13 +17,17 @@ interface LanguageGroup {
 /**
  * Language-grouped replacement for the flat word-list <select>.
  *
- * One scrollable menu: a header per language ("Pali", "Italian", "English")
- * with that language's lists directly beneath it — everything visible at
- * once, no hover timing involved. Clicking a list selects it; the menu
- * closes on selection, outside click, ESC, or the picker button.
+ * The menu first shows only the languages ("English", "Italian", "Pali"),
+ * each with its list count; clicking a language expands its lists inline
+ * (one language open at a time). Clicking a list selects it. The menu
+ * closes on selection, outside click, ESC, or the picker button. There is
+ * deliberately no hover behavior: hover-driven open/close caused menus to
+ * shut under the cursor (see git history).
  */
 export function ListPicker({ lists, listId, onList }: ListPickerProps) {
   const [open, setOpen] = useState(false);
+  /** Which language's lists are expanded (one at a time; null = collapsed). */
+  const [openLang, setOpenLang] = useState<string | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
 
   const activeList = lists.find((l) => l.id === listId);
@@ -62,6 +66,14 @@ export function ListPicker({ lists, listId, onList }: ListPickerProps) {
     return () => bar.classList.remove("list-picker-open");
   }, [open]);
 
+  // Keep the freshly expanded language's lists inside the scrolling menu.
+  useEffect(() => {
+    if (!open || !openLang) return;
+    rootRef.current
+      ?.querySelector('[aria-expanded="true"] ~ .lp-lists, .lp-group.open .lp-lists')
+      ?.scrollIntoView({ block: "nearest" });
+  }, [open, openLang]);
+
   const select = (id: string) => {
     onList(id);
     setOpen(false);
@@ -84,7 +96,11 @@ export function ListPicker({ lists, listId, onList }: ListPickerProps) {
       <button
         type="button"
         className={`list-picker-btn${activeList ? "" : " placeholder"}`}
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => {
+          setOpen((v) => !v);
+          // Opening always starts fully collapsed: languages only.
+          setOpenLang(null);
+        }}
         aria-haspopup="true"
         aria-expanded={open}
         title="Choose a word list"
@@ -93,29 +109,44 @@ export function ListPicker({ lists, listId, onList }: ListPickerProps) {
       </button>
 
       {open && (
-        <div className="list-picker-menu" role="listbox" aria-label="Word lists">
-          {groups.map((g) => (
-            <div key={g.language} className="lp-group">
-              <div className="lp-header">
-                <span className="lp-lang-name">{g.language}</span>
-                <span className="lp-lang-count">{g.lists.length}</span>
-              </div>
-              {g.lists.map((l) => (
+        <div className="list-picker-menu" role="menu" aria-label="Word lists">
+          {groups.map((g) => {
+            const expanded = g.language === openLang;
+            const hasActive = g.lists.some((l) => l.id === listId);
+            return (
+              <div key={g.language} className={`lp-group${expanded ? " open" : ""}${hasActive ? " has-active" : ""}`}>
                 <button
-                  key={l.id}
                   type="button"
-                  role="option"
-                  aria-selected={l.id === listId}
-                  className={`lp-list${l.id === listId ? " active" : ""}`}
-                  onClick={() => select(l.id)}
-                  title={`${l.name} — ${l.words.length} words`}
+                  className={`lp-language${hasActive ? " active" : ""}`}
+                  onClick={() => setOpenLang((cur) => (cur === g.language ? null : g.language))}
+                  aria-expanded={expanded}
+                  aria-haspopup="true"
                 >
-                  <span className="lp-list-name">{l.name}</span>
-                  <span className="lp-list-count">{l.words.length}</span>
+                  <span className="lp-lang-name">{g.language}</span>
+                  <span className="lp-lang-count">{g.lists.length}</span>
+                  <span className="lp-arrow" aria-hidden="true">›</span>
                 </button>
-              ))}
-            </div>
-          ))}
+                {expanded && (
+                  <div className="lp-lists" role="listbox" aria-label={`${g.language} word lists`}>
+                    {g.lists.map((l) => (
+                      <button
+                        key={l.id}
+                        type="button"
+                        role="option"
+                        aria-selected={l.id === listId}
+                        className={`lp-list${l.id === listId ? " active" : ""}`}
+                        onClick={() => select(l.id)}
+                        title={`${l.name} — ${l.words.length} words`}
+                      >
+                        <span className="lp-list-name">{l.name}</span>
+                        <span className="lp-list-count">{l.words.length}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       )}
     </div>

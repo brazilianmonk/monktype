@@ -358,26 +358,35 @@ body::before {
 }
 
 .lp-group + .lp-group {
-  margin-top: 0.35rem;
+  margin-top: 0.2rem;
 }
 
-/* Language section header — lists sit directly below it. */
-.lp-header {
+/* Clickable language row — the menu opens with only these visible; clicking
+   one expands its lists inline (accordion, one language at a time). */
+.lp-language {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.4rem 0.6rem 0.2rem;
-  color: var(--sub-color);
-  font-size: 0.78rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  user-select: none;
-  -webkit-user-select: none;
+  width: 100%;
+  background: none;
+  border: none;
+  border-radius: 0.45rem;
+  color: var(--text-color);
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.45rem 0.6rem;
+  cursor: pointer;
+  text-align: left;
 }
 
-.lp-header:first-child {
-  padding-top: 0.15rem;
+.lp-language:hover {
+  background: var(--glass-bg-hover);
+}
+
+.lp-language.active {
+  color: var(--main-color);
+  font-weight: 600;
 }
 
 .lp-lang-name {
@@ -385,7 +394,30 @@ body::before {
 }
 
 .lp-lang-count {
-  font-size: 0.75rem;
+  color: var(--sub-color);
+  font-size: 0.8rem;
+}
+
+.lp-arrow {
+  color: var(--sub-color);
+  transition: transform 0.15s;
+}
+
+.lp-group.open .lp-arrow {
+  transform: rotate(90deg);
+  color: var(--main-color);
+}
+
+/* Expanded language: its lists flow inline below the row (indented). */
+.lp-group.open {
+  background: rgba(127, 127, 127, 0.06);
+  border-radius: 0.55rem;
+}
+
+.lp-lists {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.35rem 0.35rem;
 }
 
 .lp-list {
