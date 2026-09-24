@@ -25,6 +25,8 @@ interface LanguageGroup {
 const MENU_WIDTH = 256 + 16;
 
 export function ListPicker({ lists, listId, onList }: ListPickerProps) {
+  // Starts fully collapsed (all language rows closed) so every language is
+  // equally visible; hover/click opens one flyout at a time.
   const [openLang, setOpenLang] = useState<string | null>(null);
   /** Menu opens leftward instead of rightward when there is no room. */
   const [flip, setFlip] = useState(false);
@@ -106,7 +108,7 @@ export function ListPicker({ lists, listId, onList }: ListPickerProps) {
       <button
         type="button"
         className={`list-picker-btn${activeList ? "" : " placeholder"}`}
-        onClick={() => setOpenLang((v) => (v ? null : activeLang))}
+        onClick={() => setOpenLang((v) => (v ? null : "__first__"))}
         aria-haspopup="true"
         aria-expanded={openLang !== null}
         title="Choose a word list"
@@ -116,8 +118,8 @@ export function ListPicker({ lists, listId, onList }: ListPickerProps) {
 
       {openLang !== null && (
         <div className={`list-picker-menu${flip ? " flipped" : ""}`} role="menu">
-          {groups.map((g) => {
-            const isOpen = g.language === openLang;
+          {groups.map((g, gi) => {
+            const isOpen = g.language === openLang || (openLang === "__first__" && gi === 0);
             const hasActive = g.lists.some((l) => l.id === listId);
             return (
               <div

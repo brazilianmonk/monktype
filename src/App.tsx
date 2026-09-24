@@ -57,7 +57,11 @@ export default function App() {
     const saved = Number(localStorage.getItem(COUNT_KEY));
     return WORD_COUNTS.includes(saved) ? saved : 50;
   });
-  const [listId, setListId] = useState<string>(() => localStorage.getItem(LIST_KEY) ?? "");
+  const [listId, setListId] = useState<string>(() => {
+    // One-time migration: the A1-* Italian files were renamed Italian-A1-*.
+    const saved = localStorage.getItem(LIST_KEY) ?? "";
+    return saved.replace(/^A1-/, "Italian-A1-");
+  });
   const [peek, setPeek] = useState<boolean>(() => {
     const saved = localStorage.getItem(PEEK_KEY);
     return saved !== null ? saved === "1" : true;

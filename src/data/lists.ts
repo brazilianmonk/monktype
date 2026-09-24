@@ -7,16 +7,17 @@ import type { WordEntry, WordList } from "../types";
  * The files are loaded with fetch at runtime, so you can edit them without
  * rebuilding — but a rebuild + redeploy is needed to ship changes.
  */
-const BUILT_IN_FILES = ["pali-sample.json", "A1-group-1.json", "A1-group-2.json", "A1-group-3.json", "A1-group-4.json", "A1-group-5.json", "A1-group-6.json", "A1-phrases.json", "B1-group-1.json", "B1-group-2.json", "B1-group-3.json", "B1-group-4.json", "B1-group-5.json", "B1-group-6.json", "B1-phrases-group-1.json", "B1-phrases-group-2.json", "B2-group-1.json", "B2-group-2.json", "B2-group-3.json", "B2-group-4.json", "B2-group-5.json", "B2-group-6.json", "B2-group-7.json", "B2-group-8.json", "B2-group-9.json", "B2-group-10.json", "B2-phrases-group-1.json", "B2-phrases-group-2.json", "C1-group-1.json", "C1-group-2.json", "C1-group-3.json", "C1-group-4.json", "C1-group-5.json", "C1-group-6.json", "C1-group-7.json", "C1-group-8.json", "C1-group-9.json", "C1-group-10.json", "C1-phrases.json", "C2-group-1.json", "C2-group-2.json", "C2-group-3.json", "C2-group-4.json", "C2-group-5.json", "C2-group-6.json", "C2-group-7.json", "C2-group-8.json", "C2-group-9.json", "C2-group-10.json", "C2-group-11.json", "C2-group-12.json", "C2-group-13.json", "C2-group-14.json", "C2-eng-viet.json", ];
+const BUILT_IN_FILES = ["pali-sample.json", "Italian-A1-group-1.json", "Italian-A1-group-2.json", "Italian-A1-group-3.json", "Italian-A1-group-4.json", "Italian-A1-group-5.json", "Italian-A1-group-6.json", "Italian-A1-phrases.json", "B1-group-1.json", "B1-group-2.json", "B1-group-3.json", "B1-group-4.json", "B1-group-5.json", "B1-group-6.json", "B1-phrases-group-1.json", "B1-phrases-group-2.json", "B2-group-1.json", "B2-group-2.json", "B2-group-3.json", "B2-group-4.json", "B2-group-5.json", "B2-group-6.json", "B2-group-7.json", "B2-group-8.json", "B2-group-9.json", "B2-group-10.json", "B2-phrases-group-1.json", "B2-phrases-group-2.json", "C1-group-1.json", "C1-group-2.json", "C1-group-3.json", "C1-group-4.json", "C1-group-5.json", "C1-group-6.json", "C1-group-7.json", "C1-group-8.json", "C1-group-9.json", "C1-group-10.json", "C1-phrases.json", "C2-group-1.json", "C2-group-2.json", "C2-group-3.json", "C2-group-4.json", "C2-group-5.json", "C2-group-6.json", "C2-group-7.json", "C2-group-8.json", "C2-group-9.json", "C2-group-10.json", "C2-group-11.json", "C2-group-12.json", "C2-group-13.json", "C2-group-14.json", "C2-eng-viet.json", ];
 
 const CUSTOM_KEY = "vocabtype:customLists";
 
 /** The `language` of a list, falling back to English for untagged lists. */
 export function listLanguage(list: Pick<WordList, "language" | "name">): string {
   if (list.language) return list.language;
-  // Pali ships without a language tag — infer it from the name.
+  // Untagged bundled lists are inferred from their name prefix.
   const name = list.name.toLowerCase();
   if (name === "pali" || /^(pali[-_ ])/.test(name)) return "Pali";
+  if (/^(italian[-_ ])/.test(name)) return "Italian";
   return "English";
 }
 
