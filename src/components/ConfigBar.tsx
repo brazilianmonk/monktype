@@ -1,5 +1,6 @@
 import type { WordOrder } from "../hooks/useTypingTest";
 import type { WordList } from "../types";
+import { ListPicker } from "./ListPicker";
 import { EyeIcon, EyeOffIcon, RestartIcon, VolumeIcon, VolumeOffIcon } from "./icons";
 
 export const WORD_COUNTS = [10, 25, 50, 100, 250, 500];
@@ -53,13 +54,7 @@ export function ConfigBar({
         ))}
       </div>
       <div className="group" role="group" aria-label="Word list">
-        <select value={listId} onChange={(e) => onList(e.target.value)} aria-label="Word list">
-          {lists.map((l) => (
-            <option key={l.id} value={l.id}>
-              {l.name} ({l.words.length})
-            </option>
-          ))}
-        </select>
+        <ListPicker lists={lists} listId={listId} onList={onList} />
       </div>
       <div className="group" role="group" aria-label="Word selection order">
         <button

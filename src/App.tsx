@@ -7,7 +7,7 @@ import { SettingsModal } from "./components/SettingsModal";
 import { CommandPalette } from "./components/CommandPalette";
 import { Words } from "./components/Words";
 import { addHistory } from "./data/history";
-import { deleteCustomList, getCustomLists, loadFileLists } from "./data/lists";
+import { deleteCustomList, getCustomLists, listLanguage, loadFileLists } from "./data/lists";
 import {
   DIFFICULT_REPEATS,
   MEMORIZE_INTRO_TESTS,
@@ -147,6 +147,11 @@ export default function App() {
   // Memoized so an empty list keeps a stable reference (otherwise the typing
   // test effect would restart on every render while lists are still loading).
   const listWords = useMemo(() => activeList?.words ?? [], [activeList]);
+  // Language of the active list, used to pick the pronunciation voice.
+  const activeLang = useMemo(
+    () => (activeList ? listLanguage(activeList) : "English"),
+    [activeList]
+  );
 
   // Remember the effective list selection across reloads.
   useEffect(() => {
@@ -233,8 +238,8 @@ export default function App() {
     const entry = test.words[test.wordIndex];
     if (!entry || spokenRef.current === test.wordIndex) return;
     spokenRef.current = test.wordIndex;
-    speak(entry.word);
-  }, [autoSpeak, test.status, test.wordIndex, test.words]);
+    speak(entry.word, activeLang);
+  }, [autoSpeak, test.status, test.wordIndex, test.words, activeLang]);
 
   const bubble = useMemo<BubbleInfo | null>(() => {
     if (loading || test.status === "finished" || test.words.length === 0) return null;
@@ -245,6 +250,7 @@ export default function App() {
         word: entry.word,
         meaning: entry.meaning,
         ipa: entry.ipa ?? "",
+        lang: activeLang,
         targetIndex: test.wordIndex,
         visible: true,
         animate: false,
@@ -256,11 +262,12 @@ export default function App() {
       word: test.lastMeaning.word,
       meaning: test.lastMeaning.meaning,
       ipa: test.lastMeaning.ipa ?? "",
+      lang: activeLang,
       targetIndex: test.wordIndex,
       visible: !bubbleExpired && !typingStarted,
       animate: true,
     };
-  }, [loading, test.status, peek, test.words, test.wordIndex, test.lastMeaning, test.typed, bubbleExpired]);
+  }, [loading, test.status, peek, test.words, test.wordIndex, test.lastMeaning, test.typed, bubbleExpired, activeLang]);
 
   // Keyboard shortcut: Ctrl+Shift+P (or Cmd+Shift+P on Mac) speaks the current word.
   useEffect(() => {
@@ -268,12 +275,12 @@ export default function App() {
       if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === "p") {
         e.preventDefault();
         const entry = test.words[test.wordIndex];
-        if (entry) speak(entry.word);
+        if (entry) speak(entry.word, activeLang);
       }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [test.words, test.wordIndex]);
+  }, [test.words, test.wordIndex, activeLang]);
 
   // Stop any pronunciation once the test ends (results screen / new test).
   useEffect(() => {

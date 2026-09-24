@@ -10,6 +10,8 @@ export interface BubbleInfo {
   meaning: string;
   /** IPA pronunciation, e.g. "/əˈbɪləti/"; empty when the list has none. */
   ipa: string;
+  /** Language of the word, for pronunciation (e.g. "Italian"). */
+  lang: string;
   /** The word index the bubble is anchored to (its "next word"). */
   targetIndex: number;
   visible: boolean;
@@ -201,7 +203,7 @@ function MeaningBubble({
           onClick={() => {
             // The click bubbles up to the typing-area, which refocuses the
             // typing input so the user can keep typing.
-            speak(bubble.word);
+            speak(bubble.word, bubble.lang);
           }}
         >
           <SpeakerIcon />

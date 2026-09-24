@@ -7,9 +7,18 @@ import type { WordEntry, WordList } from "../types";
  * The files are loaded with fetch at runtime, so you can edit them without
  * rebuilding — but a rebuild + redeploy is needed to ship changes.
  */
-const BUILT_IN_FILES = ["pali-sample.json", "B1-group-1.json", "B1-group-2.json", "B1-group-3.json", "B1-group-4.json", "B1-group-5.json", "B1-group-6.json", "B1-phrases-group-1.json", "B1-phrases-group-2.json", "B2-group-1.json", "B2-group-2.json", "B2-group-3.json", "B2-group-4.json", "B2-group-5.json", "B2-group-6.json", "B2-group-7.json", "B2-group-8.json", "B2-group-9.json", "B2-group-10.json", "B2-phrases-group-1.json", "B2-phrases-group-2.json", "C1-group-1.json", "C1-group-2.json", "C1-group-3.json", "C1-group-4.json", "C1-group-5.json", "C1-group-6.json", "C1-group-7.json", "C1-group-8.json", "C1-group-9.json", "C1-group-10.json", "C1-phrases.json", "C2-group-1.json", "C2-group-2.json", "C2-group-3.json", "C2-group-4.json", "C2-group-5.json", "C2-group-6.json", "C2-group-7.json", "C2-group-8.json", "C2-group-9.json", "C2-group-10.json", "C2-group-11.json", "C2-group-12.json", "C2-group-13.json", "C2-group-14.json", "C2-eng-viet.json", ];
+const BUILT_IN_FILES = ["pali-sample.json", "A1-group-1.json", "A1-group-2.json", "A1-group-3.json", "A1-group-4.json", "A1-group-5.json", "A1-group-6.json", "A1-phrases.json", "B1-group-1.json", "B1-group-2.json", "B1-group-3.json", "B1-group-4.json", "B1-group-5.json", "B1-group-6.json", "B1-phrases-group-1.json", "B1-phrases-group-2.json", "B2-group-1.json", "B2-group-2.json", "B2-group-3.json", "B2-group-4.json", "B2-group-5.json", "B2-group-6.json", "B2-group-7.json", "B2-group-8.json", "B2-group-9.json", "B2-group-10.json", "B2-phrases-group-1.json", "B2-phrases-group-2.json", "C1-group-1.json", "C1-group-2.json", "C1-group-3.json", "C1-group-4.json", "C1-group-5.json", "C1-group-6.json", "C1-group-7.json", "C1-group-8.json", "C1-group-9.json", "C1-group-10.json", "C1-phrases.json", "C2-group-1.json", "C2-group-2.json", "C2-group-3.json", "C2-group-4.json", "C2-group-5.json", "C2-group-6.json", "C2-group-7.json", "C2-group-8.json", "C2-group-9.json", "C2-group-10.json", "C2-group-11.json", "C2-group-12.json", "C2-group-13.json", "C2-group-14.json", "C2-eng-viet.json", ];
 
 const CUSTOM_KEY = "vocabtype:customLists";
+
+/** The `language` of a list, falling back to English for untagged lists. */
+export function listLanguage(list: Pick<WordList, "language" | "name">): string {
+  if (list.language) return list.language;
+  // Pali ships without a language tag — infer it from the name.
+  const name = list.name.toLowerCase();
+  if (name === "pali" || /^(pali[-_ ])/.test(name)) return "Pali";
+  return "English";
+}
 
 /**
  * Small built-in fallback so the app still works when opened straight from
@@ -40,6 +49,7 @@ const FALLBACK: WordList = {
  */
 export function normalizeList(raw: unknown, id: string): { list?: WordList; error?: string } {
   let name = "Imported list";
+  let language: string | undefined;
   let words: unknown;
 
   if (Array.isArray(raw)) {
@@ -47,6 +57,7 @@ export function normalizeList(raw: unknown, id: string): { list?: WordList; erro
   } else if (raw !== null && typeof raw === "object") {
     const obj = raw as Record<string, unknown>;
     name = String(obj.name ?? obj.language ?? obj.title ?? "Imported list");
+    if (typeof obj.language === "string" && obj.language.trim()) language = obj.language.trim();
     words = obj.words ?? obj.entries ?? obj.items ?? [];
   } else {
     return { error: "The JSON must be an array of words or an object with a `words` array." };
@@ -87,7 +98,15 @@ export function normalizeList(raw: unknown, id: string): { list?: WordList; erro
     return { error: "No valid words found — each entry needs a `word` (and optionally a `meaning`)." };
   }
 
-  return { list: { id, name: name || id, source: "custom", words: entries } };
+  return {
+    list: {
+      id,
+      name: name || id,
+      source: "custom",
+      words: entries,
+      ...(language ? { language } : {}),
+    },
+  };
 }
 
 export function getCustomLists(): WordList[] {

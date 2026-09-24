@@ -37,6 +37,11 @@ export interface WordList {
   name: string;
   source: "file" | "custom";
   words: WordEntry[];
+  /**
+   * Language of the list's words, e.g. "English", "Italian". Used to group
+   * lists in the picker; "English" is the default for untagged lists.
+   */
+  language?: string;
 }
 
 export type Theme = "dark" | "light";

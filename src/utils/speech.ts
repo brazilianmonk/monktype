@@ -23,6 +23,42 @@ let currentText = "";
 let voices: SpeechSynthesisVoice[] = [];
 let voicesLoaded = false;
 
+/**
+ * Language of the text being spoken, as a BCP-47 tag (e.g. "it", "en").
+ * Affects both the Google TTS endpoint (`tl` param) and the voice picked for
+ * the synthesis fallback. "en" keeps the pre-language behavior for English
+ * lists, Pali, and anything untagged.
+ */
+let currentLang = "en";
+
+/** Map a list language name to a BCP-47 tag for TTS. */
+function langToBCP47(lang: string): string {
+  switch (lang.toLowerCase()) {
+    case "italian":
+      return "it";
+    case "spanish":
+      return "es";
+    case "french":
+      return "fr";
+    case "german":
+      return "de";
+    case "portuguese":
+      return "pt";
+    case "dutch":
+      return "nl";
+    case "polish":
+      return "pl";
+    case "russian":
+      return "ru";
+    case "turkish":
+      return "tr";
+    case "greek":
+      return "el";
+    default:
+      return "en";
+  }
+}
+
 function refreshVoices() {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
   voices = window.speechSynthesis.getVoices();
@@ -35,13 +71,21 @@ if (typeof window !== "undefined" && "speechSynthesis" in window) {
   window.speechSynthesis.addEventListener("voiceschanged", refreshVoices);
 }
 
-/** Prefer a clear English voice (online when available), else any voice. */
+/** Prefer a clear voice matching `lang` (online when available), else any. */
 function pickVoice(): SpeechSynthesisVoice | null {
   if (!voicesLoaded) refreshVoices();
   if (voices.length === 0) return null;
+  const matching = voices.filter((v) => v.lang.toLowerCase().startsWith(currentLang));
   const en = voices.filter((v) => v.lang.toLowerCase().startsWith("en"));
-  const preferred = en.find((v) => /google|online|enhanced|natural/i.test(v.name)) ?? en[0];
-  return preferred ?? voices[0];
+  const preferred =
+    matching.find((v) => /google|online|enhanced|natural/i.test(v.name)) ??
+    matching[0] ??
+    (currentLang === "en"
+      ? null
+      : // No voice for the language: fall back to English rather than
+        // picking an arbitrary unrelated one.
+        en.find((v) => /google|online|enhanced|natural/i.test(v.name)) ?? en[0]);
+  return preferred ?? (en[0] ?? voices[0]);
 }
 
 /**
@@ -59,6 +103,8 @@ function speakWithSynth(text: string): void {
   if (voice) {
     utter.voice = voice;
     utter.lang = voice.lang;
+  } else {
+    utter.lang = currentLang;
   }
   utter.rate = 0.95; // slightly slower so it is easy to follow
 
@@ -99,7 +145,7 @@ function chunkText(text: string): string[] {
 function gttsUrl(text: string): string {
   return (
     "https://translate.google.com/translate_tts?" +
-    new URLSearchParams({ ie: "UTF-8", client: "tw-ob", tl: "en", q: text })
+    new URLSearchParams({ ie: "UTF-8", client: "tw-ob", tl: currentLang, q: text })
   );
 }
 
@@ -159,13 +205,18 @@ export function stopSpeaking(): void {
  * synthesis when the online stream cannot play. Any ongoing speech is
  * cancelled first, so repeated calls always start fresh. Returns false for
  * empty text.
+ *
+ * `lang` names the language of `text` (e.g. "Italian" — a list's `language`
+ * field); it selects the matching TTS voice/engine. Unrecognized or English
+ * text keeps the previous English behavior.
  */
-export function speak(text: string): boolean {
+export function speak(text: string, lang = "English"): boolean {
   const clean = text.trim();
   if (!clean) return false;
 
   stopSpeaking();
   currentText = clean;
+  currentLang = langToBCP47(lang);
   queue = chunkText(clean).map(gttsUrl);
   playNextChunk();
   return true;

@@ -16,7 +16,8 @@ Great for drilling vocabulary lists — English, Pali, or anything else.
 - **random or in-order word selection**: pick a random subset each test, or go through the list in order — the next test continues where the last one left off (position is remembered per list)
 - **drill difficult words**: type `*` after a word (e.g. `test*`) and it is repeated 3 more times in the same test; typing the star again resets it to 3 more repeats
 - **memorize words across tests**: type `/` after a word (e.g. `test/`) and it shows up in later tests to help you remember it — once in each of the next 3 tests, then 3× in every later test (type it with `/` again to stop memorizing)
-- bundled lists (English 250 words, Pali) + import your own lists in the browser (stored in localStorage, exportable as JSON)
+- bundled lists (English B1–C2 word & phrase lists, Italian A1, Pali) + import your own lists in the browser (stored in localStorage, exportable as JSON)
+- **language-grouped list picker**: the picker shows languages (English, Italian, …) and hovering one reveals its lists
 - dark & light themes
 - keyboard: `space` finishes a word · `tab` restarts · `enter` starts a new test · `⌫` at the start of a word goes back · `*` after a word drills it 3× · `/` after a word memorizes it
 
@@ -32,6 +33,7 @@ copy the prompt, and let an AI chat convert it to JSON for you.
 ```json
 {
   "name": "My Vocabulary",
+  "language": "Italian",
   "words": [
     { "word": "apple", "meaning": "a round fruit", "ipa": "/ˈæpəl/" },
     { "word": "sati", "meaning": "mindfulness" }
@@ -42,6 +44,12 @@ copy the prompt, and let an AI chat convert it to JSON for you.
 `ipa` is optional and mainly for English lists — when present it is shown next to the meaning
 while typing and in the results review. Omit it for other languages (e.g. Pali) and it will not
 be displayed. `pronunciation` is also accepted as an alias for `ipa`.
+
+Set a `language` field on the list (e.g. `"language": "Italian"`) to group it under that
+language in the list picker — the picker shows languages at the top level and opens a flyout
+with that language's lists on hover. Lists without a `language` are grouped as English
+(Pali lists are recognized by name). The language is also used to pick the pronunciation
+voice for the word.
 
 `word` may contain a single space to type multi-word phrases (e.g. `"word": "to get"`). The
 space is part of the phrase: type `to`, press space to insert it, then type `get`. A trailing
