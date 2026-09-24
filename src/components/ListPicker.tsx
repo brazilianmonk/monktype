@@ -78,7 +78,9 @@ export function ListPicker({ lists, listId, onList }: ListPickerProps) {
 
   const scheduleClose = () => {
     cancelClose();
-    closeTimer.current = window.setTimeout(() => setOpenLang(null), 120);
+    // Long enough for a diagonal trip between the menu and a flyout across
+    // the small gap between them; short enough to feel snappy.
+    closeTimer.current = window.setTimeout(() => setOpenLang(null), 220);
   };
 
   useEffect(() => cancelClose, []);
@@ -131,9 +133,13 @@ export function ListPicker({ lists, listId, onList }: ListPickerProps) {
                   type="button"
                   className={`lp-language${hasActive ? " active" : ""}`}
                   onClick={() => {
-                    // Click toggles the group (useful on touch screens).
+                    // Click OPENS the group (never toggles): on a mouse the
+                    // hover has usually already opened it, so a toggle here
+                    // would close the whole menu the moment the user clicks
+                    // the language row. Closing is done via outside click,
+                    // ESC, the picker button, or selecting a list.
                     cancelClose();
-                    setOpenLang((cur) => (cur === g.language ? null : g.language));
+                    setOpenLang(g.language);
                   }}
                   aria-expanded={isOpen}
                 >
