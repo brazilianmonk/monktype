@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import type { WordList } from "../types";
 import { listLanguage } from "../data/lists";
 
@@ -51,6 +52,16 @@ export function ListPicker({ lists, listId, onList }: ListPickerProps) {
     return () => window.removeEventListener("mousedown", onDown);
   }, [open]);
 
+  // While the menu is open, raise the whole config bar above the typing
+  // area: both create their own stacking contexts (backdrop-filter), so the
+  // menu's own z-index cannot escape the config bar's.
+  useEffect(() => {
+    const bar = rootRef.current?.closest(".config");
+    if (!bar) return;
+    bar.classList.toggle("list-picker-open", open);
+    return () => bar.classList.remove("list-picker-open");
+  }, [open]);
+
   const select = (id: string) => {
     onList(id);
     setOpen(false);
@@ -62,6 +73,7 @@ export function ListPicker({ lists, listId, onList }: ListPickerProps) {
       ref={rootRef}
       role="group"
       aria-label="Word list"
+      style={{ "--lp-menu-max-h": "min(26rem, 65vh)" } as CSSProperties}
       onKeyDown={(e) => {
         if (e.key === "Escape" && open) {
           e.stopPropagation();

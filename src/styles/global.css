@@ -243,6 +243,17 @@ body::before {
   box-shadow: var(--glass-shadow);
   backdrop-filter: blur(18px) saturate(1.35);
   -webkit-backdrop-filter: blur(18px) saturate(1.35);
+  position: relative;
+}
+
+/* While the list-picker menu is open, lift the whole config bar above the
+   typing area. Both elements create their own stacking contexts (they use
+   backdrop-filter), so the menu's z-index alone cannot escape the config
+   bar's context — and the typing area, being later in the DOM, would paint
+   right over the menu. Toggled by ListPicker via the list-picker-open
+   class; the modal (100) and command palette (200) still sit above it. */
+.config.list-picker-open {
+  z-index: 70;
 }
 
 .config .group {
@@ -335,7 +346,7 @@ body::before {
   flex-direction: column;
   min-width: 16rem;
   max-width: min(24rem, calc(100vw - 2rem));
-  max-height: min(26rem, 65vh);
+  max-height: var(--lp-menu-max-h, min(26rem, 65vh));
   overflow-y: auto;
   padding: 0.4rem;
   background: var(--bubble-bg);
