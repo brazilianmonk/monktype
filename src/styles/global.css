@@ -331,16 +331,12 @@ body::before {
   top: calc(100% + 0.45rem);
   left: 0;
   z-index: 60;
-}
-
-/* Near the right edge the menu opens aligned to the button's right instead. */
-.list-picker-menu.flipped {
-  left: auto;
-  right: 0;
   display: flex;
   flex-direction: column;
-  min-width: 15rem;
+  min-width: 16rem;
   max-width: min(24rem, calc(100vw - 2rem));
+  max-height: min(26rem, 65vh);
+  overflow-y: auto;
   padding: 0.4rem;
   background: var(--bubble-bg);
   border: 1px solid var(--glass-border);
@@ -350,33 +346,27 @@ body::before {
   -webkit-backdrop-filter: blur(18px) saturate(1.35);
 }
 
-.lp-group {
-  position: relative;
+.lp-group + .lp-group {
+  margin-top: 0.35rem;
 }
 
-.lp-language {
+/* Language section header — lists sit directly below it. */
+.lp-header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: 100%;
-  background: none;
-  border: none;
-  border-radius: 0.45rem;
-  color: var(--text-color);
-  font-family: var(--font);
-  font-size: 0.95rem;
-  padding: 0.45rem 0.6rem;
-  cursor: pointer;
-  text-align: left;
-}
-
-.lp-language:hover {
-  background: var(--glass-bg-hover);
-}
-
-.lp-language.active {
-  color: var(--main-color);
+  padding: 0.4rem 0.6rem 0.2rem;
+  color: var(--sub-color);
+  font-size: 0.78rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.lp-header:first-child {
+  padding-top: 0.15rem;
 }
 
 .lp-lang-name {
@@ -384,36 +374,7 @@ body::before {
 }
 
 .lp-lang-count {
-  color: var(--sub-color);
-  font-size: 0.8rem;
-}
-
-.lp-arrow {
-  color: var(--sub-color);
-  transition: transform 0.15s;
-}
-
-.lp-group.open .lp-arrow {
-  transform: translateX(2px);
-  color: var(--main-color);
-}
-
-/* Flyout with the language's lists; opens to the right of the language row. */
-.lp-lists {
-  position: absolute;
-  top: -0.4rem;
-  left: calc(100% + 0.35rem);
-  z-index: 61;
-  min-width: 13rem;
-  max-height: min(24rem, 60vh);
-  overflow-y: auto;
-  padding: 0.35rem;
-  background: var(--bubble-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--glass-shadow);
-  backdrop-filter: blur(18px) saturate(1.35);
-  -webkit-backdrop-filter: blur(18px) saturate(1.35);
+  font-size: 0.75rem;
 }
 
 .lp-list {
@@ -453,31 +414,7 @@ body::before {
   font-size: 0.8rem;
 }
 
-/* On narrow screens the flyout cannot open sideways — drop it below the
-   language row inside the same menu. */
-@media (max-width: 640px) {
-  .list-picker-menu {
-    max-height: min(28rem, 70vh);
-    overflow-y: auto;
-  }
-
-  .lp-lists {
-    position: static;
-    margin: 0 0.35rem 0.35rem;
-    border: none;
-    box-shadow: none;
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    padding: 0 0 0.25rem;
-    max-height: 16rem;
-  }
-
-  .list-picker-menu.flipped {
-    left: 0;
-    right: auto;
-  }
-}
+/* The whole menu scrolls; no per-flyout overrides needed. */
 
 .config .spacer {
   flex: 1;
